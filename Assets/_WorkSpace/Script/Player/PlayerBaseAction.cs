@@ -8,7 +8,10 @@ public class PlayerBaseAction : MonoBehaviour
 {
     [SerializeField]
     float _MoveSpeed;
+    [SerializeField]
+    float _Jump;
 
+    bool _OnFloor;
     public Rigidbody2D _rb;
     // Start is called before the first frame update
     void Start()
@@ -23,5 +26,6 @@ public class PlayerBaseAction : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         Vector2 velocity = new Vector2(x, 0).normalized;
         _rb.velocity = velocity * _MoveSpeed;
+        //ƒWƒƒƒ“ƒv‚Ìˆ—
     }
 }
