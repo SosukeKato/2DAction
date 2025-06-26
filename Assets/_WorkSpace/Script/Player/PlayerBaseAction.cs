@@ -8,10 +8,6 @@ public class PlayerBaseAction : MonoBehaviour
 {
     [SerializeField]
     float _MoveSpeed;
-    [SerializeField]
-    float _Jump;
-
-    bool _OnFloor;
 
     public Rigidbody2D _rb;
     // Start is called before the first frame update
@@ -23,22 +19,11 @@ public class PlayerBaseAction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        #region キャラクターの移動処理
         //x軸の移動処理
         float x = Input.GetAxisRaw("Horizontal");
         Vector2 velocity = new Vector2(x, 0).normalized;
         _rb.velocity = velocity * _MoveSpeed;
-        //ジャンプの処理
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            _OnFloor = false;
-        }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Floor"))
-        {
-            _OnFloor = true;
-        }
+        #endregion
     }
 }
