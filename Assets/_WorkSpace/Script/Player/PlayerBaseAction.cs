@@ -27,7 +27,7 @@ public class PlayerBaseAction : MonoBehaviour
         Vector2 velocity = new Vector2(x, 0).normalized;
         _rb.velocity = velocity * _MoveSpeed;
         //ƒWƒƒƒ“ƒv‚Ìˆ—
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (_OnFloor == true && Input.GetKeyDown(KeyCode.Space))
         {
             _OnFloor = false;
         }
