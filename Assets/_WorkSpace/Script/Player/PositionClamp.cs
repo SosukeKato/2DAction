@@ -17,7 +17,7 @@ public class PositionClamp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var pos = transform.position;
+        Vector2 pos = transform.position;
 
         pos.x = Mathf.Clamp(pos.x, _minX, _maxX);
 
