@@ -27,5 +27,17 @@ public class PlayerBaseAction : MonoBehaviour
         Vector2 velocity = new Vector2(x, 0).normalized;
         _rb.velocity = velocity * _MoveSpeed;
         //ƒWƒƒƒ“ƒv‚Ìˆ—
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            _OnFloor = false;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            _OnFloor = true;
+        }
     }
 }
