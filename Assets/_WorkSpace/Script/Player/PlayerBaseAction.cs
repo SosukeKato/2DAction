@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent (typeof(BoxCollider2D))]
 public class PlayerBaseAction : MonoBehaviour
 {
     [SerializeField]
@@ -18,7 +19,7 @@ public class PlayerBaseAction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float x = Input.GetAxis("Horizontal");
+        float x = Input.GetAxisRaw("Horizontal");
 
         Vector2 velocity = new Vector2(x, 0).normalized;
 

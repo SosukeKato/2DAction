@@ -5,9 +5,9 @@ using UnityEngine;
 public class PositionClamp : MonoBehaviour
 {
     [SerializeField]
-    float _minX = -1f;
+    float _minX = -11f;
     [SerializeField]
-    float _maxX = 1f;
+    float _maxX = 11f;
     // Start is called before the first frame update
     void Start()
     {
