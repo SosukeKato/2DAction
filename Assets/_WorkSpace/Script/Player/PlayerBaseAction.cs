@@ -31,6 +31,11 @@ public class PlayerBaseAction : MonoBehaviour
         {
             _OnFloor = false;
         }
+        //UŒ‚‚Ìˆ—
+        if (Input.GetMouseButtonDown(0))
+        {
+
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
