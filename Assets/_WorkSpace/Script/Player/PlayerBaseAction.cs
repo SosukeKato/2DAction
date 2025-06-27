@@ -12,6 +12,7 @@ public class PlayerBaseAction : MonoBehaviour
     float _Jump;
 
     bool _OnFloor;
+    public bool _InBarrier;
     public Rigidbody2D _rb;
     // Start is called before the first frame update
     void Start()
@@ -37,12 +38,16 @@ public class PlayerBaseAction : MonoBehaviour
 
         }
         //ƒK[ƒh‚Ìˆ—
-        if (Input.GetKeyDown(KeyCode.K)) 
+        if (Input.GetKey(KeyCode.K)) 
         {
-
+            _InBarrier = true;
+        }
+        else
+        {
+            _InBarrier = false;
         }
         //‰ñ”ğ‚Ìˆ—
-        if (Input.GetKeyDown(KeyCode.LeftShift)) 
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
 
         }
