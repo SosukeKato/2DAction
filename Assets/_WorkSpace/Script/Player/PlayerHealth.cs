@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -17,7 +19,10 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(_Health <= 0)
+        {
+            
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -25,6 +30,7 @@ public class PlayerHealth : MonoBehaviour
         if(collision.gameObject.CompareTag("FlyerBullet"))
         {
             _Health -= _FlyerBulletDamage;
+            Debug.Log($"{_Health}");
         }
     }
 }
