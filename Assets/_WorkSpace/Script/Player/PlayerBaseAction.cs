@@ -41,6 +41,11 @@ public class PlayerBaseAction : MonoBehaviour
         {
 
         }
+        //‰ñ”ğ‚Ìˆ—
+        if (Input.GetKeyDown(KeyCode.LeftShift)) 
+        {
+
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
