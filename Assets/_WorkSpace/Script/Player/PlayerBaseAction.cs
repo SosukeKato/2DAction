@@ -31,8 +31,13 @@ public class PlayerBaseAction : MonoBehaviour
         {
             _OnFloor = false;
         }
-        //UŒ‚‚Ìˆ—
-        if (Input.GetMouseButtonDown(0))
+        //’ÊíUŒ‚‚Ìˆ—
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+
+        }
+        //ƒK[ƒh‚Ìˆ—
+        if (Input.GetKeyDown(KeyCode.K)) 
         {
 
         }
