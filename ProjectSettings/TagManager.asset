@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Floor
+  - FlyerBullet
   layers:
   - Default
   - TransparentFX

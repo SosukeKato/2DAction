@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    [SerializeField] PlayerHealth health;
+    int _FlyerBulletDamage = 7;
     [SerializeField]
-    public const int Health = 100;
+    public int _Health = 100;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,5 +18,13 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("FlyerBullet"))
+        {
+            _Health -= _FlyerBulletDamage;
+        }
     }
 }
