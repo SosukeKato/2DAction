@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PositionClamp : MonoBehaviour
+public class PlayerPositionClamp : MonoBehaviour
 {
     [SerializeField]
     float _minX = -11f;
