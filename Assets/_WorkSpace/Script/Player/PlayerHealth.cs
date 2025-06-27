@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -21,7 +20,11 @@ public class PlayerHealth : MonoBehaviour
     {
         if(_Health <= 0)
         {
-            
+            SceneManager.LoadScene("GameOverScene");
+        }
+        if (_Health >= 100)
+        {
+            _Health = 100;
         }
     }
 
