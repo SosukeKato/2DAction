@@ -5,9 +5,9 @@ using UnityEngine;
 public class FlyerPositionClamp : MonoBehaviour
 {
     [SerializeField]
-    float _minY = 5f;
+    float _minY = 2f;
     [SerializeField]
-    float _maxY = 7f;
+    float _maxY = 5f;
     // Start is called before the first frame update
     void Start()
     {
