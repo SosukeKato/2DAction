@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Floor
   - FlyerBullet
+  - HealItem
   layers:
   - Default
   - TransparentFX
