@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
+    [SerializeField]
+    float _minY = -2f;
+    [SerializeField]
+    float _maxY = 5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +17,10 @@ public class Item : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Vector2 pos = transform.position;
+
+        pos.y = Mathf.Clamp(pos.y, _minY, _maxY);
+
+        transform.position = pos;
     }
 }
