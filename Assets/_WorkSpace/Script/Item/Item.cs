@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(CircleCollider2D))]
+[RequireComponent (typeof(Rigidbody2D))]
 public class Item : MonoBehaviour
 {
     [SerializeField]
@@ -22,5 +24,13 @@ public class Item : MonoBehaviour
         pos.y = Mathf.Clamp(pos.y, _minY, _maxY);
 
         transform.position = pos;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            
+        }
     }
 }
