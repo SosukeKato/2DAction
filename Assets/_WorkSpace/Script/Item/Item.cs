@@ -7,7 +7,7 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     [SerializeField]
-    float _minY = -2f;
+    float _minY = -2.25f;
     [SerializeField]
     float _maxY = 5f;
     // Start is called before the first frame update

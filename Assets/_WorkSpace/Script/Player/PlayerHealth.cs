@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] PlayerHealth health;
+    [SerializeField]
     int _FlyerBulletDamage = 7;
+    [SerializeField]
+    int _ItemHeal = 5;
     [SerializeField]
     public int _Health = 100;
     // Start is called before the first frame update
@@ -33,6 +35,11 @@ public class PlayerHealth : MonoBehaviour
         if(collision.gameObject.CompareTag("FlyerBullet"))
         {
             _Health -= _FlyerBulletDamage;
+            Debug.Log($"{_Health}");
+        }
+        if (collision.gameObject.CompareTag("HealItem"))
+        {
+            _Health += _ItemHeal;
             Debug.Log($"{_Health}");
         }
     }
