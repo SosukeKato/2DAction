@@ -7,7 +7,7 @@ public class EnemyHealth : MonoBehaviour
 {
     bool _Death;
     [SerializeField]
-    public int _Health = 100;
+    int _Health = 100;
     [SerializeField]
     int _MaxHealth = 100;
     // Start is called before the first frame update
