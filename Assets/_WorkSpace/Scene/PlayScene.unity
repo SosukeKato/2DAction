@@ -323,7 +323,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1076123598}
-  - component: {fileID: 1076123599}
   m_Layer: 0
   m_Name: SpawnManager
   m_TagString: Untagged
@@ -350,26 +349,6 @@ Transform:
   - {fileID: 1443606551}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1076123599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1076123597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08734c4738c342445836e8368d259022, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _EnemyPrefab: []
-  _EnemySpawn:
-  - {fileID: 648379602}
-  - {fileID: 537227616}
-  - {fileID: 1598640803}
-  - {fileID: 1443606551}
-  _SpawnInterval: 0
-  _SpawnTimer: 0
 --- !u!1 &1443606550
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,7 +497,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _MoveSpeed: 10
-  _Jump: 10
+  _Jump: 1000
+  _OnFloor: 0
   _InBarrier: 0
   _rb: {fileID: 0}
 --- !u!61 &1471342360

@@ -10,7 +10,7 @@ public class PlayerBaseAction : MonoBehaviour
     float _MoveSpeed;
     [SerializeField]
     float _Jump;
-
+    [SerializeField]
     bool _OnFloor;
     public bool _InBarrier;
     public Rigidbody2D _rb;
@@ -35,7 +35,7 @@ public class PlayerBaseAction : MonoBehaviour
         //’ÊíUŒ‚‚Ìˆ—
         if (Input.GetKeyDown(KeyCode.J))
         {
-
+            _rb.AddForce(velocity * _Jump);
         }
         //ƒK[ƒh‚Ìˆ—
         if (Input.GetKey(KeyCode.K)) 
