@@ -10,6 +10,8 @@ public class EnemyHealth : MonoBehaviour
     int _Health = 100;
     [SerializeField]
     int _MaxHealth = 100;
+    [SerializeField]
+    List<GameObject> _EnemyDropItem; 
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +36,8 @@ public class EnemyHealth : MonoBehaviour
         if (_Death == true)
         {
             Destroy(gameObject);
+            int RandomItemDrop = UnityEngine.Random.Range(0, _EnemyDropItem.Count);
+            Instantiate(_EnemyDropItem[RandomItemDrop], transform.position, Quaternion.identity);
         }
     }
 }
