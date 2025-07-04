@@ -30,12 +30,13 @@ public class PlayerBaseAction : MonoBehaviour
         //ジャンプの処理
         if (_OnFloor == true && Input.GetKeyDown(KeyCode.Space))
         {
+            _rb.AddForce(velocity * _Jump);
             _OnFloor = false;
         }
         //通常攻撃の処理
         if (Input.GetKeyDown(KeyCode.J))
         {
-            _rb.AddForce(velocity * _Jump);
+            
         }
         //ガードの処理
         if (Input.GetKey(KeyCode.K)) 
