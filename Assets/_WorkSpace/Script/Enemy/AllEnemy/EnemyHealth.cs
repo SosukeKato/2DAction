@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Collider2D))]
 public class EnemyHealth : MonoBehaviour
 {
     bool _Death;
@@ -9,6 +10,8 @@ public class EnemyHealth : MonoBehaviour
     int _Health = 100;
     [SerializeField]
     int _MaxHealth = 100;
+    [SerializeField]
+    int _NAttackDamage = 15;
     [SerializeField]
     List<GameObject> _EnemyDropItem; 
     // Start is called before the first frame update
@@ -37,6 +40,14 @@ public class EnemyHealth : MonoBehaviour
             Destroy(gameObject);
             int RandomItemDrop = UnityEngine.Random.Range(0, _EnemyDropItem.Count);
             Instantiate(_EnemyDropItem[RandomItemDrop], transform.position, Quaternion.identity);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("NAttack"))
+        {
+            _Health -= _NAttackDamage;
         }
     }
 }
