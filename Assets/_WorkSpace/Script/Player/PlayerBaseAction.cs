@@ -37,6 +37,7 @@ public class PlayerBaseAction : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.J))
         {
             Instantiate(_NAttack);
+            StartCoroutine("NAttckTime");
         }
         //ÉKÅ[ÉhÇÃèàóù
         if (Input.GetKeyDown(KeyCode.K))
@@ -68,5 +69,11 @@ public class PlayerBaseAction : MonoBehaviour
         yield return new WaitForSeconds(1);
         _InBarrier = false;
         Debug.Log("1ïbÇΩÇ¡ÇΩÇÊ");
+    }
+
+    IEnumerator NAttckTime()
+    {
+        yield return new WaitForSeconds(1);
+        Destroy(_NAttack.gameObject);
     }
 }
