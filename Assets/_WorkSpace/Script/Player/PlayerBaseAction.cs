@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -10,6 +11,8 @@ public class PlayerBaseAction : MonoBehaviour
     float _MoveSpeed;
     [SerializeField]
     float _Jump;
+    [SerializeField]
+    GameObject _NAttack;
     [SerializeField]
     bool _OnFloor;
     public bool _InBarrier;
@@ -33,7 +36,7 @@ public class PlayerBaseAction : MonoBehaviour
         //’ÊíUŒ‚‚Ìˆ—
         if (Input.GetKeyDown(KeyCode.J))
         {
-            
+            Instantiate(_NAttack);
         }
         //ƒK[ƒh‚Ìˆ—
         if (Input.GetKeyDown(KeyCode.K))
