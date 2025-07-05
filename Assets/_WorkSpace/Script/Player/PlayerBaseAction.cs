@@ -44,10 +44,6 @@ public class PlayerBaseAction : MonoBehaviour
             _InBarrier = true;
             StartCoroutine("BarrierTime");
         }
-        else
-        {
-            _InBarrier = false;
-        }
         //‰ñ”ğ‚Ìˆ—
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
