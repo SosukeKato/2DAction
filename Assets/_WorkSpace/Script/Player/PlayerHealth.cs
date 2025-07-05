@@ -10,7 +10,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField]
     int _ItemHeal = 5;
     [SerializeField]
-    public int _Health = 100;
+    public int _PlayerHealth = 100;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,13 +20,13 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(_Health <= 0)
+        if(_PlayerHealth <= 0)
         {
             SceneManager.LoadScene("GameOverScene");
         }
-        if (_Health >= 100)
+        if (_PlayerHealth >= 100)
         {
-            _Health = 100;
+            _PlayerHealth = 100;
         }
     }
 
@@ -34,13 +34,13 @@ public class PlayerHealth : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("FlyerBullet"))
         {
-            _Health -= _FlyerBulletDamage;
-            Debug.Log($"{_Health}");
+            _PlayerHealth -= _FlyerBulletDamage;
+            Debug.Log($"{_PlayerHealth}");
         }
         if (collision.gameObject.CompareTag("HealItem"))
         {
-            _Health += _ItemHeal;
-            Debug.Log($"{_Health}");
+            _PlayerHealth += _ItemHeal;
+            Debug.Log($"{_PlayerHealth}");
         }
     }
 }

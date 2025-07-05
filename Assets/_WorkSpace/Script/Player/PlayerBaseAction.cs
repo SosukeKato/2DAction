@@ -39,9 +39,10 @@ public class PlayerBaseAction : MonoBehaviour
             
         }
         //ÉKÅ[ÉhÇÃèàóù
-        if (Input.GetKey(KeyCode.K)) 
+        if (Input.GetKeyDown(KeyCode.K)) 
         {
             _InBarrier = true;
+            StartCoroutine("BarrierTime");
         }
         else
         {
@@ -60,5 +61,11 @@ public class PlayerBaseAction : MonoBehaviour
         {
             _OnFloor = true;
         }
+    }
+
+    IEnumerator BarrierTime ()
+    {
+        yield return new WaitForSeconds(1);
+        _InBarrier = false ;
     }
 }
