@@ -24,22 +24,20 @@ public class PlayerBaseAction : MonoBehaviour
     void Update()
     {
         //x軸の移動処理
-        float x = Input.GetAxisRaw("Horizontal");
-        Vector2 velocity = new Vector2(x, 0).normalized;
-        _rb.velocity = velocity * _MoveSpeed;
         //ジャンプの処理
         if (_OnFloor == true && Input.GetKeyDown(KeyCode.Space))
         {
-            _rb.AddForce(velocity * _Jump);
+            Debug.Log("Jump");
+            _rb.AddForce(Vector2.up * _Jump, ForceMode2D.Impulse);
             _OnFloor = false;
         }
         //通常攻撃の処理
         if (Input.GetKeyDown(KeyCode.J))
         {
-            
+
         }
         //ガードの処理
-        if (Input.GetKeyDown(KeyCode.K)) 
+        if (Input.GetKeyDown(KeyCode.K))
         {
             _InBarrier = true;
             StartCoroutine("BarrierTime");
@@ -49,6 +47,9 @@ public class PlayerBaseAction : MonoBehaviour
         {
 
         }
+        float x = Input.GetAxisRaw("Horizontal");
+        Vector2 velocity = new Vector2(x * _MoveSpeed, _rb.velocity.y).normalized;
+        _rb.velocity = velocity;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -59,9 +60,9 @@ public class PlayerBaseAction : MonoBehaviour
         }
     }
 
-    IEnumerator BarrierTime ()
+    IEnumerator BarrierTime()
     {
         yield return new WaitForSeconds(1);
-        _InBarrier = false ;
+        _InBarrier = false;
     }
 }

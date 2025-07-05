@@ -497,7 +497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _MoveSpeed: 10
-  _Jump: 1000
+  _Jump: 10
   _OnFloor: 0
   _InBarrier: 0
   _rb: {fileID: 0}
@@ -587,7 +587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _FlyerBulletDamage: 7
   _ItemHeal: 5
-  _Health: 100
+  _PlayerHealth: 100
 --- !u!114 &1471342363
 MonoBehaviour:
   m_ObjectHideFlags: 0
