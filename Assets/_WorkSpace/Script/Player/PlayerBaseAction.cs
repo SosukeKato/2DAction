@@ -33,7 +33,7 @@ public class PlayerBaseAction : MonoBehaviour
         //’ÊíUŒ‚‚Ìˆ—
         if (Input.GetKeyDown(KeyCode.J))
         {
-
+            
         }
         //ƒK[ƒh‚Ìˆ—
         if (Input.GetKeyDown(KeyCode.K))
