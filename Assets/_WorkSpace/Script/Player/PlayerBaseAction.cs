@@ -23,7 +23,6 @@ public class PlayerBaseAction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //x²‚ÌˆÚ“®ˆ—
         //ƒWƒƒƒ“ƒv‚Ìˆ—
         if (_OnFloor == true && Input.GetKeyDown(KeyCode.Space))
         {
@@ -47,6 +46,7 @@ public class PlayerBaseAction : MonoBehaviour
         {
 
         }
+        //x²‚ÌˆÚ“®ˆ—
         float x = Input.GetAxisRaw("Horizontal");
         Vector2 velocity = new Vector2(x * _MoveSpeed, _rb.velocity.y).normalized;
         _rb.velocity = velocity;
@@ -64,5 +64,6 @@ public class PlayerBaseAction : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         _InBarrier = false;
+        Debug.Log("1•b‚½‚Á‚½‚æ");
     }
 }
