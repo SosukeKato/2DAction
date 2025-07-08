@@ -28,14 +28,21 @@ public class PlayerBaseAction : MonoBehaviour
     {
         //x²‚ÌˆÚ“®ˆ—
         float x = Input.GetAxisRaw("Horizontal");
-        Vector2 velocity = new Vector2(x * _MoveSpeed, _rb.velocity.y).normalized;
-        _rb.velocity = velocity;
         //ƒWƒƒƒ“ƒv‚Ìˆ—
         if (_OnGround == true && Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("Jump");
-            _rb.AddForce(Vector2.up * _Jump, ForceMode2D.Impulse);
+            _rb.velocity = new Vector2(_rb.velocity.x, _Jump);
             _OnGround = false;
+        }
+        if (!_OnGround)
+        {
+            float gravity = Time.deltaTime * _rb.gravityScale;
+            _rb.velocity += Vector2.up * gravity;
+        }
+        else
+        {
+            _rb.velocity = Vector2.right * (x * _MoveSpeed);
         }
         //’ÊíUŒ‚‚Ìˆ—
         if (Input.GetKeyDown(KeyCode.J))
