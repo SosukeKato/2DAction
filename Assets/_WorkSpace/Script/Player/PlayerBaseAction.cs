@@ -10,7 +10,7 @@ public class PlayerBaseAction : MonoBehaviour
     [SerializeField]
     float _MoveSpeed;
     [SerializeField]
-    float _Jump;
+    float _JumpPower;
     [SerializeField]
     GameObject _NAttack;
     [SerializeField]
@@ -32,7 +32,7 @@ public class PlayerBaseAction : MonoBehaviour
         if (_OnGround == true && Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("Jump");
-            _rb.velocity = new Vector2(_rb.velocity.x, _Jump);
+            _rb.velocity = new Vector2(_rb.velocity.x, _JumpPower);
             _OnGround = false;
         }
         if (!_OnGround)
@@ -42,7 +42,7 @@ public class PlayerBaseAction : MonoBehaviour
         }
         else
         {
-            _rb.velocity = Vector2.right * (x * _MoveSpeed);
+            _rb.velocity = Vector2.right * (x * _MoveSpeed);    
         }
         //í èÌçUåÇÇÃèàóù
         if (Input.GetKeyDown(KeyCode.J))
@@ -65,7 +65,7 @@ public class PlayerBaseAction : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Floor"))
+        if (collision.gameObject.CompareTag("Ground"))
         {
             _OnGround = true;
         }

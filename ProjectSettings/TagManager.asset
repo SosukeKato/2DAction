@@ -4,10 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Floor
   - FlyerBullet
   - HealItem
   - NAttack
+  - Ground
   layers:
   - Default
   - TransparentFX
