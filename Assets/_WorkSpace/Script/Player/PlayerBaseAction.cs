@@ -14,7 +14,7 @@ public class PlayerBaseAction : MonoBehaviour
     [SerializeField]
     GameObject _NAttack;
     [SerializeField]
-    bool _OnFloor;
+    bool _OnGround;
     public bool _InBarrier;
     public Rigidbody2D _rb;
     // Start is called before the first frame update
@@ -31,11 +31,11 @@ public class PlayerBaseAction : MonoBehaviour
         Vector2 velocity = new Vector2(x * _MoveSpeed, _rb.velocity.y).normalized;
         _rb.velocity = velocity;
         //ÉWÉÉÉìÉvÇÃèàóù
-        if (_OnFloor == true && Input.GetKeyDown(KeyCode.Space))
+        if (_OnGround == true && Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("Jump");
             _rb.AddForce(Vector2.up * _Jump, ForceMode2D.Impulse);
-            _OnFloor = false;
+            _OnGround = false;
         }
         //í èÌçUåÇÇÃèàóù
         if (Input.GetKeyDown(KeyCode.J))
@@ -60,7 +60,7 @@ public class PlayerBaseAction : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Floor"))
         {
-            _OnFloor = true;
+            _OnGround = true;
         }
     }
 
