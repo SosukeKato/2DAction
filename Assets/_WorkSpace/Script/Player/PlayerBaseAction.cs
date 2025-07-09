@@ -41,7 +41,7 @@ public class PlayerBaseAction : MonoBehaviour
         }
         else
         {
-            _rb.velocity = Vector2.right * (x * _MoveSpeed);    
+            _rb.velocity = Vector2.right * (x * _MoveSpeed);
         }
         //’ÊíUŒ‚‚Ìˆ—
         if (Input.GetKeyDown(KeyCode.J))
@@ -58,7 +58,7 @@ public class PlayerBaseAction : MonoBehaviour
         //‰ñ”ğ‚Ìˆ—
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-
+            
         }
     }
 

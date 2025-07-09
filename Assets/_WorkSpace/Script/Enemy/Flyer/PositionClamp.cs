@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlyerPositionClamp : MonoBehaviour
+public class PositionClamp : MonoBehaviour
 {
     public Transform _tr;
     [SerializeField]
