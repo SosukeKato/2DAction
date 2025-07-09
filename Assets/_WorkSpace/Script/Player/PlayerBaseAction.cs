@@ -31,7 +31,6 @@ public class PlayerBaseAction : MonoBehaviour
         //ƒWƒƒƒ“ƒv‚Ìˆ—
         if (_OnGround == true && Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Jump");
             _rb.velocity = new Vector2(_rb.velocity.x, _JumpPower);
             _OnGround = false;
         }
