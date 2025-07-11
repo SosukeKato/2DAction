@@ -6,6 +6,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     bool _Death;
+    bool _OnGround;
     [SerializeField]
     int _Health = 100;
     [SerializeField]
@@ -45,11 +46,28 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Ground"))
+        {
+            _OnGround = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            _OnGround = false;
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("NAttack"))
         {
             _Health -= _NAttackDamage;
+            Debug.Log($"ŒÂ‚Ì“G‚ÌHP‚Í{_Health}‚¶‚á‚æ");
         }
     }
 }
