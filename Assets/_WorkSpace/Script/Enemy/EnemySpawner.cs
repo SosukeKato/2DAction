@@ -9,13 +9,20 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     List<Transform> _EnemySpawn;
     [SerializeField]
+    GameObject _Boss;
+    [SerializeField]
+    Transform _BossSpawn;
+    [SerializeField]
     float _SpawnInterval;
     [SerializeField]
     float _SpawnTimer;
+    [SerializeField]
+    int _BossSpawnCount;
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
-        
+        yield return new WaitForSeconds(_BossSpawnCount);
+        Instantiate(_Boss, _BossSpawn.position, Quaternion.identity);
     }
 
     // Update is called once per frame
