@@ -51,17 +51,6 @@ public class PlayerBaseAction : MonoBehaviour
             Instantiate(_NAttack,_PlayerFront.position,Quaternion.identity);
             StartCoroutine("NAttckTime");
         }
-        //ƒK[ƒh‚Ìˆ—
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            _InBarrier = true;
-            StartCoroutine("BarrierTime");
-        }
-        //‰ñ”ğ‚Ìˆ—
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            
-        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
