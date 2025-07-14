@@ -14,6 +14,8 @@ public class PlayerBaseAction : MonoBehaviour
     [SerializeField]
     GameObject _NAttack;
     [SerializeField]
+    Transform _PlayerFront;
+    [SerializeField]
     bool _OnGround;
     public bool _InBarrier;
     public Rigidbody2D _rb;
@@ -46,7 +48,7 @@ public class PlayerBaseAction : MonoBehaviour
         //’ÊíUŒ‚‚Ìˆ—
         if (Input.GetKeyDown(KeyCode.J))
         {
-            Instantiate(_NAttack);
+            Instantiate(_NAttack,_PlayerFront.position,Quaternion.identity);
             StartCoroutine("NAttckTime");
         }
         //ƒK[ƒh‚Ìˆ—
@@ -80,6 +82,6 @@ public class PlayerBaseAction : MonoBehaviour
     IEnumerator NAttckTime()
     {
         yield return new WaitForSeconds(1);
-        Destroy(_NAttack.gameObject);
+        Destroy(_NAttack);
     }
 }
