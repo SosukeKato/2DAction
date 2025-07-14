@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
@@ -19,10 +20,15 @@ public class PlayerBaseAction : MonoBehaviour
     bool _OnGround;
     int _LeftShiftNumber = 0;
     public Rigidbody2D _rb;
+    public Transform _tr;
+    Vector3 SavePosition = new Vector3();
+
     // Start is called before the first frame update
     void Start()
     {
+        _tr = transform;
         _rb = GetComponent<Rigidbody2D>();
+        SavePosition = _tr.localPosition;
     }
 
     // Update is called once per frame
@@ -55,13 +61,13 @@ public class PlayerBaseAction : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             _LeftShiftNumber += 1;
-            if (_LeftShiftNumber % 2 == 0)
+            if (_LeftShiftNumber % 2 == 1)
             {
-
+                SavePosition = _tr.position; 
             }
-            else if(_LeftShiftNumber % 2 == 1)
+            else if (_LeftShiftNumber % 2 == 0)
             {
-
+                _tr.position = SavePosition;
             }
         }
     }
