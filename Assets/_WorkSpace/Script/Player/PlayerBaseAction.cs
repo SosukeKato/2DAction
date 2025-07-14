@@ -17,7 +17,7 @@ public class PlayerBaseAction : MonoBehaviour
     Transform _PlayerFront;
     [SerializeField]
     bool _OnGround;
-    public bool _InBarrier;
+    int _LeftShiftNumber = 0;
     public Rigidbody2D _rb;
     // Start is called before the first frame update
     void Start()
@@ -51,6 +51,19 @@ public class PlayerBaseAction : MonoBehaviour
             Instantiate(_NAttack,_PlayerFront.position,Quaternion.identity);
             StartCoroutine("NAttckTime");
         }
+        //保存した位置に帰ってくるスキルの処理を追加
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            _LeftShiftNumber += 1;
+            if (_LeftShiftNumber % 2 == 0)
+            {
+
+            }
+            else if(_LeftShiftNumber % 2 == 1)
+            {
+
+            }
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -59,13 +72,6 @@ public class PlayerBaseAction : MonoBehaviour
         {
             _OnGround = true;
         }
-    }
-
-    IEnumerator BarrierTime()
-    {
-        yield return new WaitForSeconds(1);
-        _InBarrier = false;
-        Debug.Log("1秒たったよ");
     }
 
     IEnumerator NAttckTime()
