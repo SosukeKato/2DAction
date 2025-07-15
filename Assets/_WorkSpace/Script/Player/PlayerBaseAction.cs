@@ -15,6 +15,8 @@ public class PlayerBaseAction : MonoBehaviour
     [SerializeField]
     GameObject _NAttack;
     [SerializeField]
+    GameObject _OverHeadAttack;
+    [SerializeField]
     Transform _PlayerFront;
     [SerializeField]
     bool _OnGround;
