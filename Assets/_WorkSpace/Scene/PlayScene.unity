@@ -314,6 +314,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1076123598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &959705784
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 959705785}
+  m_Layer: 0
+  m_Name: PlayerOverHead
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &959705785
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959705784}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1471342357}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1076123597
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,7 +484,7 @@ GameObject:
   - component: {fileID: 1471342363}
   - component: {fileID: 1471342364}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -525,6 +556,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1134924615}
+  - {fileID: 959705785}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1471342359
@@ -542,10 +574,12 @@ MonoBehaviour:
   _MoveSpeed: 5
   _JumpPower: 30
   _NAttack: {fileID: 8748858219866094968, guid: 733fbb5cc691c5b4cbf0cf4caa6c78b0, type: 3}
+  _OverHeadAttack: {fileID: 1761560020596830137, guid: 54431858f8b867b4aabae12d79fcedcf, type: 3}
   _PlayerFront: {fileID: 1134924615}
+  _PlayerOverHead: {fileID: 959705785}
   _OnGround: 0
-  _InBarrier: 0
   _rb: {fileID: 0}
+  _tr: {fileID: 0}
 --- !u!61 &1471342360
 BoxCollider2D:
   m_ObjectHideFlags: 0
