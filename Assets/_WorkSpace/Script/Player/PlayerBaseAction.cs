@@ -70,6 +70,11 @@ public class PlayerBaseAction : MonoBehaviour
                 _tr.position = SavePosition;
             }
         }
+        //“ªã‚ÉUŒ‚‚·‚éƒXƒLƒ‹‚Ìˆ—‚ğ’Ç‰Á
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
