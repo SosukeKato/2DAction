@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8978937300354702462}
   - component: {fileID: 5793538870469217185}
   - component: {fileID: 2213747055382914802}
+  - component: {fileID: 1195352641708346866}
   m_Layer: 0
   m_Name: NAttack
   m_TagString: NAttack
@@ -130,3 +131,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1195352641708346866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8748858219866094968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d73775d1daf2b784a8dbadef228f9e94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _AttackDuration: 0.1
