@@ -19,6 +19,8 @@ public class PlayerBaseAction : MonoBehaviour
     [SerializeField]
     Transform _PlayerFront;
     [SerializeField]
+    Transform _PlayerOverHead;
+    [SerializeField]
     bool _OnGround;
     int _LeftShiftNumber = 0;
     public Rigidbody2D _rb;
@@ -57,7 +59,6 @@ public class PlayerBaseAction : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.J))
         {
             Instantiate(_NAttack,_PlayerFront.position,Quaternion.identity);
-            StartCoroutine("NAttckTime");
         }
         //保存した位置に帰ってくるスキルの処理を追加
         if (Input.GetKeyDown(KeyCode.LeftShift))
@@ -75,7 +76,7 @@ public class PlayerBaseAction : MonoBehaviour
         //頭上に攻撃するスキルの処理を追加
         if (Input.GetKeyDown(KeyCode.I))
         {
-            
+            Instantiate(_OverHeadAttack, _PlayerOverHead.position, Quaternion.identity);
         }
     }
 
@@ -85,11 +86,5 @@ public class PlayerBaseAction : MonoBehaviour
         {
             _OnGround = true;
         }
-    }
-
-    IEnumerator NAttckTime()
-    {
-        yield return new WaitForSeconds(1);
-        Destroy(_NAttack);
     }
 }
