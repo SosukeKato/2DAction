@@ -64,7 +64,7 @@ public class PlayerBaseAction : MonoBehaviour
         {
             Instantiate(_NAttack,_PlayerFront.position,Quaternion.identity);
         }
-        //保存した位置に帰ってくるスキルの処理を追加
+        //保存した位置に帰ってくるスキルの処理
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             _LeftShiftNumber += 1;
@@ -77,10 +77,15 @@ public class PlayerBaseAction : MonoBehaviour
                 _tr.position = SavePosition;
             }
         }
-        //頭上に攻撃するスキルの処理を追加
+        //頭上に攻撃するスキルの処理
         if (Input.GetKeyDown(KeyCode.I))
         {
             Instantiate(_OverHeadAttack, _PlayerOverHead.position, Quaternion.identity);
+        }
+        //頭上にEnemyを打ち上げるスキルの処理
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            Instantiate(_UpperImpulseAttack, _PlayerFoot.position, Quaternion.identity);
         }
     }
 
