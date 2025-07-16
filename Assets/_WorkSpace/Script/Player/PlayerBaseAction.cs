@@ -17,9 +17,13 @@ public class PlayerBaseAction : MonoBehaviour
     [SerializeField]
     GameObject _OverHeadAttack;
     [SerializeField]
+    GameObject _UpperImpulseAttack;
+    [SerializeField]
     Transform _PlayerFront;
     [SerializeField]
     Transform _PlayerOverHead;
+    [SerializeField]
+    Transform _PlayerFoot;
     [SerializeField]
     bool _OnGround;
     int _LeftShiftNumber = 0;

@@ -481,7 +481,6 @@ GameObject:
   - component: {fileID: 1471342360}
   - component: {fileID: 1471342359}
   - component: {fileID: 1471342362}
-  - component: {fileID: 1471342363}
   - component: {fileID: 1471342364}
   m_Layer: 0
   m_Name: Player
@@ -667,18 +666,6 @@ MonoBehaviour:
   _FlyerBulletDamage: 7
   _ItemHeal: 5
   _PlayerHealth: 100
---- !u!114 &1471342363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1471342353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24ee8767c8c12314cbdec04feab17851, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1471342364
 MonoBehaviour:
   m_ObjectHideFlags: 0
