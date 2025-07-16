@@ -44,13 +44,13 @@ public class EnemyHealth : MonoBehaviour
             int RandomItemDrop = UnityEngine.Random.Range(0, _EnemyDropItem.Count);
             Instantiate(_EnemyDropItem[RandomItemDrop], transform.position, Quaternion.identity);
         }
-        if (_OnGround == false)
+        if (_OnGround == true)
         {
-            _NAttackDamage *= _AirEnemyDefenseDebuff;
+            _AirEnemyDefenseDebuff = 1;
         }
         else
         {
-            _NAttackDamage /= _AirEnemyDefenseDebuff;
+            _AirEnemyDefenseDebuff = 2;
         }
     }
 
@@ -74,7 +74,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("NAttack"))
         {
-            _Health -= _NAttackDamage;
+            _Health -= _NAttackDamage * _AirEnemyDefenseDebuff;
             Debug.Log($"‚±‚Ì“G‚ÌHP‚Í{_Health}‚¶‚á‚æ");
         }
     }
