@@ -9,6 +9,7 @@ TagManager:
   - NAttack
   - Ground
   - OverHeadAttack
+  - UpperImpulse
   layers:
   - Default
   - TransparentFX
