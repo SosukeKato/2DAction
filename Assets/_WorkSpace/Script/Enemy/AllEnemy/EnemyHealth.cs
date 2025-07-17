@@ -14,6 +14,8 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField]
     int _NAttackDamage = 15;
     [SerializeField]
+    int _OverHeadAttackDamage = 30;
+    [SerializeField]
     int _AirEnemyDefenseDebuff = 2;
     [SerializeField]
     List<GameObject> _EnemyDropItem = null; 
@@ -75,6 +77,11 @@ public class EnemyHealth : MonoBehaviour
         if(collision.gameObject.CompareTag("NAttack"))
         {
             _Health -= _NAttackDamage * _AirEnemyDefenseDebuff;
+            Debug.Log($"‚±‚Ì“G‚ÌHP‚Í{_Health}‚¶‚á‚æ");
+        }
+        if (collision.gameObject.CompareTag("OverHeadAttack"))
+        {
+            _Health -= _OverHeadAttackDamage * _AirEnemyDefenseDebuff;
             Debug.Log($"‚±‚Ì“G‚ÌHP‚Í{_Health}‚¶‚á‚æ");
         }
     }
