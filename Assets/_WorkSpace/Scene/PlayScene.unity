@@ -436,6 +436,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1471342357}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1139544826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1139544827}
+  m_Layer: 0
+  m_Name: PlayerFoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1139544827
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139544826}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1471342357}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1443606550
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,6 +587,7 @@ Transform:
   m_Children:
   - {fileID: 1134924615}
   - {fileID: 959705785}
+  - {fileID: 1139544827}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1471342359
@@ -574,8 +606,10 @@ MonoBehaviour:
   _JumpPower: 30
   _NAttack: {fileID: 8748858219866094968, guid: 733fbb5cc691c5b4cbf0cf4caa6c78b0, type: 3}
   _OverHeadAttack: {fileID: 1761560020596830137, guid: 54431858f8b867b4aabae12d79fcedcf, type: 3}
+  _UpperImpulse: {fileID: 0}
   _PlayerFront: {fileID: 1134924615}
   _PlayerOverHead: {fileID: 959705785}
+  _PlayerFoot: {fileID: 0}
   _OnGround: 0
   _rb: {fileID: 0}
   _tr: {fileID: 0}

@@ -17,7 +17,7 @@ public class PlayerBaseAction : MonoBehaviour
     [SerializeField]
     GameObject _OverHeadAttack;
     [SerializeField]
-    GameObject _UpperImpulseAttack;
+    GameObject _UpperImpulse;
     [SerializeField]
     Transform _PlayerFront;
     [SerializeField]
@@ -85,7 +85,7 @@ public class PlayerBaseAction : MonoBehaviour
         //“ªã‚ÉEnemy‚ğ‘Å‚¿ã‚°‚éƒXƒLƒ‹‚Ìˆ—
         if (Input.GetKeyDown(KeyCode.M))
         {
-            Instantiate(_UpperImpulseAttack, _PlayerFoot.position, Quaternion.identity);
+            Instantiate(_UpperImpulse, _PlayerFoot.position, Quaternion.identity);
         }
     }
 
