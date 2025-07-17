@@ -84,5 +84,9 @@ public class EnemyHealth : MonoBehaviour
             _Health -= _OverHeadAttackDamage * _AirEnemyDefenseDebuff;
             Debug.Log($"‚±‚Ì“G‚ÌHP‚Í{_Health}‚¶‚á‚æ");
         }
+        if (collision.gameObject.CompareTag("UpperImpulse"))
+        {
+
+        }
     }
 }

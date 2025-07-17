@@ -8,6 +8,7 @@ TagManager:
   - HealItem
   - NAttack
   - Ground
+  - OverHeadAttack
   layers:
   - Default
   - TransparentFX
