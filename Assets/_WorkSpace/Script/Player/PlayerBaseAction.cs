@@ -78,7 +78,7 @@ public class PlayerBaseAction : MonoBehaviour
             }
         }
         //“ªã‚ÉUŒ‚‚·‚éƒXƒLƒ‹‚Ìˆ—
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.I) && _OnGround == true)
         {
             Instantiate(_OverHeadAttack, _PlayerOverHead.position, Quaternion.identity);
         }
