@@ -19,13 +19,7 @@ public class EnemyHealth : MonoBehaviour
     int _AirEnemyDefenseDebuff = 2;
     [SerializeField]
     List<GameObject> _EnemyDropItem = null; 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         if (_Health <= 0)
