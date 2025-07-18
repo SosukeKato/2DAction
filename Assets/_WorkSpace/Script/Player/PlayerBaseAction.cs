@@ -29,6 +29,10 @@ public class PlayerBaseAction : MonoBehaviour
     [SerializeField]
     int _UpperImpulseCT;
     [SerializeField]
+    bool _OverHeadAttackStartCT;
+    [SerializeField]
+    bool _UpperImpulseStartCT;
+    [SerializeField]
     bool _OnGround;
     int _LeftShiftNumber = 0;
     public Rigidbody2D _rb;
@@ -82,16 +86,18 @@ public class PlayerBaseAction : MonoBehaviour
             }
         }
         //頭上に攻撃するスキルの処理
-        if (Input.GetKeyDown(KeyCode.I) && _OnGround == true)
+        if (Input.GetKeyDown(KeyCode.I) && _OnGround == true && _OverHeadAttackStartCT == false)
         {
             Instantiate(_OverHeadAttack, _PlayerOverHead.position, Quaternion.identity);
+            _OverHeadAttackStartCT = true;
             StartCoroutine("OverHeadAttackSkillCT");
         }
         //頭上にEnemyを打ち上げるスキルの処理
-        if (Input.GetKeyDown(KeyCode.M) && _OnGround == true)
+        if (Input.GetKeyDown(KeyCode.M) && _OnGround == true && _UpperImpulseStartCT == false)
         {
             Instantiate(_UpperImpulse, _PlayerFoot.position, Quaternion.identity);
-            StartCoroutine("_UpperImpulseSkillCT");
+            _UpperImpulseStartCT = true;
+            StartCoroutine("UpperImpulseSkillCT");
         }
     }
 
@@ -102,4 +108,18 @@ public class PlayerBaseAction : MonoBehaviour
             _OnGround = true;
         }
     }
+
+    #region スキルのCT処理
+    IEnumerator OverHeadAttackSkillCT()
+    {
+        yield return new WaitForSeconds(_OverHeadAttackCT);
+        _OverHeadAttackStartCT = false;
+    }
+
+    IEnumerator UpperImpulseSkillCT()
+    {
+        yield return new WaitForSeconds(_UpperImpulseCT);
+        _UpperImpulseStartCT = false;
+    }
+    #endregion
 }
