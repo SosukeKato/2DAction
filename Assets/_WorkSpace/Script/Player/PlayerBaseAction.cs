@@ -25,6 +25,10 @@ public class PlayerBaseAction : MonoBehaviour
     [SerializeField]
     Transform _PlayerFoot;
     [SerializeField]
+    int _OverHeadAttackCT;
+    [SerializeField]
+    int _UpperImpulseCT;
+    [SerializeField]
     bool _OnGround;
     int _LeftShiftNumber = 0;
     public Rigidbody2D _rb;
@@ -81,11 +85,13 @@ public class PlayerBaseAction : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I) && _OnGround == true)
         {
             Instantiate(_OverHeadAttack, _PlayerOverHead.position, Quaternion.identity);
+            StartCoroutine("OverHeadAttackSkillCT");
         }
         //“ªã‚ÉEnemy‚ğ‘Å‚¿ã‚°‚éƒXƒLƒ‹‚Ìˆ—
         if (Input.GetKeyDown(KeyCode.M) && _OnGround == true)
         {
             Instantiate(_UpperImpulse, _PlayerFoot.position, Quaternion.identity);
+            StartCoroutine("_UpperImpulseSkillCT");
         }
     }
 
