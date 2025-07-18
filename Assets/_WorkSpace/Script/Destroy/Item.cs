@@ -10,13 +10,7 @@ public class Item : MonoBehaviour
     float _minY = -2.25f;
     [SerializeField]
     float _maxY = 5f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         Vector2 pos = transform.position;
