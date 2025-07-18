@@ -11,13 +11,7 @@ public class PlayerHealth : MonoBehaviour
     int _ItemHeal = 5;
     [SerializeField]
     int _PlayerHealth = 100;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         if(_PlayerHealth <= 0)
