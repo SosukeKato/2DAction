@@ -379,6 +379,7 @@ Transform:
   - {fileID: 537227616}
   - {fileID: 1598640803}
   - {fileID: 1443606551}
+  - {fileID: 1077634518}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1076123599
@@ -401,10 +402,41 @@ MonoBehaviour:
   - {fileID: 1598640803}
   - {fileID: 1443606551}
   _Boss: {fileID: 3120624529214524670, guid: 4ae1c4d2793d8f5498405e7e00300250, type: 3}
-  _BossSpawn: {fileID: 0}
+  _BossSpawn: {fileID: 1077634518}
   _SpawnInterval: 10
   _SpawnTimer: 10
   _BossSpawnCount: 180
+--- !u!1 &1077634517
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1077634518}
+  m_Layer: 0
+  m_Name: BossSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1077634518
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077634517}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1076123598}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1134924614
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,6 +642,10 @@ MonoBehaviour:
   _PlayerFront: {fileID: 1134924615}
   _PlayerOverHead: {fileID: 959705785}
   _PlayerFoot: {fileID: 1139544827}
+  _OverHeadAttackCT: 0
+  _UpperImpulseCT: 0
+  _OverHeadAttackStartCT: 0
+  _UpperImpulseStartCT: 0
   _OnGround: 0
   _rb: {fileID: 0}
   _tr: {fileID: 0}
