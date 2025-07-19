@@ -9,15 +9,16 @@ public class EnemyAI : MonoBehaviour
     float _MoveSpeed = 3f;
 
     Transform _Player;
+    Rigidbody2D _rb;
     // Start is called before the first frame update
     void Start()
     {
+        _rb = GetComponent<Rigidbody2D>();
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj == null)
         {
             throw new NullReferenceException("playerObj is null");
         }
-
         _Player = playerObj.transform;
     }
 
@@ -39,6 +40,14 @@ public class EnemyAI : MonoBehaviour
         if (_PlayerX - _EnemyX < 0)
         {
             transform.localScale = new Vector3(1, 1, 1);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+
         }
     }
 }

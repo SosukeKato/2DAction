@@ -151,6 +151,7 @@ MonoBehaviour:
   _Health: 100
   _MaxHealth: 100
   _NAttackDamage: 15
+  _OverHeadAttackDamage: 30
   _AirEnemyDefenseDebuff: 2
   _EnemyDropItem:
   - {fileID: 7556764341943390721, guid: 4700b9d9a10c3d74bbbfcd864d5436bf, type: 3}
