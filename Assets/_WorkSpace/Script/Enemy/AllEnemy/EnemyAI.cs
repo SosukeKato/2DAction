@@ -9,11 +9,15 @@ public class EnemyAI : MonoBehaviour
     float _MoveSpeed = 3f;
 
     Transform _Player;
+
+    Transform _tr;
     Rigidbody2D _rb;
     // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _tr = transform;
+
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj == null)
         {
