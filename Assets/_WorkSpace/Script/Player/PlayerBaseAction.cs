@@ -52,6 +52,15 @@ public class PlayerBaseAction : MonoBehaviour
     {
         //x軸の移動処理
         float x = Input.GetAxisRaw("Horizontal");
+        //Playerの見た目を進行方向にあわせて回転させる処理
+        if (x < 0)
+        {
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+        else if (x > 0)
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        }
         //ジャンプの処理
         if (_OnGround == true && Input.GetKeyDown(KeyCode.Space))
         {
