@@ -232,4 +232,4 @@ MonoBehaviour:
   _OverHeadAttackDamage: 30
   _AirEnemyDefenseDebuff: 2
   _EnemyDropItem:
-  - {fileID: 7556764341943390721, guid: 4700b9d9a10c3d74bbbfcd864d5436bf, type: 3}
+  - {fileID: 3729811217784919095, guid: d81b87c471d14f44987f78d29c6ccb7f, type: 3}
