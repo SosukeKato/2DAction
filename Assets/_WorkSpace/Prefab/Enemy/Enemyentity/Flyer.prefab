@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _MoveSpeed: 3
+  _PlayerScale: 3
 --- !u!58 &1663996501872567046
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -220,4 +221,5 @@ MonoBehaviour:
   _NAttackDamage: 15
   _OverHeadAttackDamage: 30
   _AirEnemyDefenseDebuff: 2
-  _EnemyDropItem: []
+  _EnemyDropItem:
+  - {fileID: 7556764341943390721, guid: 4700b9d9a10c3d74bbbfcd864d5436bf, type: 3}

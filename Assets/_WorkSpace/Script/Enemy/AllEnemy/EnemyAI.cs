@@ -7,6 +7,8 @@ public class EnemyAI : MonoBehaviour
 {
     [SerializeField]
     float _MoveSpeed = 3f;
+    [SerializeField]
+    int _PlayerScale = 3;
 
     Transform _Player;
 
@@ -39,11 +41,11 @@ public class EnemyAI : MonoBehaviour
 
         if (_PlayerX - _EnemyX > 0)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            _tr.localScale = new Vector3(_PlayerScale, _PlayerScale, 1);
         }
         if (_PlayerX - _EnemyX < 0)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            _tr.localScale = new Vector3(-_PlayerScale, _PlayerScale, 1);
         }
     }
 
