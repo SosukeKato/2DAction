@@ -424,7 +424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _EnemyPrefab:
-  - {fileID: 4895572998334754561, guid: fa12a98254af95f488bf27c276a22f06, type: 3}
+  - {fileID: 814354398583130970, guid: 4120eb8fa2f10d34b8a64deada02d2bb, type: 3}
   _EnemySpawn:
   - {fileID: 648379602}
   - {fileID: 1598640803}
@@ -547,7 +547,7 @@ Transform:
   m_GameObject: {fileID: 1513151837}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.6, z: 0}
+  m_LocalPosition: {x: -0.0642, y: -1.6856, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
