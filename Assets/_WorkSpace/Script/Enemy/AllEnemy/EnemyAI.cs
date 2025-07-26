@@ -32,7 +32,7 @@ public class EnemyAI : MonoBehaviour
     void Update()
     {
         float _PlayerX = _Player.position.x;
-        float _EnemyX = transform.localPosition.x;
+        float _EnemyX = transform.position.x;
 
         if (_Player == null) return;
 
