@@ -6,12 +6,14 @@ using UnityEngine;
 [RequireComponent (typeof(EnemyHealth))]
 [RequireComponent (typeof(Rigidbody2D))]
 [RequireComponent (typeof(Collider2D))]
-public class FlyerAttack : MonoBehaviour
+public class EnemyAttack : MonoBehaviour
 {
     [SerializeField]
-    GameObject _flyerAttack;
+    GameObject _enemyAttack;
     [SerializeField]
-    Transform _flyer;
+    Transform _enemy;
+
+    float _flyerAttackDuration;
     // Start is called before the first frame update
     void Start()
     {
