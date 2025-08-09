@@ -13,6 +13,7 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField]
     Transform _enemy;
 
+    GameObject _enemyAttackObject;
     float _flyerAttackDuration;
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,7 @@ public class EnemyAttack : MonoBehaviour
         _flyerAttackDuration += Time.deltaTime;
         if (_flyerAttackDuration >= 10)
         {
-            Instantiate(_enemyAttack, _enemy.position, Quaternion.identity);
+            _enemyAttackObject = Instantiate(_enemyAttack, _enemy.position, Quaternion.identity);
         }
     }
 }
