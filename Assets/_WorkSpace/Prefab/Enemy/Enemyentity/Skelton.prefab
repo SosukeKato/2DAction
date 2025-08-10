@@ -156,7 +156,8 @@ MonoBehaviour:
   _NAttackDamage: 15
   _OverHeadAttackDamage: 30
   _AirEnemyDefenseDebuff: 2
-  _EnemyDropItem: []
+  _EnemyDropItem:
+  - {fileID: 3729811217784919095, guid: d81b87c471d14f44987f78d29c6ccb7f, type: 3}
 --- !u!50 &-8902353173545676690
 Rigidbody2D:
   serializedVersion: 4
