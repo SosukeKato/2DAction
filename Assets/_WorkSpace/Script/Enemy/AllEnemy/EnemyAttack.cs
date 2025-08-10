@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent (typeof(EnemyHealth))]
 [RequireComponent (typeof(Rigidbody2D))]
 [RequireComponent (typeof(Collider2D))]
+[RequireComponent (typeof(PositionClamp))]
 public class EnemyAttack : MonoBehaviour
 {
     [SerializeField]
