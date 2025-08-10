@@ -15,13 +15,6 @@ public class EnemyAttack : MonoBehaviour
 
     GameObject _enemyAttackObject;
     float _enemyAttackInterval;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         _enemyAttackInterval += Time.deltaTime;
