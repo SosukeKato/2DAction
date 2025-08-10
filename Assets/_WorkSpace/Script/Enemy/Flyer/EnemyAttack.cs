@@ -14,7 +14,7 @@ public class EnemyAttack : MonoBehaviour
     Transform _enemy;
 
     GameObject _enemyAttackObject;
-    float _flyerAttackDuration;
+    float _enemyAttackInterval;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,8 +24,8 @@ public class EnemyAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _flyerAttackDuration += Time.deltaTime;
-        if (_flyerAttackDuration >= 10)
+        _enemyAttackInterval += Time.deltaTime;
+        if (_enemyAttackInterval >= 10)
         {
             _enemyAttackObject = Instantiate(_enemyAttack, _enemy.position, Quaternion.identity);
         }
