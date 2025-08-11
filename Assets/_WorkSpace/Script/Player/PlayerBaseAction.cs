@@ -35,8 +35,8 @@ public class PlayerBaseAction : MonoBehaviour
     [SerializeField]
     bool _OnGround;
     int _LeftShiftNumber = 0;
-    public Rigidbody2D _rb;
-    public Transform _tr;
+    Rigidbody2D _rb;
+    Transform _tr;
     Vector3 SavePosition = new Vector3();
 
     // Start is called before the first frame update

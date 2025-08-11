@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PositionClamp : MonoBehaviour
 {
-    public Transform _tr;
+    Transform _tr;
     [SerializeField]
     float _minY = 2f;
     [SerializeField]
