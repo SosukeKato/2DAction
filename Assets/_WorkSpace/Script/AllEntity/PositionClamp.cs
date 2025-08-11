@@ -13,13 +13,12 @@ public class PositionClamp : MonoBehaviour
     float _minX = -11f;
     [SerializeField]
     float _maxX = 11f;
-    // Start is called before the first frame update
+
     void Start()
     {
         _tr = transform;
     }
 
-    // Update is called once per frame
     void Update()
     {
         Vector2 pos = transform.position;
