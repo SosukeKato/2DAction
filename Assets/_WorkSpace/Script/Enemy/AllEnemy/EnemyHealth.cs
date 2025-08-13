@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
+    EnemyAI _EAI;
+    Rigidbody2D _rb;
     bool _Death;
     bool _OnGround;
     [SerializeField]
@@ -17,7 +19,15 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField]
     int _AirEnemyDefenseDebuff = 2;
     [SerializeField]
-    List<GameObject> _EnemyDropItem = null; 
+    float _JumpPower = 30;
+    [SerializeField]
+    List<GameObject> _EnemyDropItem = null;
+
+    void Start()
+    {
+        _rb = GetComponent<Rigidbody2D>();
+        _EAI = GetComponent<EnemyAI>();
+    }
 
     void Update()
     {
@@ -79,7 +89,20 @@ public class EnemyHealth : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("UpperImpulse"))
         {
-
+            if (_OnGround == true)
+            {
+                _rb.velocity = new Vector2(_rb.velocity.x, _JumpPower);
+                _OnGround = false;
+            }
+            if (!_OnGround)
+            {
+                float gravity = Time.deltaTime * _rb.gravityScale;
+                _rb.velocity += Vector2.up * gravity;
+            }
+            else
+            {
+                _rb.velocity = Vector2.right * (_EAI._MoveSpeed);
+            }
         }
     }
 }

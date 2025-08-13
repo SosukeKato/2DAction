@@ -6,7 +6,7 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     [SerializeField]
-    float _MoveSpeed = 3f;
+    public float _MoveSpeed = 3f;
     [SerializeField]
     int _PlayerScale = 3;
 
