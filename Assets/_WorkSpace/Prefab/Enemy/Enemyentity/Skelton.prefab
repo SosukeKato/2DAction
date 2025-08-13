@@ -156,6 +156,7 @@ MonoBehaviour:
   _NAttackDamage: 15
   _OverHeadAttackDamage: 30
   _AirEnemyDefenseDebuff: 2
+  _JumpPower: 30
   _EnemyDropItem:
   - {fileID: 3729811217784919095, guid: d81b87c471d14f44987f78d29c6ccb7f, type: 3}
 --- !u!50 &-8902353173545676690
@@ -173,7 +174,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 10
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 9.8
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -184,7 +185,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &-20202556550654202
 MonoBehaviour:
   m_ObjectHideFlags: 0
