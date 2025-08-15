@@ -51,11 +51,11 @@ public class PlayerBaseAction : MonoBehaviour
         //Playerの見た目を進行方向にあわせて回転させる処理
         if (x < 0)
         {
-            transform.eulerAngles = new Vector3(0, 180, 0);
+            _tr.eulerAngles = new Vector3(0, 180, 0);
         }
         else if (x > 0)
         {
-            transform.eulerAngles = new Vector3(0, 0, 0);
+            _tr.eulerAngles = new Vector3(0, 0, 0);
         }
         //ジャンプの処理
         if (_OnGround == true && Input.GetKeyDown(KeyCode.Space))
@@ -76,6 +76,11 @@ public class PlayerBaseAction : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.J))
         {
             Instantiate(_NAttack,_PlayerFront.position,Quaternion.identity);
+        }
+        //
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+
         }
         //頭上に攻撃するスキルの処理
         if (Input.GetKeyDown(KeyCode.I) && _OnGround == true && _OverHeadAttackStartCT == false)
