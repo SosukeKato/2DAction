@@ -34,17 +34,13 @@ public class PlayerBaseAction : MonoBehaviour
     bool _UpperImpulseStartCT;
     [SerializeField]
     bool _OnGround;
-    int _LeftShiftNumber = 0;
     Rigidbody2D _rb;
     Transform _tr;
-    Vector3 SavePosition = new Vector3();
-
     // Start is called before the first frame update
     void Start()
     {
         _tr = transform;
         _rb = GetComponent<Rigidbody2D>();
-        SavePosition = _tr.localPosition;
     }
 
     // Update is called once per frame
