@@ -81,19 +81,6 @@ public class PlayerBaseAction : MonoBehaviour
         {
             Instantiate(_NAttack,_PlayerFront.position,Quaternion.identity);
         }
-        //保存した位置に帰ってくるスキルの処理
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            _LeftShiftNumber += 1;
-            if (_LeftShiftNumber % 2 == 1)
-            {
-                SavePosition = _tr.position; 
-            }
-            else if (_LeftShiftNumber % 2 == 0)
-            {
-                _tr.position = SavePosition;
-            }
-        }
         //頭上に攻撃するスキルの処理
         if (Input.GetKeyDown(KeyCode.I) && _OnGround == true && _OverHeadAttackStartCT == false)
         {
