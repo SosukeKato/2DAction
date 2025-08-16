@@ -36,8 +36,8 @@ public class EnemyAI : MonoBehaviour
 
         if (_Player == null) return;
 
-        Vector2 direction = (_Player.position - transform.position).normalized;
-        transform.position += (Vector3)(direction * _MoveSpeed * Time.deltaTime);
+        Vector2 direction = (_Player.position - transform.position).normalized;//‚±‚±—vC³
+        transform.position += (Vector3)(direction * _MoveSpeed * Time.deltaTime);//‚±‚±—vC³
 
         if (_PlayerX - _EnemyX > 0)
         {
