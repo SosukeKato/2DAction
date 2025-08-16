@@ -13,6 +13,12 @@ public class PlayerBaseAction : MonoBehaviour
     [SerializeField]
     float _JumpPower;
     [SerializeField]
+    Transform _playerMuzzle;
+    [SerializeField]
+    GameObject _playerBullet;
+    [SerializeField]
+    int _bulletSpeed;
+    [SerializeField]
     GameObject _NAttack;
     [SerializeField]
     GameObject _OverHeadAttack;
@@ -34,6 +40,7 @@ public class PlayerBaseAction : MonoBehaviour
     bool _UpperImpulseStartCT;
     [SerializeField]
     bool _OnGround;
+    GameObject _bulletAttack;
     Rigidbody2D _rb;
     Transform _tr;
     // Start is called before the first frame update
@@ -80,7 +87,8 @@ public class PlayerBaseAction : MonoBehaviour
         //
         if (Input.GetKeyDown(KeyCode.L))
         {
-
+            _bulletAttack = Instantiate(_playerBullet, _playerMuzzle.position, Quaternion.identity);
+            _bulletAttack.GetComponent<Rigidbody>().AddForce(_playerMuzzle.forward * _bulletSpeed);
         }
         //ì™è„Ç…çUåÇÇ∑ÇÈÉXÉLÉãÇÃèàóù
         if (Input.GetKeyDown(KeyCode.I) && _OnGround == true && _OverHeadAttackStartCT == false)
