@@ -84,7 +84,7 @@ public class PlayerBaseAction : MonoBehaviour
         {
             Instantiate(_NAttack,_PlayerFront.position,Quaternion.identity);
         }
-        //
+        //Bullet‚ğ‘Å‚¿o‚·ƒXƒLƒ‹‚Ìˆ—
         if (Input.GetKeyDown(KeyCode.L))
         {
             _bulletAttack = Instantiate(_playerBullet, _playerMuzzle.position, Quaternion.identity);
