@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/_WorkSpace/IgnoreAsset/Item/Porforever/Demo/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/_WorkSpace/Scene/TitleScene.unity
+    guid: e0ecfca8e03cd2944a9f3daf81c5fdcc
   - enabled: 1
     path: Assets/_WorkSpace/Scene/PlayScene.unity
     guid: 52dccacf201452f4aa3ce4aa1fdff06d
   - enabled: 1
-    path: Assets/_WorkSpace/Scene/GameOverScene.unity
-    guid: 0e7cc63e89fc8cd44bc240de61eeeeed
+    path: Assets/_WorkSpace/Scene/GameClearScene.unity
+    guid: 2dc56db40155d2b47911067c4a06b70d
   m_configObjects: {}
