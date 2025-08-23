@@ -24,7 +24,7 @@ public class SceneChanger : MonoBehaviour
         {
             if (Input.anyKeyDown)
             {
-                SceneManager.LoadScene("PlayScene");
+                SceneManager.LoadScene("TutorialScene");
             }
         }
     }
