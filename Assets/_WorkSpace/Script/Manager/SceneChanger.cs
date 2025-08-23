@@ -35,5 +35,10 @@ public class SceneChanger : MonoBehaviour
                 SceneManager.LoadScene("PlayScene");
             }
         }
+
+        if (SceneManager.GetActiveScene().name == "PlayScene")
+        {
+            
+        }
     }
 }
