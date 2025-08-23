@@ -27,5 +27,13 @@ public class SceneChanger : MonoBehaviour
                 SceneManager.LoadScene("TutorialScene");
             }
         }
+
+        if (SceneManager.GetActiveScene().name == "TutorialScene")
+        {
+            if (Input.anyKeyDown)
+            {
+                SceneManager.LoadScene("PlayScene");
+            }
+        }
     }
 }
