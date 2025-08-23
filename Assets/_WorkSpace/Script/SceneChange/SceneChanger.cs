@@ -17,4 +17,15 @@ public class SceneChanger : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    void Update()
+    {
+        if (SceneManager.GetActiveScene().name == "TitleScene")
+        {
+            if (Input.anyKeyDown)
+            {
+                SceneManager.LoadScene("PlayScene");
+            }
+        }
+    }
 }
