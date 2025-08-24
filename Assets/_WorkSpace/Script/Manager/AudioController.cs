@@ -28,5 +28,10 @@ public class AudioController : MonoBehaviour
         {
 
         }
+
+        if (SceneManager.GetActiveScene().name == "PlayScene")
+        {
+
+        }
     }
 }
