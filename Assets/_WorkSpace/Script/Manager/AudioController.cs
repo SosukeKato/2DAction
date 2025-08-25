@@ -29,7 +29,17 @@ public class AudioController : MonoBehaviour
 
         }
 
+        if (SceneManager.GetActiveScene().name == "TutorialScene")
+        {
+
+        }
+
         if (SceneManager.GetActiveScene().name == "PlayScene")
+        {
+
+        }
+
+        if (SceneManager.GetActiveScene().name == "GameClearScene")
         {
 
         }
