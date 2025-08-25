@@ -40,5 +40,13 @@ public class SceneChanger : MonoBehaviour
         {
             
         }
+
+        if (SceneManager.GetActiveScene().name == "GameClearscene")
+        {
+            if (Input.anyKeyDown)
+            {
+                SceneManager.LoadScene("TitleScene");
+            }
+        }
     }
 }
