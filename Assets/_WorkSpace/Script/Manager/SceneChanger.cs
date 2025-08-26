@@ -38,7 +38,10 @@ public class SceneChanger : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "PlayScene")
         {
-            
+            if (GetComponent<PlayerHealth>()._death == true)
+            {
+                SceneManager.LoadScene("GameOverScene");
+            }
         }
 
         if (SceneManager.GetActiveScene().name == "GameClearscene")

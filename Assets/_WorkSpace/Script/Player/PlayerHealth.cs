@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    bool _death;
+    public bool _death;
     [SerializeField]
     int _flyerBulletDamage = 7;
     [SerializeField]
