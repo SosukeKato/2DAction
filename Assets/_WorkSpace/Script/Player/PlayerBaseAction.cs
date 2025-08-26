@@ -84,12 +84,6 @@ public class PlayerBaseAction : MonoBehaviour
         {
             Instantiate(_NAttack,_PlayerFront.position,Quaternion.identity);
         }
-        //Bulletを打ち出すスキルの処理
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            _bulletAttack = Instantiate(_playerBullet, _playerMuzzle.position, Quaternion.identity);
-            _bulletAttack.GetComponent<Rigidbody>().AddForce(_playerMuzzle.forward * _bulletSpeed);
-        }
         //頭上に攻撃するスキルの処理
         if (Input.GetKeyDown(KeyCode.I) && _OnGround == true && _OverHeadAttackStartCT == false)
         {
