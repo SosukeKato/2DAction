@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -16,11 +17,19 @@ public class GameController : MonoBehaviour
     void Update()
     {
         #region Timer‚Ìˆ—
-        _sec += Time.deltaTime;
-        if (_sec >= 60 )
+        if (SceneManager.GetActiveScene().name == "PlayScene")
+        {
+            _sec += Time.deltaTime;
+            if (_sec >= 60)
+            {
+                _sec = 0;
+                _min++;
+            }
+        }
+        if (SceneManager.GetActiveScene().name == "GameClearScene" || SceneManager.GetActiveScene().name == "GameOverScene")
         {
             _sec = 0;
-            _min++;
+            _min = 0;
         }
         #endregion
     }
