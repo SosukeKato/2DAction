@@ -20,6 +20,7 @@ public class SceneChanger : MonoBehaviour
 
     void Update()
     {
+        #region TitleScene‚É‚¢‚é‚Æ‚«‚Ìˆ—
         if (SceneManager.GetActiveScene().name == "TitleScene")
         {
             if (Input.anyKeyDown)
@@ -27,7 +28,9 @@ public class SceneChanger : MonoBehaviour
                 SceneManager.LoadScene("TutorialScene");
             }
         }
+        #endregion
 
+        #region TutorialScene‚É‚¢‚é‚Æ‚«‚Ìˆ—
         if (SceneManager.GetActiveScene().name == "TutorialScene")
         {
             if (Input.anyKeyDown)
@@ -35,15 +38,23 @@ public class SceneChanger : MonoBehaviour
                 SceneManager.LoadScene("PlayScene");
             }
         }
+        #endregion
 
+        #region PlayScene‚É‚¢‚é‚Æ‚«‚Ìˆ—
         if (SceneManager.GetActiveScene().name == "PlayScene")
         {
             if (GetComponent<PlayerHealth>()._death == true)
             {
                 SceneManager.LoadScene("GameOverScene");
             }
+            if (GetComponent<GameController>()._min == 3)
+            {
+                SceneManager.LoadScene("GameClearScene");
+            }
         }
+        #endregion
 
+        #region GameClearScene‚É‚¢‚é‚Æ‚«‚Ìˆ—
         if (SceneManager.GetActiveScene().name == "GameClearscene")
         {
             if (Input.anyKeyDown)
@@ -51,7 +62,9 @@ public class SceneChanger : MonoBehaviour
                 SceneManager.LoadScene("TitleScene");
             }
         }
+        #endregion
 
+        #region GameOverScene‚É‚¢‚é‚Æ‚«‚Ìˆ—
         if (SceneManager.GetActiveScene().name == "GameOverScene")
         {
             if (Input.anyKeyDown)
@@ -59,5 +72,6 @@ public class SceneChanger : MonoBehaviour
                 SceneManager.LoadScene("TitleScene");
             }
         }
+        #endregion
     }
 }
