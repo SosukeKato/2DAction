@@ -5,22 +5,27 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
+    bool _death;
     [SerializeField]
-    int _FlyerBulletDamage = 7;
+    int _flyerBulletDamage = 7;
     [SerializeField]
-    int _ItemHeal = 5;
+    int _itemHeal = 5;
     [SerializeField]
-    int _PlayerHealth = 100;
+    public int _playerHealth = 100;
 
     void Update()
     {
-        if(_PlayerHealth <= 0)
+        if(_playerHealth <= 0)
         {
-            SceneManager.LoadScene("GameOverScene");
+            _death = true;
         }
-        if (_PlayerHealth >= 100)
+        else
         {
-            _PlayerHealth = 100;
+            _death = false;
+        }
+        if (_playerHealth >= 100)
+        {
+            _playerHealth = 100;
         }
     }
 
@@ -28,13 +33,13 @@ public class PlayerHealth : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("FlyerBullet"))
         {
-            _PlayerHealth -= _FlyerBulletDamage;
-            Debug.Log($"{_PlayerHealth}");
+            _playerHealth -= _flyerBulletDamage;
+            Debug.Log($"{_playerHealth}");
         }
         if (collision.gameObject.CompareTag("HealItem"))
         {
-            _PlayerHealth += _ItemHeal;
-            Debug.Log($"{_PlayerHealth}");
+            _playerHealth += _itemHeal;
+            Debug.Log($"{_playerHealth}");
         }
     }
 }
