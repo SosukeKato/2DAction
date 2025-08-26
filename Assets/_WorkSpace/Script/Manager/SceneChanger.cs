@@ -51,5 +51,13 @@ public class SceneChanger : MonoBehaviour
                 SceneManager.LoadScene("TitleScene");
             }
         }
+
+        if (SceneManager.GetActiveScene().name == "GameOverScene")
+        {
+            if (Input.anyKeyDown)
+            {
+                SceneManager.LoadScene("TitleScene");
+            }
+        }
     }
 }
