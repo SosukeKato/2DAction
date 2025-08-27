@@ -10,7 +10,7 @@ EditorBuildSettings:
     guid: e0ecfca8e03cd2944a9f3daf81c5fdcc
   - enabled: 1
     path: Assets/_WorkSpace/Scene/TutorialScene.unity
-    guid: 6298cdb64d2a396439982bab5cfcfddc
+    guid: 6f75853d2ee5c0842b408e3d08aeb6b3
   - enabled: 1
     path: Assets/_WorkSpace/Scene/PlayScene.unity
     guid: 52dccacf201452f4aa3ce4aa1fdff06d
