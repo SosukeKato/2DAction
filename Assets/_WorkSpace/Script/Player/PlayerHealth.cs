@@ -5,7 +5,9 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public bool _death;
-    public int _playerHealth = 100;
+    int _playerHealth = 100;
+    [SerializeField]
+    int _heal = 3;
 
     void Update()
     {
@@ -20,6 +22,14 @@ public class PlayerHealth : MonoBehaviour
         if (_playerHealth >= 100)
         {
             _playerHealth = 100;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("HealItem"))
+        {
+            _playerHealth += _heal;
         }
     }
 }
