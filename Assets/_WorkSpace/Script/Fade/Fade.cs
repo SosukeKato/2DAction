@@ -4,12 +4,18 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class RestartFade : MonoBehaviour
+public class Fade : MonoBehaviour
 {
-    bool Fade = false;
+    bool FinishFade = false;
     byte _alpha;
     [SerializeField]
     Image _fade;
+    [SerializeField]
+    byte _r;
+    [SerializeField]
+    byte _g;
+    [SerializeField]
+    byte _b;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +25,7 @@ public class RestartFade : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!Fade)
+        if (!FinishFade)
         {
             FadeOut();
         }
@@ -32,10 +38,10 @@ public class RestartFade : MonoBehaviour
     void FadeOut()
     {
         _alpha++;
-        _fade.color = new Color32(0, 0, 0, _alpha);
+        _fade.color = new Color32(_r, _g, _b, _alpha);
         if (_alpha == 255)
         {
-            Fade = true;
+            FinishFade = true;
             SceneManager.LoadScene("ChangeScene");
         }
     }
@@ -43,7 +49,7 @@ public class RestartFade : MonoBehaviour
     void FadeIn()
     {
         _alpha--;
-        _fade.color = new Color32(0, 0, 0, _alpha);
+        _fade.color = new Color32(_r, _g, _b, _alpha);
         if (_alpha == 0)
         {
             Destroy(gameObject);
