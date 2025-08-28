@@ -12,13 +12,6 @@ public class HealItem : MonoBehaviour
     float _minY = -2.25f;
     [SerializeField]
     float _maxY = 5f;
-    [SerializeField]
-    public int _heal = 3;
-
-    void Start()
-    {
-        _pH = GetComponent<PlayerHealth>();
-    }
 
     void Update()
     {
@@ -29,9 +22,8 @@ public class HealItem : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
-            _pH._playerHealth += _heal;//“y—j“ú‚É—v‘Š’k(‰ñ•œ‚µ‚È‚¢)
             Destroy(gameObject);
         }
     }

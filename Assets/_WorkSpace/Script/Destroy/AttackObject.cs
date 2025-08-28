@@ -5,10 +5,12 @@ using UnityEngine;
 public class AttackObject : MonoBehaviour
 {
     [SerializeField]
-    float _AttackDuration;
+    float _attackDuration;
+    [SerializeField]
+    public int _attackDamage;
     IEnumerator Start()
     {
-        yield return new WaitForSeconds(_AttackDuration);
+        yield return new WaitForSeconds(_attackDuration);
         Destroy(gameObject);
     }
 

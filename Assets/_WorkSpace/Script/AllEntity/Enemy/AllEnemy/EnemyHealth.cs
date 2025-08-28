@@ -46,7 +46,7 @@ public class EnemyHealth : MonoBehaviour
         if (_Death == true)
         {
             Destroy(gameObject);
-            int RandomItemDrop = UnityEngine.Random.Range(0, _EnemyDropItem.Count);
+            int RandomItemDrop = Random.Range(0, _EnemyDropItem.Count);
             Instantiate(_EnemyDropItem[RandomItemDrop], transform.position, Quaternion.identity);
         }
         if (_OnGround == true)
