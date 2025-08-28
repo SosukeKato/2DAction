@@ -20,6 +20,11 @@ public class Item : MonoBehaviour
         transform.position = pos;
     }
 
+    public virtual void CatchItem()
+    {
+
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
