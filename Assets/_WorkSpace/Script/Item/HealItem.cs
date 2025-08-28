@@ -31,7 +31,7 @@ public class HealItem : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            _pH._playerHealth += _heal;//“y—j“ú‚É—v‘Š’k
+            _pH._playerHealth += _heal;//“y—j“ú‚É—v‘Š’k(‰ñ•œ‚µ‚È‚¢)
             Destroy(gameObject);
         }
     }

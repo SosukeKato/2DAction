@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 9128437556955062154}
   m_Layer: 5
   m_Name: RestartFade
-  m_TagString: Untagged
+  m_TagString: Fade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -190,6 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fd1cc6a8d123154f83bb65559ca5a37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _alpha: 0
   _fade: {fileID: 1841523478943783133}
   _sceneName: TitleScene
   _r: 255

@@ -6,6 +6,7 @@ public class SceneChanger : MonoBehaviour
     static SceneChanger instance { get; set; }
 
     Fade _fade;
+    GameObject fade;
 
     [SerializeField]
     GameObject _restartFade;
@@ -22,6 +23,8 @@ public class SceneChanger : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        fade = GameObject.FindGameObjectWithTag("Fade");
     }
 
     void Update()
@@ -29,7 +32,7 @@ public class SceneChanger : MonoBehaviour
         #region TitleSceneにいるときの処理
         if (SceneManager.GetActiveScene().name == "TitleScene")
         {
-            if (Input.anyKeyDown)
+            if ((Input.anyKeyDown) && (fade == null))//Fade中にキーが押せてしまうため要修正
             {
                 SceneManager.LoadScene("TutorialScene");
             }
@@ -73,7 +76,7 @@ public class SceneChanger : MonoBehaviour
         #region GameOverSceneにいるときの処理
         if (SceneManager.GetActiveScene().name == "GameOverScene")
         {
-            if (Input.anyKeyDown)
+            if ((Input.anyKeyDown) && (fade == null))//Fade中にキーが押せてしまうため要修正
             {
                 Instantiate(_restartFade, _sceneManager.position, Quaternion.identity);
             }
