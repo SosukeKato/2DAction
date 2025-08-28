@@ -11,19 +11,27 @@ public class PlayerAction : MonoBehaviour
     [SerializeField]
     float _JumpPower;
     [SerializeField]
-    Transform _playerMuzzle;
+    bool _OnGround;
+
+    #region UŒ‚‚ÌPrefab‚ğ•Û‘¶‚·‚é•Ï”
     [SerializeField]
     GameObject _NAttack;
     [SerializeField]
     GameObject _OverHeadAttack;
     [SerializeField]
     GameObject _UpperImpulse;
+    #endregion
+
+    #region UŒ‚‚Ì”­¶ˆÊ’u‚ğŠÇ—‚·‚é•Ï”
     [SerializeField]
     Transform _PlayerFront;
     [SerializeField]
     Transform _PlayerOverHead;
     [SerializeField]
     Transform _PlayerFoot;
+    #endregion
+
+    #region UŒ‚‚ÌCT‚ğŠÇ—‚·‚é•Ï”
     [SerializeField]
     int _OverHeadAttackCT;
     [SerializeField]
@@ -32,8 +40,8 @@ public class PlayerAction : MonoBehaviour
     bool _OverHeadAttackStartCT;
     [SerializeField]
     bool _UpperImpulseStartCT;
-    [SerializeField]
-    bool _OnGround;
+    #endregion
+
     Rigidbody2D _rb;
     Transform _tr;
 
