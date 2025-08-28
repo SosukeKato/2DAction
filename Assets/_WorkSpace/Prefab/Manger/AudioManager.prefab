@@ -47,6 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startSESorce: {fileID: 4702566634860859454}
   _startSEClip: {fileID: 8300000, guid: e4ce31fcba91b534caa78799c9847aff, type: 3}
+  _gameStartSESorce: {fileID: 4702566634860859454}
+  _gameStartSEClip: {fileID: 8300000, guid: e4ce31fcba91b534caa78799c9847aff, type: 3}
   _bgmSorce: []
   _bGMClip: []
   _restartSESorce: {fileID: 4702566634860859454}
