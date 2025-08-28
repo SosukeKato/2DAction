@@ -5,6 +5,11 @@ public class SceneChanger : MonoBehaviour
 {
     static SceneChanger instance { get; set; }
 
+
+    [SerializeField]
+    GameObject _restartFade;
+    [SerializeField]
+    Transform _sceneManager;
     void Start()
     {
         if (instance == null)
@@ -69,7 +74,7 @@ public class SceneChanger : MonoBehaviour
         {
             if (Input.anyKeyDown)
             {
-                SceneManager.LoadScene("TitleScene");
+                Instantiate(_restartFade, _sceneManager.position, Quaternion.identity);
             }
         }
         #endregion

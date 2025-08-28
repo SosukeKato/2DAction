@@ -11,6 +11,8 @@ public class Fade : MonoBehaviour
     [SerializeField]
     Image _fade;
     [SerializeField]
+    string _sceneName;
+    [SerializeField]
     byte _r;
     [SerializeField]
     byte _g;
@@ -42,7 +44,7 @@ public class Fade : MonoBehaviour
         if (_alpha == 255)
         {
             FinishFade = true;
-            SceneManager.LoadScene("ChangeScene");
+            SceneManager.LoadScene(_sceneName);
         }
     }
 
