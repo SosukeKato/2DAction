@@ -1,0 +1,12 @@
+Font: pigmo  Style: 00
+Point Size: 80   SP/PD Ratio: 16.3%
+
+Characters included: 6742/6742
+Missing characters: 0
+Excluded characters: 0
+
+Characters missing from font file:
+----------------------------------------
+
+Characters excluded from packing:
+----------------------------------------
