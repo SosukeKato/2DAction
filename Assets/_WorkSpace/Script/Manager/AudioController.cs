@@ -11,11 +11,11 @@ public class AudioController : MonoBehaviour
     [SerializeField]
     AudioSource[] _bgmSorce;
     [SerializeField]
-    AudioSource[] _seSorce;
-    [SerializeField]
     AudioClip[] _bGMClip;
     [SerializeField]
-    AudioClip[] _sEClip;
+    AudioSource _restartSESorce;
+    [SerializeField]
+    AudioClip _restartSEClip;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,5 +52,14 @@ public class AudioController : MonoBehaviour
         {
 
         }
+        #region GameOverSceneÇÃèàóù
+        if (SceneManager.GetActiveScene().name == "GameOverScene")
+        {
+            if (Input.anyKeyDown)
+            {
+                _restartSESorce.PlayOneShot(_restartSEClip);
+            }
+        }
+        #endregion 
     }
 }
