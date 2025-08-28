@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(CapsuleCollider2D))]
-public class PlayerBaseAction : MonoBehaviour
+public class PlayerAction : MonoBehaviour
 {
     [SerializeField]
     float _MoveSpeed;
@@ -50,6 +50,7 @@ public class PlayerBaseAction : MonoBehaviour
 
     void Update()
     {
+        #region キャラクターの基本移動処理
         //x軸の移動処理
         float x = Input.GetAxisRaw("Horizontal");
         //Playerの見た目を進行方向にあわせて回転させる処理
@@ -76,6 +77,8 @@ public class PlayerBaseAction : MonoBehaviour
         {
             _rb.velocity = Vector2.right * (x * _MoveSpeed);
         }
+        #endregion
+
         //通常攻撃の処理
         if (Input.GetKeyDown(KeyCode.J))
         {
