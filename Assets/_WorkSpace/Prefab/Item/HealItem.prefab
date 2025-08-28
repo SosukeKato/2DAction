@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8258394222291255385}
   - component: {fileID: 80561427887665189}
   - component: {fileID: 3804806593391517816}
-  - component: {fileID: 7995422275895931217}
+  - component: {fileID: -1667006854364300359}
   m_Layer: 0
   m_Name: HealItem
   m_TagString: HealItem
@@ -181,7 +181,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &7995422275895931217
+--- !u!114 &-1667006854364300359
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -193,5 +193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ec7fc1755d3ab744a82a3011371021c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minY: -2.5
+  _minY: -2.25
   _maxY: 5
+  _heal: 3
