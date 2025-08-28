@@ -13,7 +13,7 @@ public class HealItem : MonoBehaviour
     [SerializeField]
     float _maxY = 5f;
     [SerializeField]
-    int _heal = 3;
+    public int _heal = 3;
 
     void Start()
     {
