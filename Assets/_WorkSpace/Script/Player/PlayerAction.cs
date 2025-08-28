@@ -13,10 +13,6 @@ public class PlayerAction : MonoBehaviour
     [SerializeField]
     Transform _playerMuzzle;
     [SerializeField]
-    GameObject _playerBullet;
-    [SerializeField]
-    int _bulletSpeed;
-    [SerializeField]
     GameObject _NAttack;
     [SerializeField]
     GameObject _OverHeadAttack;
