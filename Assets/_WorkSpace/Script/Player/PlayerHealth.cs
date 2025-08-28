@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public bool _death;
-    [SerializeField]
     public int _playerHealth = 100;
 
     void Update()

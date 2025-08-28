@@ -40,14 +40,14 @@ public class PlayerBaseAction : MonoBehaviour
     bool _OnGround;
     Rigidbody2D _rb;
     Transform _tr;
-    // Start is called before the first frame update
+
     void Start()
     {
         _tr = transform;
         _rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         //x²‚ÌˆÚ“®ˆ—

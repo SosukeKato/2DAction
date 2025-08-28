@@ -33,7 +33,7 @@ public class SceneChanger : MonoBehaviour
         #region TutorialScene‚É‚¢‚é‚Æ‚«‚Ìˆ—
         if (SceneManager.GetActiveScene().name == "TutorialScene")
         {
-            if (Input.anyKeyDown)
+            if (Input.GetKeyDown(KeyCode.Return))
             {
                 SceneManager.LoadScene("PlayScene");
             }
