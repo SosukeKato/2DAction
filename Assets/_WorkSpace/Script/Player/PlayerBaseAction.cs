@@ -40,7 +40,6 @@ public class PlayerBaseAction : MonoBehaviour
     bool _UpperImpulseStartCT;
     [SerializeField]
     bool _OnGround;
-    GameObject _bulletAttack;
     Rigidbody2D _rb;
     Transform _tr;
     // Start is called before the first frame update
