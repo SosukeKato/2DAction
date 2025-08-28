@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Fade : MonoBehaviour
 {
     bool FinishFade = false;
-    byte _alpha;
+    public byte _alpha;
     [SerializeField]
     Image _fade;
     [SerializeField]
@@ -21,6 +21,7 @@ public class Fade : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Application.targetFrameRate = 90;
         DontDestroyOnLoad(gameObject);
     }
 

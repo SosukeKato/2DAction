@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _restartFade: {fileID: 5236827775019743312, guid: e297d9acc6d77594fa2a8955d8c1e596, type: 3}
-  _sceneChanger: {fileID: 64576509}
+  _sceneManager: {fileID: 64576509}
 --- !u!1 &245185071
 GameObject:
   m_ObjectHideFlags: 0

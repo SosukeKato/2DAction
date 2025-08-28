@@ -5,6 +5,7 @@ public class SceneChanger : MonoBehaviour
 {
     static SceneChanger instance { get; set; }
 
+    Fade _fade;
 
     [SerializeField]
     GameObject _restartFade;
