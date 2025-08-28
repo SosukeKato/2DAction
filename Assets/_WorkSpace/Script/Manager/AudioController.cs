@@ -8,14 +8,22 @@ public class AudioController : MonoBehaviour
 {
     static AudioController instance { get; set; }
 
+    #region TitleScene‚Å‚Ì‰¹º‚ğ•Û‘¶‚·‚é•Ï”
+    [SerializeField]
+    AudioSource _startSESorce;
+    [SerializeField]
+    AudioClip _startSEClip;
+    #endregion
     [SerializeField]
     AudioSource[] _bgmSorce;
     [SerializeField]
     AudioClip[] _bGMClip;
+    #region GameOverScene‚Å‚Ì‰¹º‚ğ•Û‘¶‚·‚é•Ï”
     [SerializeField]
     AudioSource _restartSESorce;
     [SerializeField]
     AudioClip _restartSEClip;
+    #endregion
     // Start is called before the first frame update
     void Start()
     {
@@ -33,10 +41,15 @@ public class AudioController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        #region TitleScene‚Å‚Ìˆ—
         if (SceneManager.GetActiveScene().name == "TitleScene")
         {
-            
+            if (Input.anyKeyDown)
+            {
+                _startSESorce.PlayOneShot(_startSEClip);
+            }
         }
+        #endregion
 
         if (SceneManager.GetActiveScene().name == "TutorialScene")
         {

@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3503d926d8432864eb2b6c1ad1759fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _startSESorce: {fileID: 4702566634860859454}
+  _startSEClip: {fileID: 8300000, guid: e4ce31fcba91b534caa78799c9847aff, type: 3}
   _bgmSorce: []
   _bGMClip: []
   _restartSESorce: {fileID: 4702566634860859454}
