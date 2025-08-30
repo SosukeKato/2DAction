@@ -77,6 +77,7 @@ public class AudioController : MonoBehaviour
         {
 
         }
+
         #region GameOverScene‚Ìˆ—
         if (SceneManager.GetActiveScene().name == "GameOverScene")
         {

@@ -14,7 +14,6 @@ public class EnemyAI : MonoBehaviour
 
     Transform _tr;
     Rigidbody2D _rb;
-    // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -28,32 +27,23 @@ public class EnemyAI : MonoBehaviour
         _Player = playerObj.transform;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        float _PlayerX = _Player.position.x;
-        float _EnemyX = transform.position.x;
+        float _playerX = _Player.position.x;
+        float _enemyX = transform.position.x;
 
         if (_Player == null) return;
 
-        Vector2 direction = (_Player.position - transform.position).normalized;//‚±‚±—vC³
-        transform.position += (Vector3)(direction * _MoveSpeed * Time.deltaTime);//‚±‚±—vC³
+        Vector2 direction = new Vector2(_playerX - _enemyX,0f).normalized;
+        transform.position += (Vector3)(direction * _MoveSpeed * Time.deltaTime);
 
-        if (_PlayerX - _EnemyX > 0)
+        if (_playerX - _enemyX > 0)
         {
             _tr.localScale = new Vector3(_PlayerScale, _PlayerScale, 1);
         }
-        if (_PlayerX - _EnemyX < 0)
+        if (_playerX - _enemyX < 0)
         {
             _tr.localScale = new Vector3(-_PlayerScale, _PlayerScale, 1);
         }
     }
-
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Enemy"))
-    //    {
-
-    //    }
-    //}
 }
