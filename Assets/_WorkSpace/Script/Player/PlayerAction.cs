@@ -47,6 +47,7 @@ public class PlayerAction : MonoBehaviour
 
     void Start()
     {
+        Application.targetFrameRate = 60;
         _tr = transform;
         _rb = GetComponent<Rigidbody2D>();
     }
