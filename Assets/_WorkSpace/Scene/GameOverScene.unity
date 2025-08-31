@@ -667,6 +667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30db2d70fc0967a47a751ca16823b948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fade: {fileID: 5236827775019743312, guid: e297d9acc6d77594fa2a8955d8c1e596, type: 3}
   _restartFade: {fileID: 5236827775019743312, guid: e297d9acc6d77594fa2a8955d8c1e596, type: 3}
   _sceneManager: {fileID: 1236737720}
 --- !u!4 &1236737720
