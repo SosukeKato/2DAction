@@ -75,10 +75,6 @@ public class SceneController : MonoBehaviour
             {
                 Instantiate(_restartFade, _sceneManager.position, Quaternion.identity);
             }
-            if (_restartFade != null)
-            {
-                return;
-            }
         }
         #endregion
     }
