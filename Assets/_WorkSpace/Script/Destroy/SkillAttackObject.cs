@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class SkillAttackObject : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    float _attackDuration;
+    IEnumerator Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        yield return new WaitForSeconds(_attackDuration);
+        Destroy(gameObject);
     }
 }
