@@ -389,7 +389,7 @@ MonoBehaviour:
   _PlayerOverHead: {fileID: 113483306}
   _PlayerFoot: {fileID: 231482379}
   _OverHeadAttackCT: 0
-  _UpperImpulseCT: 0
+  _UpperImpulseCT: 5
   _OverHeadAttackStartCT: 0
   _UpperImpulseStartCT: 0
 --- !u!70 &926164836

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8724795820673214298}
   - component: {fileID: 978426414883749554}
   - component: {fileID: -70729160643800663}
-  - component: {fileID: -1476919212750695288}
+  - component: {fileID: 1863767473770279443}
   m_Layer: 0
   m_Name: FlyerBullet
   m_TagString: FlyerBullet
@@ -159,7 +159,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-1476919212750695288
+--- !u!114 &1863767473770279443
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -171,5 +171,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d73775d1daf2b784a8dbadef228f9e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _attackDuration: 2
-  _attackDamage: 0
+  _attackDuration: 0

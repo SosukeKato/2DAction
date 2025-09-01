@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1848261309494782556}
   - component: {fileID: 8121407273604794018}
-  - component: {fileID: 2700987896630160805}
+  - component: {fileID: -6605712667054630710}
   m_Layer: 0
   m_Name: UpperImpulse
   m_TagString: UpperImpulse
@@ -79,7 +79,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2700987896630160805
+--- !u!114 &-6605712667054630710
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -88,7 +88,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7555395955912732884}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d73775d1daf2b784a8dbadef228f9e94, type: 3}
+  m_Script: {fileID: 11500000, guid: 77282458ba1bafd489a1635b04530c23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _attackDuration: 3
