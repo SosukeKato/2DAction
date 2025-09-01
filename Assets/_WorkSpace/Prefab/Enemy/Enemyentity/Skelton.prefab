@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 7069317197427637860}
   m_Layer: 0
   m_Name: Skelton
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -198,8 +198,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502e1f2cd1e597d42aaf0d152f991723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyAttack: {fileID: 0}
-  _enemy: {fileID: 0}
+  _flyerAttack: {fileID: 0}
+  _flyer: {fileID: 0}
 --- !u!114 &7069317197427637860
 MonoBehaviour:
   m_ObjectHideFlags: 0
