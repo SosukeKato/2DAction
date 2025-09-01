@@ -21,7 +21,7 @@ public class FlyerAttack : MonoBehaviour
         _flyerAttackInterval += Time.deltaTime;
         if (_flyerAttackInterval >= 10)
         {
-            _flyerAttackObject = Instantiate(_flyerAttack, _flyer.position, Quaternion.identity);
+            _flyerAttackObject = Instantiate(_flyerAttack, _flyer.position, transform.rotation);
         }
     }
 }
