@@ -7,21 +7,21 @@ using UnityEngine;
 [RequireComponent (typeof(Rigidbody2D))]
 [RequireComponent (typeof(Collider2D))]
 [RequireComponent (typeof(PositionClamp))]
-public class EnemyAttack : MonoBehaviour
+public class FlyerAttack : MonoBehaviour
 {
     [SerializeField]
-    GameObject _enemyAttack;
+    GameObject _flyerAttack;
     [SerializeField]
-    Transform _enemy;
+    Transform _flyer;
 
-    GameObject _enemyAttackObject;
-    float _enemyAttackInterval;
+    GameObject _flyerAttackObject;
+    float _flyerAttackInterval;
     void Update()
     {
-        _enemyAttackInterval += Time.deltaTime;
-        if (_enemyAttackInterval >= 10)
+        _flyerAttackInterval += Time.deltaTime;
+        if (_flyerAttackInterval >= 10)
         {
-            _enemyAttackObject = Instantiate(_enemyAttack, _enemy.position, Quaternion.identity);
+            _flyerAttackObject = Instantiate(_flyerAttack, _flyer.position, Quaternion.identity);
         }
     }
 }
