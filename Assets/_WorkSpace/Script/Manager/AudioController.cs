@@ -21,6 +21,13 @@ public class AudioController : MonoBehaviour
     [SerializeField]
     AudioClip _gameStartSEClip;
     #endregion
+
+    #region PlaySceneÇ≈ÇÃâπê∫Çï€ë∂Ç∑ÇÈïœêî
+    [SerializeField]
+    AudioSource _UpperImpulseSESorce;
+    [SerializeField]
+    AudioClip _UpperImpulseSEClip;
+    #endregion
     [SerializeField]
     AudioSource[] _bgmSorce;
     [SerializeField]
@@ -68,10 +75,15 @@ public class AudioController : MonoBehaviour
         }
         #endregion
 
+        #region PlaySceneÇ≈ÇÃèàóù
         if (SceneManager.GetActiveScene().name == "PlayScene")
         {
-
+            if (Input.GetKeyDown(KeyCode.M))
+            {
+                _UpperImpulseSESorce.PlayOneShot(_UpperImpulseSEClip);
+            }
         }
+        #endregion
 
         if (SceneManager.GetActiveScene().name == "GameClearScene")
         {
