@@ -8,6 +8,8 @@ public class PlayerHealth : MonoBehaviour
     int _playerHealth = 100;
     [SerializeField]
     int _heal = 3;
+    [SerializeField]
+    int _flyerAttackDamage = 5;
 
     void Update()
     {
@@ -27,9 +29,18 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        #region アイテム取得時の処理
         if (collision.CompareTag("HealItem"))
         {
             _playerHealth += _heal;
         }
+        #endregion
+
+        #region Playerがダメージを食らう処理
+        if (collision.CompareTag("FlyerBullet"))
+        {
+            _playerHealth -= _flyerAttackDamage;
+        }
+        #endregion
     }
 }
