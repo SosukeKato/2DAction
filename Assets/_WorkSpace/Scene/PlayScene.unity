@@ -366,6 +366,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _death: 0
   _heal: 3
+  _flyerAttackDamage: 0
 --- !u!114 &926164835
 MonoBehaviour:
   m_ObjectHideFlags: 0

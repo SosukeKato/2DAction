@@ -9,6 +9,8 @@ public class EnemyAI : MonoBehaviour
     public float _MoveSpeed = 3f;
     [SerializeField]
     int _PlayerScale = 3;
+    [SerializeField]
+    Animation _attackAnimation;
 
     Transform _Player;
 
