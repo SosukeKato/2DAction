@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackObject : MonoBehaviour
+public class NAttackObject : MonoBehaviour
 {
     [SerializeField]
     float _attackDuration;
