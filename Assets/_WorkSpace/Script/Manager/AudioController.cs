@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -89,10 +86,15 @@ public class AudioController : MonoBehaviour
         }
         #endregion
 
+        #region GameClearScene‚Å‚Ìˆ—
         if (SceneManager.GetActiveScene().name == "GameClearScene")
         {
-
+            if (Input.anyKeyDown)
+            {
+                _restartGameClearSESorce.PlayOneShot(_restartGameClearSEClip);
+            }
         }
+        #endregion
 
         #region GameOverScene‚Ìˆ—
         if (SceneManager.GetActiveScene().name == "GameOverScene")
