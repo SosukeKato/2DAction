@@ -28,15 +28,19 @@ public class AudioController : MonoBehaviour
     [SerializeField]
     AudioClip _UpperImpulseSEClip;
     #endregion
+
+    #region GameClearSceneÇ≈ÇÃâπê∫Çï€ë∂Ç∑ÇÈïœêî
     [SerializeField]
-    AudioSource[] _bgmSorce;
+    AudioSource _restartGameClearSESorce;
     [SerializeField]
-    AudioClip[] _bGMClip;
+    AudioClip _restartGameClearSEClip;
+    #endregion
+
     #region GameOverSceneÇ≈ÇÃâπê∫Çï€ë∂Ç∑ÇÈïœêî
     [SerializeField]
-    AudioSource _restartSESorce;
+    AudioSource _restartGameOverSESorce;
     [SerializeField]
-    AudioClip _restartSEClip;
+    AudioClip _restartGameOverSEClip;
     #endregion
     // Start is called before the first frame update
     void Start()
@@ -95,7 +99,7 @@ public class AudioController : MonoBehaviour
         {
             if (Input.anyKeyDown)
             {
-                _restartSESorce.PlayOneShot(_restartSEClip);
+                _restartGameOverSESorce.PlayOneShot(_restartGameOverSEClip);
             }
         }
         #endregion 
