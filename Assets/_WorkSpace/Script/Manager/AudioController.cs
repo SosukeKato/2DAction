@@ -39,7 +39,6 @@ public class AudioController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _audioSorce.Stop();
         if (instance == null)
         {
             instance = this;
