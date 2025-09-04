@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public bool _death;
     int _playerHealth = 100;
     [SerializeField]
     int _heal = 3;
@@ -15,11 +14,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if(_playerHealth <= 0)
         {
-            _death = true;
-        }
-        else
-        {
-            _death = false;
+            
         }
         if (_playerHealth >= 100)
         {
