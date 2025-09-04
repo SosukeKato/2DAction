@@ -39,6 +39,8 @@ public class AudioController : MonoBehaviour
     #region GameOverSceneでの音声を保存する変数
     [SerializeField]
     AudioClip _restartGameOverSEClip;
+    [SerializeField]
+    AudioClip _gameOverBGMClip;
     #endregion
 
     void Awake()
@@ -102,7 +104,8 @@ public class AudioController : MonoBehaviour
         #region GameOverSceneでのBGMの処理
         if (scene.name == "GameOverScene")
         {
-            // BGMなし（必要に応じてゲームオーバー用BGMを追加）
+            _bGMAudioSource.clip = _gameOverBGMClip;
+            _bGMAudioSource.Play();
         }
         #endregion
     }
