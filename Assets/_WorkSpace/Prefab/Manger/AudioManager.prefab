@@ -310,8 +310,10 @@ MonoBehaviour:
   _gameStartSEClip: {fileID: 8300000, guid: e4ce31fcba91b534caa78799c9847aff, type: 3}
   _upperImpulseSEClip: {fileID: 8300000, guid: 5b85171a6298ce94d86ee36f7c123bd7, type: 3}
   _playBGMClip: {fileID: 8300000, guid: 536485c182a07c04b96732fd6de0bf72, type: 3}
-  _restartGameClearSEClip: {fileID: 0}
-  _restartGameOverSEClip: {fileID: 0}
+  _restartGameClearSEClip: {fileID: 8300000, guid: 35b3471799bf90848bb3c2a5d92ad10e, type: 3}
+  _gameClearBGMClip: {fileID: 8300000, guid: a17540f6316a590428bbe1e54c2dba51, type: 3}
+  _restartGameOverSEClip: {fileID: 8300000, guid: b5ecb551439764c41bf6d914b005073b, type: 3}
+  _gameOverBGMClip: {fileID: 8300000, guid: 62cc49f0271116b4197fc0f199127514, type: 3}
 --- !u!82 &4702566634860859454
 AudioSource:
   m_ObjectHideFlags: 0
