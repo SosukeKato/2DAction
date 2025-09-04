@@ -26,6 +26,8 @@ public class AudioController : MonoBehaviour
     [SerializeField]
     AudioClip _upperImpulseSEClip;
     [SerializeField]
+    AudioClip _overHeadAttackSEClip;
+    [SerializeField]
     AudioClip _playBGMClip;
     #endregion
 
@@ -125,6 +127,10 @@ public class AudioController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.M))
             {
                 _sEAudioSource.PlayOneShot(_upperImpulseSEClip);
+            }
+            if (Input.GetKeyDown(KeyCode.I))
+            {
+                _sEAudioSource.PlayOneShot(_overHeadAttackSEClip);
             }
         }
         #endregion
