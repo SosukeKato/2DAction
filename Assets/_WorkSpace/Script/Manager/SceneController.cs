@@ -9,6 +9,8 @@ public class SceneController : MonoBehaviour
     GameObject _restartFade;
     [SerializeField]
     Transform _sceneManager;
+
+    GameObject playerObj;
     void Start()
     {
         if (instance == null)
@@ -20,6 +22,8 @@ public class SceneController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        playerObj = GameObject.FindGameObjectWithTag("Player");
     }
 
     void Update()
@@ -47,7 +51,7 @@ public class SceneController : MonoBehaviour
         #region PlaySceneÇ…Ç¢ÇÈÇ∆Ç´ÇÃèàóù
         if (SceneManager.GetActiveScene().name == "PlayScene")
         {
-            if (GetComponent<PlayerHealth>()._death == true)
+            if (playerObj != null)
             {
                 SceneManager.LoadScene("GameOverScene");
             }
