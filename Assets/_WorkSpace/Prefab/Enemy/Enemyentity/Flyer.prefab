@@ -226,7 +226,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 10
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -272,3 +272,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _flyerAttack: {fileID: 4404108738399803691, guid: 0cee30c1594d9db4ca02aefc38b137da, type: 3}
   _flyer: {fileID: 7965213388584525566}
+  _bulletSpeed: 1
