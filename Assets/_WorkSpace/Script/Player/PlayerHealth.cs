@@ -14,7 +14,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if(_playerHealth <= 0)
         {
-            
+            Destroy(gameObject);
         }
         if (_playerHealth >= 100)
         {
@@ -29,6 +29,7 @@ public class PlayerHealth : MonoBehaviour
         {
             _playerHealth += _heal;
             Debug.Log($"ç°ÇÃHPÇÕ{_playerHealth}Ç∂Ç·ÇÊ");
+            Destroy(collision.gameObject);
         }
         #endregion
 
@@ -37,6 +38,7 @@ public class PlayerHealth : MonoBehaviour
         {
             _playerHealth -= _flyerAttackDamage;
             Debug.Log($"ç°ÇÃHPÇÕ{_playerHealth}Ç∂Ç·ÇÊ");
+            Destroy(collision.gameObject);
         }
         #endregion
     }
