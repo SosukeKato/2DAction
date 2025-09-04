@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3503d926d8432864eb2b6c1ad1759fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioSorce: {fileID: 4702566634860859454}
+  _bGMAudioSource: {fileID: 4702566634860859454}
+  _sEAudioSource: {fileID: 4702566634860859454}
   _startSEClip: {fileID: 8300000, guid: e4ce31fcba91b534caa78799c9847aff, type: 3}
   _titleBGMClip: {fileID: 8300000, guid: 4187a3b82d5232c46ad2f4d3e084f6b3, type: 3}
   _gameStartSEClip: {fileID: 8300000, guid: e4ce31fcba91b534caa78799c9847aff, type: 3}

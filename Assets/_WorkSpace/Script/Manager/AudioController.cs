@@ -6,7 +6,9 @@ public class AudioController : MonoBehaviour
     static AudioController instance { get; set; }
 
     [SerializeField]
-    AudioSource _audioSorce;
+    AudioSource _bGMAudioSource;
+    [SerializeField]
+    AudioSource _sEAudioSource;
 
     #region TitleSceneÇ≈ÇÃâπê∫Çï€ë∂Ç∑ÇÈïœêî
     [SerializeField]
@@ -39,6 +41,7 @@ public class AudioController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        OnSceneLoaded(SceneManager.GetActiveScene(), LoadSceneMode.Single);
         if (instance == null)
         {
             instance = this;
@@ -53,13 +56,13 @@ public class AudioController : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        _audioSorce.Stop();
+        _bGMAudioSource.Stop();
 
         #region TitleSceneÇ≈ÇÃBGMÇÃèàóù
         if (scene.name == "TitleScene")
         {
-            _audioSorce.clip = _titleBGMClip;
-            _audioSorce.Play();
+            _bGMAudioSource.clip = _titleBGMClip;
+            _bGMAudioSource.Play();
         }
         #endregion
 
@@ -73,8 +76,8 @@ public class AudioController : MonoBehaviour
         #region PlaySceneÇ≈ÇÃBGMÇÃèàóù
         if (scene.name == "PlayScene")
         {
-            _audioSorce.clip = _playBGMClip;
-            _audioSorce.Play();
+            _bGMAudioSource.clip = _playBGMClip;
+            _bGMAudioSource.Play();
         }
         #endregion
 
@@ -100,7 +103,7 @@ public class AudioController : MonoBehaviour
         {
             if (Input.anyKeyDown)
             {
-                _audioSorce.PlayOneShot(_startSEClip);
+                _sEAudioSource.PlayOneShot(_startSEClip);
             }
         }
         #endregion
@@ -110,7 +113,7 @@ public class AudioController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Return))
             {
-                _audioSorce.PlayOneShot(_gameStartSEClip);
+                _sEAudioSource.PlayOneShot(_gameStartSEClip);
             }
         }
         #endregion
@@ -120,7 +123,7 @@ public class AudioController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.M))
             {
-                _audioSorce.PlayOneShot(_upperImpulseSEClip);
+                _sEAudioSource.PlayOneShot(_upperImpulseSEClip);
             }
         }
         #endregion
@@ -130,7 +133,7 @@ public class AudioController : MonoBehaviour
         {
             if (Input.anyKeyDown)
             {
-                _audioSorce.PlayOneShot(_restartGameClearSEClip);
+                _sEAudioSource.PlayOneShot(_restartGameClearSEClip);
             }
         }
         #endregion
@@ -140,7 +143,7 @@ public class AudioController : MonoBehaviour
         {
             if (Input.anyKeyDown)
             {
-                _audioSorce.PlayOneShot(_restartGameOverSEClip);
+                _sEAudioSource.PlayOneShot(_restartGameOverSEClip);
             }
         }
         #endregion 
