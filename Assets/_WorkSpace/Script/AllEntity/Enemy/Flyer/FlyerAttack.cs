@@ -18,12 +18,9 @@ public class FlyerAttack : MonoBehaviour
     GameObject _flyerAttackObject;
     float _flyerAttackInterval;
 
-
-
     Transform _player;
     [SerializeField]
     float _bulletSpeed;
-
     void Start()
     {
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");

@@ -12,8 +12,8 @@ public class EnemyAI : MonoBehaviour
     int _PlayerScale = 3;
     [SerializeField]
     float _stopDistance = 1;
-    [SerializeField]
-    Animation _attackAnimation;
+
+    Animator _enemyAnimator;
 
     Transform _Player;
 
@@ -23,6 +23,7 @@ public class EnemyAI : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _tr = transform;
+        _enemyAnimator = GetComponent<Animator>();
 
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj == null)
