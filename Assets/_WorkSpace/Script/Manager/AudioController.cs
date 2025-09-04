@@ -5,41 +5,34 @@ public class AudioController : MonoBehaviour
 {
     static AudioController instance { get; set; }
 
+    [SerializeField]
+    AudioSource _audioSorce;
+
     #region TitleSceneÇ≈ÇÃâπê∫Çï€ë∂Ç∑ÇÈïœêî
     [SerializeField]
-    AudioSource _startSESorce;
-    [SerializeField]
     AudioClip _startSEClip;
-    [SerializeField]
-    AudioSource _titleBGMSorce;
     [SerializeField]
     AudioClip _titleBGMClip;
     #endregion
 
     #region TutorialSceneÇ≈ÇÃâπê∫Çï€ë∂Ç∑ÇÈïœêî
     [SerializeField]
-    AudioSource _gameStartSESorce;
-    [SerializeField]
     AudioClip _gameStartSEClip;
     #endregion
 
     #region PlaySceneÇ≈ÇÃâπê∫Çï€ë∂Ç∑ÇÈïœêî
     [SerializeField]
-    AudioSource _UpperImpulseSESorce;
+    AudioClip _upperImpulseSEClip;
     [SerializeField]
-    AudioClip _UpperImpulseSEClip;
+    AudioClip _playBGMClip;
     #endregion
 
     #region GameClearSceneÇ≈ÇÃâπê∫Çï€ë∂Ç∑ÇÈïœêî
-    [SerializeField]
-    AudioSource _restartGameClearSESorce;
     [SerializeField]
     AudioClip _restartGameClearSEClip;
     #endregion
 
     #region GameOverSceneÇ≈ÇÃâπê∫Çï€ë∂Ç∑ÇÈïœêî
-    [SerializeField]
-    AudioSource _restartGameOverSESorce;
     [SerializeField]
     AudioClip _restartGameOverSEClip;
     #endregion
@@ -56,11 +49,27 @@ public class AudioController : MonoBehaviour
             Destroy(gameObject);
         }
 
-        #region TitleSceneÇ≈BGMÇñ¬ÇÁÇ∑èàóù
+        #region TitleSceneÇ≈ÇÃèàóù
         if (SceneManager.GetActiveScene().name == "TitleScene")
         {
-            _titleBGMSorce.clip = _titleBGMClip;
-            _titleBGMSorce.Play();
+            _audioSorce.clip = _titleBGMClip;
+            _audioSorce.Play();
+        }
+        #endregion
+
+        #region TutorialSceneÇ≈ÇÃèàóù
+        if (SceneManager.GetActiveScene().name == "TutorialScene")
+        {
+
+        }
+        #endregion
+
+        #region PlaySceneÇ≈ÇÃèàóù
+        if (SceneManager.GetActiveScene().name == "PlayScene")
+        {
+            _audioSorce.Stop();
+            _audioSorce.clip = _playBGMClip;
+            _audioSorce.Play();
         }
         #endregion
     }
@@ -73,7 +82,7 @@ public class AudioController : MonoBehaviour
         {
             if (Input.anyKeyDown)
             {
-                _startSESorce.PlayOneShot(_startSEClip);
+                _audioSorce.PlayOneShot(_startSEClip);
             }
         }
         #endregion
@@ -83,7 +92,7 @@ public class AudioController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Return))
             {
-                _gameStartSESorce.PlayOneShot(_gameStartSEClip);
+                _audioSorce.PlayOneShot(_gameStartSEClip);
             }
         }
         #endregion
@@ -93,7 +102,7 @@ public class AudioController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.M))
             {
-                _UpperImpulseSESorce.PlayOneShot(_UpperImpulseSEClip);
+                _audioSorce.PlayOneShot(_upperImpulseSEClip);
             }
         }
         #endregion
@@ -103,7 +112,7 @@ public class AudioController : MonoBehaviour
         {
             if (Input.anyKeyDown)
             {
-                _restartGameClearSESorce.PlayOneShot(_restartGameClearSEClip);
+                _audioSorce.PlayOneShot(_restartGameClearSEClip);
             }
         }
         #endregion
@@ -113,7 +122,7 @@ public class AudioController : MonoBehaviour
         {
             if (Input.anyKeyDown)
             {
-                _restartGameOverSESorce.PlayOneShot(_restartGameOverSEClip);
+                _audioSorce.PlayOneShot(_restartGameOverSEClip);
             }
         }
         #endregion 
