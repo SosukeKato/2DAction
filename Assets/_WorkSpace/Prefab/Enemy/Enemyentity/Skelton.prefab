@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1972591425354795972}
   - component: {fileID: -8902353173545676690}
   - component: {fileID: 7069317197427637860}
+  - component: {fileID: 75089849290906413}
   m_Layer: 0
   m_Name: Skelton
   m_TagString: Enemy
@@ -139,7 +140,6 @@ MonoBehaviour:
   _MoveSpeed: 3
   _PlayerScale: 3
   _attackAnimation: {fileID: 0}
-  _enemy: {fileID: 6106545819284921472}
 --- !u!114 &1972591425354795972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,3 +203,24 @@ MonoBehaviour:
   _maxY: 5
   _minX: -11
   _maxX: 11
+--- !u!95 &75089849290906413
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6106545819284921472}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c311a3552fa928744bd51b57c90a39d5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
