@@ -39,45 +39,64 @@ public class AudioController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _audioSorce.Stop();
         if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
         {
             Destroy(gameObject);
         }
+    }
 
-        #region TitleSceneでの処理
-        if (SceneManager.GetActiveScene().name == "TitleScene")
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        _audioSorce.Stop();
+
+        #region TitleSceneでのBGMの処理
+        if (scene.name == "TitleScene")
         {
             _audioSorce.clip = _titleBGMClip;
             _audioSorce.Play();
         }
         #endregion
 
-        #region TutorialSceneでの処理
-        if (SceneManager.GetActiveScene().name == "TutorialScene")
+        #region TutorialSceneでのBGMの処理
+        if (scene.name == "TutorialScene")
         {
-
+            // BGMなし
         }
         #endregion
 
-        #region PlaySceneでの処理
-        if (SceneManager.GetActiveScene().name == "PlayScene")
+        #region PlaySceneでのBGMの処理
+        if (scene.name == "PlayScene")
         {
-            _audioSorce.Stop();
             _audioSorce.clip = _playBGMClip;
             _audioSorce.Play();
         }
         #endregion
+
+        #region GameClearSceneでのBGMの処理
+        if (scene.name == "GameClearScene")
+        {
+            // BGMなし（必要に応じてクリア用BGMを追加）
+        }
+        #endregion
+
+        #region GameOverSceneでのBGMの処理
+        if (scene.name == "GameOverScene")
+        {
+            // BGMなし（必要に応じてゲームオーバー用BGMを追加）
+        }
+        #endregion
     }
 
-    // Update is called once per frame
     void Update()
     {
-        #region TitleSceneでの処理
+        #region TitleSceneでのSEの処理
         if (SceneManager.GetActiveScene().name == "TitleScene")
         {
             if (Input.anyKeyDown)
@@ -87,7 +106,7 @@ public class AudioController : MonoBehaviour
         }
         #endregion
 
-        #region TutorialSceneでの処理
+        #region TutorialSceneでのSEの処理
         if (SceneManager.GetActiveScene().name == "TutorialScene")
         {
             if (Input.GetKeyDown(KeyCode.Return))
@@ -97,7 +116,7 @@ public class AudioController : MonoBehaviour
         }
         #endregion
 
-        #region PlaySceneでの処理
+        #region PlaySceneでのSEの処理
         if (SceneManager.GetActiveScene().name == "PlayScene")
         {
             if (Input.GetKeyDown(KeyCode.M))
@@ -107,7 +126,7 @@ public class AudioController : MonoBehaviour
         }
         #endregion
 
-        #region GameClearSceneでの処理
+        #region GameClearSceneでのSEの処理
         if (SceneManager.GetActiveScene().name == "GameClearScene")
         {
             if (Input.anyKeyDown)
@@ -117,7 +136,7 @@ public class AudioController : MonoBehaviour
         }
         #endregion
 
-        #region GameOverSceneの処理
+        #region GameOverSceneでのSEの処理
         if (SceneManager.GetActiveScene().name == "GameOverScene")
         {
             if (Input.anyKeyDown)
