@@ -14,9 +14,11 @@ public class FlyerAttack : MonoBehaviour
     GameObject _flyerAttack;
     [SerializeField]
     Transform _flyer;
+    [SerializeField]
+    float _flyerAttackInterval = 10;
 
     GameObject _flyerAttackObject;
-    float _flyerAttackInterval;
+    float _flyerAttackTimer;
 
     Transform _player;
     [SerializeField]
@@ -34,10 +36,10 @@ public class FlyerAttack : MonoBehaviour
     void Update()
     {
         #region Ž©—Í
-        _flyerAttackInterval += Time.deltaTime;
-        if (_flyerAttackInterval >= 10)
+        _flyerAttackTimer += Time.deltaTime;
+        if (_flyerAttackTimer >= _flyerAttackInterval)
         {
-            _flyerAttackInterval = 0;
+            _flyerAttackTimer = 0;
             _flyerAttackObject = Instantiate(_flyerAttack, _flyer.position, transform.rotation);
         }
         #endregion

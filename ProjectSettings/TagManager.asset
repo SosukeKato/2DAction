@@ -12,6 +12,7 @@ TagManager:
   - UpperImpulse
   - Fade
   - Enemy
+  - SkeltonAttack
   layers:
   - Default
   - TransparentFX

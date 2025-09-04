@@ -9,6 +9,8 @@ public class PlayerHealth : MonoBehaviour
     int _heal = 3;
     [SerializeField]
     int _flyerAttackDamage = 5;
+    [SerializeField]
+    int _skeltonAttackDamage = 7;
 
     void Update()
     {
@@ -36,6 +38,11 @@ public class PlayerHealth : MonoBehaviour
         if (collision.CompareTag("FlyerBullet"))
         {
             _playerHealth -= _flyerAttackDamage;
+            Destroy(collision.gameObject);
+        }
+        if (collision.CompareTag("SkeltonAttack"))
+        {
+            _playerHealth -= _skeltonAttackDamage;
             Destroy(collision.gameObject);
         }
         #endregion
