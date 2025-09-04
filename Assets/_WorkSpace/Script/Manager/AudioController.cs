@@ -10,6 +10,10 @@ public class AudioController : MonoBehaviour
     AudioSource _startSESorce;
     [SerializeField]
     AudioClip _startSEClip;
+    [SerializeField]
+    AudioSource _titleBGMSorce;
+    [SerializeField]
+    AudioClip _titleBGMClip;
     #endregion
 
     #region TutorialScene‚Å‚Ì‰¹º‚ğ•Û‘¶‚·‚é•Ï”
@@ -51,6 +55,14 @@ public class AudioController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        #region TitleScene‚ÅBGM‚ğ–Â‚ç‚·ˆ—
+        if (SceneManager.GetActiveScene().name == "TitleScene")
+        {
+            _titleBGMSorce.clip = _titleBGMClip;
+            _titleBGMSorce.Play();
+        }
+        #endregion
     }
 
     // Update is called once per frame

@@ -390,6 +390,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 301261515}
   m_CullTransparentMesh: 1
+--- !u!82 &356427419 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4702566634860859454, guid: 79a84e1e3d78c1b45a33f60c6791d735, type: 3}
+  m_PrefabInstance: {fileID: 3349006198945842111}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &436757885
 GameObject:
   m_ObjectHideFlags: 0
@@ -1054,6 +1059,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5079800477095260559, guid: 79a84e1e3d78c1b45a33f60c6791d735, type: 3}
+      propertyPath: _titleBGMClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4187a3b82d5232c46ad2f4d3e084f6b3, type: 3}
+    - target: {fileID: 5079800477095260559, guid: 79a84e1e3d78c1b45a33f60c6791d735, type: 3}
+      propertyPath: _titleBGMSorce
+      value: 
+      objectReference: {fileID: 356427419}
     - target: {fileID: 5293958889963727717, guid: 79a84e1e3d78c1b45a33f60c6791d735, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

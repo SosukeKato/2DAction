@@ -47,14 +47,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startSESorce: {fileID: 4702566634860859454}
   _startSEClip: {fileID: 8300000, guid: e4ce31fcba91b534caa78799c9847aff, type: 3}
+  _titleBGMSorce: {fileID: 4702566634860859454}
+  _titleBGMClip: {fileID: 8300000, guid: 4187a3b82d5232c46ad2f4d3e084f6b3, type: 3}
   _gameStartSESorce: {fileID: 4702566634860859454}
   _gameStartSEClip: {fileID: 8300000, guid: e4ce31fcba91b534caa78799c9847aff, type: 3}
   _UpperImpulseSESorce: {fileID: 4702566634860859454}
   _UpperImpulseSEClip: {fileID: 8300000, guid: 5b85171a6298ce94d86ee36f7c123bd7, type: 3}
-  _bgmSorce: []
-  _bGMClip: []
-  _restartSESorce: {fileID: 4702566634860859454}
-  _restartSEClip: {fileID: 8300000, guid: b5ecb551439764c41bf6d914b005073b, type: 3}
+  _restartGameClearSESorce: {fileID: 0}
+  _restartGameClearSEClip: {fileID: 0}
+  _restartGameOverSESorce: {fileID: 0}
+  _restartGameOverSEClip: {fileID: 0}
 --- !u!82 &4702566634860859454
 AudioSource:
   m_ObjectHideFlags: 0
