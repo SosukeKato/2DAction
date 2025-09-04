@@ -32,6 +32,8 @@ public class AudioController : MonoBehaviour
     #region GameClearScene‚Å‚Ì‰¹º‚ğ•Û‘¶‚·‚é•Ï”
     [SerializeField]
     AudioClip _restartGameClearSEClip;
+    [SerializeField]
+    AudioClip _gameClearBGMClip;
     #endregion
 
     #region GameOverScene‚Å‚Ì‰¹º‚ğ•Û‘¶‚·‚é•Ï”
@@ -92,7 +94,8 @@ public class AudioController : MonoBehaviour
         #region GameClearScene‚Å‚ÌBGM‚Ìˆ—
         if (scene.name == "GameClearScene")
         {
-            
+            _bGMAudioSource.clip = _gameClearBGMClip;
+            _bGMAudioSource.Play();
         }
         #endregion
 
