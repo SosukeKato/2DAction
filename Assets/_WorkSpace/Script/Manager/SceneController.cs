@@ -51,7 +51,7 @@ public class SceneController : MonoBehaviour
         #region PlayScene‚É‚¢‚é‚Æ‚«‚Ìˆ—
         if (SceneManager.GetActiveScene().name == "PlayScene")
         {
-            if (playerObj != null)
+            if (playerObj == null)
             {
                 SceneManager.LoadScene("GameOverScene");
             }
