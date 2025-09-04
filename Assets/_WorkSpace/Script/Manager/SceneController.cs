@@ -55,7 +55,7 @@ public class SceneController : MonoBehaviour
             {
                 SceneManager.LoadScene("GameOverScene");
             }
-            if (GetComponent<GameController>()._min == 3)
+            if (GetComponent<Timer>()._min == 3)
             {
                 SceneManager.LoadScene("GameClearScene");
             }
