@@ -28,7 +28,6 @@ public class PlayerHealth : MonoBehaviour
         if (collision.CompareTag("HealItem"))
         {
             _playerHealth += _heal;
-            Debug.Log($"ç°ÇÃHPÇÕ{_playerHealth}Ç∂Ç·ÇÊ");
             Destroy(collision.gameObject);
         }
         #endregion
@@ -37,7 +36,6 @@ public class PlayerHealth : MonoBehaviour
         if (collision.CompareTag("FlyerBullet"))
         {
             _playerHealth -= _flyerAttackDamage;
-            Debug.Log($"ç°ÇÃHPÇÕ{_playerHealth}Ç∂Ç·ÇÊ");
             Destroy(collision.gameObject);
         }
         #endregion

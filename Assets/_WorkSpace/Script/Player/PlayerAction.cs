@@ -42,6 +42,8 @@ public class PlayerAction : MonoBehaviour
     bool _UpperImpulseStartCT;
     #endregion
 
+    Animator _pA;
+
     Rigidbody2D _rb;
     Transform _tr;
 
@@ -50,6 +52,7 @@ public class PlayerAction : MonoBehaviour
         Application.targetFrameRate = 60;
         _tr = transform;
         _rb = GetComponent<Rigidbody2D>();
+        _pA = GetComponent<Animator>();
     }
 
 
@@ -58,6 +61,14 @@ public class PlayerAction : MonoBehaviour
         #region キャラクターの基本移動処理
         //x軸の移動処理
         float x = Input.GetAxisRaw("Horizontal");
+        if (x != 0)
+        {
+            _pA.SetBool("Move", true);
+        }
+        else
+        {
+            _pA.SetBool("Move", false);
+        }
         //Playerの見た目を進行方向にあわせて回転させる処理
         if (x < 0)
         {
@@ -72,6 +83,7 @@ public class PlayerAction : MonoBehaviour
         {
             _rb.velocity = new Vector2(_rb.velocity.x, _JumpPower);
             _OnGround = false;
+            _pA.SetBool("Jump", true);
         }
         if (!_OnGround)
         {
@@ -81,6 +93,7 @@ public class PlayerAction : MonoBehaviour
         else
         {
             _rb.velocity = Vector2.right * (x * _MoveSpeed);
+            _pA.SetBool("Jump", false);
         }
         #endregion
 
@@ -88,6 +101,11 @@ public class PlayerAction : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.J))
         {
             Instantiate(_NAttack,_PlayerFront.position,Quaternion.identity);
+            _pA.SetBool("NAttack", true);
+        }
+        else
+        {
+            _pA.SetBool("NAttack", false);
         }
         //頭上に攻撃するスキルの処理
         if (Input.GetKeyDown(KeyCode.I) && _OnGround == true && _OverHeadAttackStartCT == false)
