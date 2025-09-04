@@ -38,10 +38,9 @@ public class AudioController : MonoBehaviour
     [SerializeField]
     AudioClip _restartGameOverSEClip;
     #endregion
-    // Start is called before the first frame update
-    void Start()
+
+    void Awake()
     {
-        OnSceneLoaded(SceneManager.GetActiveScene(), LoadSceneMode.Single);
         if (instance == null)
         {
             instance = this;
@@ -53,6 +52,19 @@ public class AudioController : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    //void OnDestroy()
+    //{
+    //    if (instance == this)
+    //    {
+    //        SceneManager.sceneLoaded -= OnSceneLoaded;
+    //    }
+    //}
+
+    //void Start()
+    //{
+    //    OnSceneLoaded(SceneManager.GetActiveScene(), LoadSceneMode.Single);
+    //}
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
@@ -67,10 +79,6 @@ public class AudioController : MonoBehaviour
         #endregion
 
         #region TutorialSceneでのBGMの処理
-        if (scene.name == "TutorialScene")
-        {
-            // BGMなし
-        }
         #endregion
 
         #region PlaySceneでのBGMの処理
@@ -84,7 +92,7 @@ public class AudioController : MonoBehaviour
         #region GameClearSceneでのBGMの処理
         if (scene.name == "GameClearScene")
         {
-            // BGMなし（必要に応じてクリア用BGMを追加）
+            
         }
         #endregion
 
