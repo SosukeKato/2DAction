@@ -16,6 +16,12 @@ public class FlyerAttack : MonoBehaviour
 
     GameObject _flyerAttackObject;
     float _flyerAttackInterval;
+
+    void Start()
+    {
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+    }
+
     void Update()
     {
         _flyerAttackInterval += Time.deltaTime;

@@ -38,9 +38,9 @@ public class EnemyAI : MonoBehaviour
 
         float _playerX = _Player.position.x;
         float _enemyX = transform.position.x;
-        float _distance = Mathf.Abs(_playerX - _enemyX);
+        float _distance = Mathf.Abs(_playerX - _enemyX);//(AI)
 
-        if (_distance > _stopDistance)
+        if (_distance > _stopDistance) //‹——£‚ğæ“¾‚µ‚Ä‚»‚Ì‹——£‚æ‚è‹ß‚Ã‚©‚È‚¢‚æ‚¤‚É‚·‚éğŒ•¶(AI)
         {
             Vector2 direction = new Vector2(_playerX - _enemyX, 0f).normalized;
             transform.position += (Vector3)(direction * _MoveSpeed * Time.deltaTime);

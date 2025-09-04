@@ -49,7 +49,7 @@ public class AudioController : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-            SceneManager.sceneLoaded += OnSceneLoaded;
+            SceneManager.sceneLoaded += OnSceneLoaded;//この書き方まだよくわかってない(AI)
         }
         else
         {
@@ -57,22 +57,9 @@ public class AudioController : MonoBehaviour
         }
     }
 
-    //void OnDestroy()
-    //{
-    //    if (instance == this)
-    //    {
-    //        SceneManager.sceneLoaded -= OnSceneLoaded;
-    //    }
-    //}
-
-    //void Start()
-    //{
-    //    OnSceneLoaded(SceneManager.GetActiveScene(), LoadSceneMode.Single);
-    //}
-
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)//シーンがロードされたときのみ実行する関数(AI)
     {
-        _bGMAudioSource.Stop();
+        _bGMAudioSource.Stop();//直前のシーンで再生されてたBGMを停止する処理(AI)
 
         #region TitleSceneでのBGMの処理
         if (scene.name == "TitleScene")
