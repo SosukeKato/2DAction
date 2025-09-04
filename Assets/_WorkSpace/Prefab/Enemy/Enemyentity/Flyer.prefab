@@ -209,6 +209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _MoveSpeed: 3
   _PlayerScale: 3
+  _stopDistance: 1
   _attackAnimation: {fileID: 0}
 --- !u!50 &6480724160634267475
 Rigidbody2D:

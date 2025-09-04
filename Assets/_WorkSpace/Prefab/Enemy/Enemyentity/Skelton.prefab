@@ -139,6 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _MoveSpeed: 3
   _PlayerScale: 3
+  _stopDistance: 1.4
   _attackAnimation: {fileID: 0}
 --- !u!114 &1972591425354795972
 MonoBehaviour:
