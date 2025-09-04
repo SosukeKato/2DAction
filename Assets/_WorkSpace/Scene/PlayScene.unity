@@ -364,9 +364,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5be1fe6a2fa2ef4e8129a82fefd048a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _death: 0
   _heal: 3
-  _flyerAttackDamage: 0
+  _flyerAttackDamage: 5
 --- !u!114 &926164835
 MonoBehaviour:
   m_ObjectHideFlags: 0

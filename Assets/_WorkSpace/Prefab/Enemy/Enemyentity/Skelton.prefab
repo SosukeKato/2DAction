@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: -4914753593451889690}
   - component: {fileID: 1972591425354795972}
   - component: {fileID: -8902353173545676690}
-  - component: {fileID: -20202556550654202}
   - component: {fileID: 7069317197427637860}
   m_Layer: 0
   m_Name: Skelton
@@ -139,6 +138,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _MoveSpeed: 3
   _PlayerScale: 3
+  _attackAnimation: {fileID: 0}
+  _enemy: {fileID: 6106545819284921472}
 --- !u!114 &1972591425354795972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,20 +187,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &-20202556550654202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6106545819284921472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 502e1f2cd1e597d42aaf0d152f991723, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _flyerAttack: {fileID: 0}
-  _flyer: {fileID: 0}
 --- !u!114 &7069317197427637860
 MonoBehaviour:
   m_ObjectHideFlags: 0
