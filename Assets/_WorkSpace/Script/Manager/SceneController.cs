@@ -71,7 +71,7 @@ public class SceneController : MonoBehaviour
         #region GameOverSceneにいるときの処理
         if (SceneManager.GetActiveScene().name == "GameOverScene")
         {
-            if (Input.anyKeyDown)//Fade中にキーが押せてしまうため要修正
+            if (Input.GetKeyDown(KeyCode.Return))//Fade中にキーが押せてしまうため要修正
             {
                 Instantiate(_restartFade, _sceneManager.position, Quaternion.identity);
             }
