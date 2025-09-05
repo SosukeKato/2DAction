@@ -49,11 +49,11 @@ public class EnemyAI : MonoBehaviour
 
         if (_playerX - _enemyX > 0)
         {
-            _tr.localScale = new Vector3(_PlayerScale, _PlayerScale, 1);
+            _tr.eulerAngles = new Vector3(0, 0, 0);
         }
         if (_playerX - _enemyX < 0)
         {
-            _tr.localScale = new Vector3(-_PlayerScale, _PlayerScale, 1);
+            _tr.eulerAngles = new Vector3(0, 180, 0);
         }
     }
 }
