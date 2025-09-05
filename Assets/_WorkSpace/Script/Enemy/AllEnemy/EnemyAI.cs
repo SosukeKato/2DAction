@@ -13,7 +13,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField]
     float _stopDistance = 1;
 
-    Animator _enemyAnimator;
+    Animator _sA;
 
     Transform _Player;
 
@@ -23,7 +23,7 @@ public class EnemyAI : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _tr = transform;
-        _enemyAnimator = GetComponent<Animator>();
+        _sA = GetComponent<Animator>();
 
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj == null)
@@ -45,6 +45,11 @@ public class EnemyAI : MonoBehaviour
         {
             Vector2 direction = new Vector2(_playerX - _enemyX, 0f).normalized;
             transform.position += (Vector3)(direction * _MoveSpeed * Time.deltaTime);
+            _sA.SetBool("SkeltonMove", true);
+        }
+        else
+        {
+            _sA.SetBool("SkeltonMove", false);
         }
 
         if (_playerX - _enemyX > 0)
