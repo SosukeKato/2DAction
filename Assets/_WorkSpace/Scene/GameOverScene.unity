@@ -179,7 +179,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press AnyKey To Title
+  m_text: Press Enter To Title
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 28f7dc91728977f41ac65d04167a2e54, type: 2}
   m_sharedMaterial: {fileID: 519466901263321556, guid: 28f7dc91728977f41ac65d04167a2e54, type: 2}
