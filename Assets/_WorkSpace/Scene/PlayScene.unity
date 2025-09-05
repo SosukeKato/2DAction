@@ -349,8 +349,8 @@ MonoBehaviour:
   - {fileID: 1598640803}
   _Boss: {fileID: 3120624529214524670, guid: 4ae1c4d2793d8f5498405e7e00300250, type: 3}
   _BossSpawn: {fileID: 1077634518}
-  _SpawnInterval: 10
-  _SpawnTimer: 10
+  _SpawnInterval: 3
+  _SpawnTimer: 3
   _BossSpawnCount: 180
 --- !u!1 &1077634517
 GameObject:

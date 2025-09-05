@@ -51,10 +51,6 @@ public class SceneController : MonoBehaviour
         #region PlayScene‚É‚¢‚é‚Æ‚«‚Ìˆ—
         if (SceneManager.GetActiveScene().name == "PlayScene")
         {
-            if (playerObj == null)
-            {
-                SceneManager.LoadScene("GameOverScene");
-            }
             if (GetComponent<Timer>()._min == 3)
             {
                 SceneManager.LoadScene("GameClearScene");

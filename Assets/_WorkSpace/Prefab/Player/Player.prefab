@@ -233,7 +233,7 @@ MonoBehaviour:
   _PlayerFront: {fileID: 6909038325741840483}
   _PlayerOverHead: {fileID: 2666945886307698648}
   _PlayerFoot: {fileID: 6870959609950061348}
-  _OverHeadAttackCT: 0
+  _OverHeadAttackCT: 4
   _UpperImpulseCT: 5
   _OverHeadAttackStartCT: 0
   _UpperImpulseStartCT: 0
@@ -251,6 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _heal: 3
   _flyerAttackDamage: 5
+  _skeltonAttackDamage: 7
 --- !u!212 &4546121441806957197
 SpriteRenderer:
   m_ObjectHideFlags: 0

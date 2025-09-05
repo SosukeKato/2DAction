@@ -71,9 +71,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.028278789, y: 0}
+  m_Offset: {x: 0.028278887, y: 0.050400317}
   serializedVersion: 2
-  m_Radius: 0.20024447
+  m_Radius: 0.2199664
 --- !u!114 &3505632577965738309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93642752bf4e94d4b8ed2546ea276552, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minY: 2
+  _minY: 2.5
   _maxY: 3
   _minX: -11
   _maxX: 11
@@ -144,8 +144,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 429ac4b19fdbc86469cecf0636d7c094, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Health: 100
-  _MaxHealth: 100
+  _Health: 30
+  _MaxHealth: 30
   _NAttackDamage: 15
   _OverHeadAttackDamage: 30
   _AirEnemyDefenseDebuff: 2

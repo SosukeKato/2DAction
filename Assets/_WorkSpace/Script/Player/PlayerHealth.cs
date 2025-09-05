@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if(_playerHealth <= 0)
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene("GameOverScene");
         }
         if (_playerHealth >= 100)
         {

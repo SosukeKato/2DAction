@@ -185,8 +185,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 429ac4b19fdbc86469cecf0636d7c094, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Health: 100
-  _MaxHealth: 100
+  _Health: 30
+  _MaxHealth: 30
   _NAttackDamage: 15
   _OverHeadAttackDamage: 30
   _AirEnemyDefenseDebuff: 2
