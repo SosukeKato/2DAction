@@ -61,7 +61,7 @@ public class SceneController : MonoBehaviour
         #region GameClearScene‚É‚¢‚é‚Æ‚«‚Ìˆ—
         if (SceneManager.GetActiveScene().name == "GameClearScene")
         {
-            if (Input.anyKeyDown)
+            if (Input.GetKeyDown(KeyCode.Return))
             {
                 SceneManager.LoadScene("TitleScene");
             }
