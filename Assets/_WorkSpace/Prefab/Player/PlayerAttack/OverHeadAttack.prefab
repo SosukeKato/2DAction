@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6721290434603149308}
   - component: {fileID: 2775706228704868861}
   - component: {fileID: 8853157346137332465}
-  - component: {fileID: 8599817013652050852}
+  - component: {fileID: -1280672505693393959}
   m_Layer: 0
   m_Name: OverHeadAttack
   m_TagString: OverHeadAttack
@@ -152,7 +152,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &8599817013652050852
+--- !u!114 &-1280672505693393959
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,10 +161,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1761560020596830137}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d73775d1daf2b784a8dbadef228f9e94, type: 3}
+  m_Script: {fileID: 11500000, guid: 77282458ba1bafd489a1635b04530c23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _attackDuration: 1
+  _attackDuration: 2
 --- !u!1 &2096715856077561788
 GameObject:
   m_ObjectHideFlags: 0

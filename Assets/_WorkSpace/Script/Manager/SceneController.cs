@@ -51,7 +51,7 @@ public class SceneController : MonoBehaviour
         #region PlayScene‚É‚¢‚é‚Æ‚«‚Ìˆ—
         if (SceneManager.GetActiveScene().name == "PlayScene")
         {
-            if (GetComponent<Timer>()._min == 3)
+            if (GetComponent<Timer>()._min == 1)
             {
                 SceneManager.LoadScene("GameClearScene");
             }

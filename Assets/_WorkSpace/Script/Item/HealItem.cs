@@ -13,6 +13,11 @@ public class HealItem : MonoBehaviour
     [SerializeField]
     float _maxY = 5f;
 
+    void Start()
+    {
+        Application.targetFrameRate = 30;
+    }
+
     void Update()
     {
         Vector2 pos = transform.position;

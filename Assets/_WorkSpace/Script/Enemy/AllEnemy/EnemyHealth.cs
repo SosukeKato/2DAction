@@ -25,6 +25,7 @@ public class EnemyHealth : MonoBehaviour
 
     void Start()
     {
+        Application.targetFrameRate = 30;
         _rb = GetComponent<Rigidbody2D>();
         _EAI = GetComponent<EnemyAI>();
     }
@@ -59,17 +60,17 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D col)
     {
-        if(collision.gameObject.CompareTag("Ground"))
+        if(col.gameObject.CompareTag("Ground"))
         {
             _OnGround = true;
         }
     }
 
-    void OnCollisionExit2D(Collision2D collision)
+    void OnCollisionExit2D(Collision2D col)//collisionà¯êîÇæÇ©ÇÁñºëOïœÇ¶ÇƒÇ‡ìÆÇ≠Ç®
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (col.gameObject.CompareTag("Ground"))
         {
             _OnGround = false;
         }

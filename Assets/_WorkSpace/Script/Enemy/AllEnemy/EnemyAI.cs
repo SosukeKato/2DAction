@@ -21,6 +21,8 @@ public class EnemyAI : MonoBehaviour
     Rigidbody2D _rb;
     void Start()
     {
+        Application.targetFrameRate = 30;
+
         _rb = GetComponent<Rigidbody2D>();
         _tr = transform;
         _sA = GetComponent<Animator>();

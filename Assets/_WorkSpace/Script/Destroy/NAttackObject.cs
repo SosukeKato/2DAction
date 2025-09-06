@@ -8,6 +8,7 @@ public class NAttackObject : MonoBehaviour
     float _attackDuration;
     IEnumerator Start()
     {
+        Application.targetFrameRate = 30;
         yield return new WaitForSeconds(_attackDuration);
         Destroy(gameObject);
     }
