@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
     static Timer instance { get; set; }
+
+    [SerializeField]
+    Text TimerText;
 
     float _sec;
     public float _min;
@@ -28,5 +32,7 @@ public class Timer : MonoBehaviour
             _min = 0;
         }
         #endregion
+
+        TimerText.text = _min.ToString("00") + ":" + ((int)_sec).ToString("00");
     }
 }
