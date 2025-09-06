@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class Timer : MonoBehaviour
 {
     static Timer instance { get; set; }
 
     [SerializeField]
-    Text TimerText;
+    TextMeshProUGUI TimerText;
 
     float _sec;
     public float _min;
@@ -17,7 +18,7 @@ public class Timer : MonoBehaviour
     void Update()
     {
         #region Timer‚Ìˆ—
-        if (SceneManager.GetActiveScene().name == "PlayScene")
+        if (SceneManager.GetActiveScene().name == "EasyStage")
         {
             _sec += Time.deltaTime;
             if (_sec >= 60)
