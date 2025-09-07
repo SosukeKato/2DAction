@@ -1,18 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ButtonSceneChange : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    string SceneName;
+    void OnClincked()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        SceneManager.LoadScene(SceneName);
     }
 }
