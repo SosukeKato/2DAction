@@ -6,10 +6,10 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    static Timer instance { get; set; }
-
     [SerializeField]
     TextMeshProUGUI TimerText;
+    [SerializeField]
+    float _timeLimit;
 
     float _sec;
     public float _min;
@@ -17,19 +17,15 @@ public class Timer : MonoBehaviour
     void Update()
     {
         #region Timer‚Ìˆ—
-        if (SceneManager.GetActiveScene().name == "EasyStage")
-        {
-            _sec += Time.deltaTime;
-            if (_sec >= 60)
-            {
-                _sec = 0;
-                _min++;
-            }
-        }
-        if (SceneManager.GetActiveScene().name == "GameClearScene" || SceneManager.GetActiveScene().name == "GameOverScene")
+        _sec += Time.deltaTime;
+        if (_sec >= 60)
         {
             _sec = 0;
-            _min = 0;
+            _min++;
+        }
+        if (_min >= _timeLimit)
+        {
+            Destroy(TimerText);
         }
         #endregion
 
