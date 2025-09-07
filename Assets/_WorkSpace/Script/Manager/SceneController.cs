@@ -28,16 +28,6 @@ public class SceneController : MonoBehaviour
 
     void Update()
     {
-        #region TitleScene‚É‚¢‚é‚Æ‚«‚Ìˆ—
-        if (SceneManager.GetActiveScene().name == "TitleScene")
-        {
-            if (Input.anyKeyDown)//Fade’†‚ÉƒL[‚ª‰Ÿ‚¹‚Ä‚µ‚Ü‚¤‚½‚ß—vC³
-            {
-                SceneManager.LoadScene("TutorialScene");
-            }
-        }
-        #endregion
-
         #region TutorialScene‚É‚¢‚é‚Æ‚«‚Ìˆ—
         if (SceneManager.GetActiveScene().name == "TutorialScene")
         {
