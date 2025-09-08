@@ -179,7 +179,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: HardCore
+  m_text: Lunatic
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 28f7dc91728977f41ac65d04167a2e54, type: 2}
   m_sharedMaterial: {fileID: 519466901263321556, guid: 28f7dc91728977f41ac65d04167a2e54, type: 2}
@@ -1322,7 +1322,7 @@ GameObject:
   - component: {fileID: 1342302955}
   - component: {fileID: 1342302954}
   m_Layer: 5
-  m_Name: HardCore
+  m_Name: Lunatic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
