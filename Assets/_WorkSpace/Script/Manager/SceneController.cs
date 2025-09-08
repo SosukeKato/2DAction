@@ -68,4 +68,9 @@ public class SceneController : MonoBehaviour
         }
         #endregion
     }
+
+    public void ChangeScene(string SceneName)
+    {
+        SceneManager.LoadScene(SceneName);
+    }
 }

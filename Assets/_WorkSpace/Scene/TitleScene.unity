@@ -402,7 +402,6 @@ GameObject:
   - component: {fileID: 340372007}
   - component: {fileID: 340372006}
   - component: {fileID: 340372005}
-  - component: {fileID: 340372008}
   m_Layer: 5
   m_Name: Hard
   m_TagString: Untagged
@@ -512,19 +511,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 340372003}
   m_CullTransparentMesh: 1
---- !u!114 &340372008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 340372003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cae2a3402d39d54c96f068351ad0706, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SceneName: 
 --- !u!1 &436757885
 GameObject:
   m_ObjectHideFlags: 0
@@ -1201,7 +1187,6 @@ GameObject:
   - component: {fileID: 1342302956}
   - component: {fileID: 1342302955}
   - component: {fileID: 1342302954}
-  - component: {fileID: 1342302957}
   m_Layer: 5
   m_Name: HardCore
   m_TagString: Untagged
@@ -1311,19 +1296,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1342302952}
   m_CullTransparentMesh: 1
---- !u!114 &1342302957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1342302952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cae2a3402d39d54c96f068351ad0706, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SceneName: 
 --- !u!1 &1609658554
 GameObject:
   m_ObjectHideFlags: 0
@@ -1336,7 +1308,6 @@ GameObject:
   - component: {fileID: 1609658558}
   - component: {fileID: 1609658557}
   - component: {fileID: 1609658556}
-  - component: {fileID: 1609658559}
   m_Layer: 5
   m_Name: Easy
   m_TagString: Untagged
@@ -1408,16 +1379,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1609658554}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1628487398}
+        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: EasyStage
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1609658557
@@ -1458,19 +1429,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1609658554}
   m_CullTransparentMesh: 1
---- !u!114 &1609658559
+--- !u!114 &1628487398 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 7676088426139497412, guid: ddcbcd3b1ed5ae44a98f96ecf119f9d0, type: 3}
+  m_PrefabInstance: {fileID: 2514854907167267671}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1609658554}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cae2a3402d39d54c96f068351ad0706, type: 3}
+  m_Script: {fileID: 11500000, guid: 30db2d70fc0967a47a751ca16823b948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: 
 --- !u!1 &1961350802
 GameObject:
   m_ObjectHideFlags: 0
@@ -1825,7 +1794,6 @@ GameObject:
   - component: {fileID: 2138343151}
   - component: {fileID: 2138343150}
   - component: {fileID: 2138343149}
-  - component: {fileID: 2138343152}
   m_Layer: 5
   m_Name: Normal
   m_TagString: Untagged
@@ -1935,19 +1903,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2138343147}
   m_CullTransparentMesh: 1
---- !u!114 &2138343152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2138343147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cae2a3402d39d54c96f068351ad0706, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SceneName: 
 --- !u!1001 &2514854907167267671
 PrefabInstance:
   m_ObjectHideFlags: 0
