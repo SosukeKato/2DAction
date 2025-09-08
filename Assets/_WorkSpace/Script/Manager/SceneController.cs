@@ -33,7 +33,7 @@ public class SceneController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Return))
             {
-                SceneManager.LoadScene("PlayScene");
+                SceneManager.LoadScene("TitleScene");
             }
         }
         #endregion
