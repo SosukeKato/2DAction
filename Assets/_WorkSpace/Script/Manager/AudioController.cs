@@ -75,7 +75,7 @@ public class AudioController : MonoBehaviour
         #endregion
 
         #region PlayScene‚Å‚ÌBGM‚Ìˆ—
-        if (scene.name == "PlayScene")
+        if (scene.name == "EasyStage")
         {
             _bGMAudioSource.clip = _playBGMClip;
             _bGMAudioSource.Play();
@@ -122,7 +122,7 @@ public class AudioController : MonoBehaviour
         #endregion
 
         #region PlayScene‚Å‚ÌSE‚Ìˆ—
-        if (SceneManager.GetActiveScene().name == "PlayScene")
+        if (SceneManager.GetActiveScene().name == "EasyStage")
         {
             if (Input.GetKeyDown(KeyCode.M))
             {

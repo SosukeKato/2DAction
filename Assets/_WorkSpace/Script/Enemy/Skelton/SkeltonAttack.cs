@@ -25,7 +25,6 @@ public class SkeltonAttack : MonoBehaviour
         if (_skeltonAttackTimer >= _skeltonAttackInterval - 0.1) 
         {
             _sA.SetBool("SkeltonAttack", true);
-            StartCoroutine("AnimationDelay");
         }
         if (_skeltonAttackTimer >= _skeltonAttackInterval)
         {

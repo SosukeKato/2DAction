@@ -39,7 +39,7 @@ public class SceneController : MonoBehaviour
         #endregion
 
         #region PlayScene‚É‚¢‚é‚Æ‚«‚Ìˆ—
-        if (SceneManager.GetActiveScene().name == "PlayScene")
+        if (SceneManager.GetActiveScene().name == "EasyStage")
         {
             if (GetComponent<Timer>()._min == 3)
             {
