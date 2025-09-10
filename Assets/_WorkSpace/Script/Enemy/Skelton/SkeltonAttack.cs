@@ -33,10 +33,4 @@ public class SkeltonAttack : MonoBehaviour
             Instantiate(_skeltonAttack, _skeltonForward.position, Quaternion.identity);
         }
     }
-
-    IEnumerator AnimationDelay()
-    {
-        yield return new WaitForSeconds(0.08f);
-        _sA.SetBool("SkeltonAttack", false);
-    }
 }

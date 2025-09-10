@@ -14,9 +14,9 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     float _SpawnInterval;
     [SerializeField]
-    float _SpawnTimer;
-    [SerializeField]
     int _BossSpawnCount;
+
+    float _SpawnTimer = 0;
     // Start is called before the first frame update
     void Start()
     {
