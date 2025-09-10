@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class NAttackObject : MonoBehaviour
+public class EnemyAttackObject : MonoBehaviour
 {
     [SerializeField]
     float _attackDuration;
