@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class SkillAttackObject : MonoBehaviour
+public class PlayerAttackObject : MonoBehaviour
 {
     [SerializeField]
     float _attackDuration;
