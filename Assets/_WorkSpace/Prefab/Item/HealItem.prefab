@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 8258394222291255385}
   - component: {fileID: 80561427887665189}
   - component: {fileID: 3804806593391517816}
-  - component: {fileID: -1667006854364300359}
+  - component: {fileID: -3990943660348355545}
+  - component: {fileID: -5673397916894793154}
   m_Layer: 0
   m_Name: HealItem
   m_TagString: HealItem
@@ -181,7 +182,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &-1667006854364300359
+--- !u!114 &-3990943660348355545
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,9 +191,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 3729811217784919095}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ec7fc1755d3ab744a82a3011371021c, type: 3}
+  m_Script: {fileID: 11500000, guid: 93642752bf4e94d4b8ed2546ea276552, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _minY: -2.25
   _maxY: 5
-  _heal: 3
+  _minX: -11
+  _maxX: 11
+--- !u!114 &-5673397916894793154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3729811217784919095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d73775d1daf2b784a8dbadef228f9e94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _attackDuration: 10
