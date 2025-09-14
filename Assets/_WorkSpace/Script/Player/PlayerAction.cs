@@ -92,7 +92,6 @@ public class PlayerAction : MonoBehaviour
         else
         {
             _rb.velocity = Vector2.right * (x * _MoveSpeed);
-            //_pA.SetTrigger("Jump");
         }
         #endregion
 
@@ -101,10 +100,6 @@ public class PlayerAction : MonoBehaviour
         {
             Instantiate(_NAttack,_PlayerFront.position,Quaternion.identity);
             _pA.SetTrigger("NAttack");
-        }
-        else
-        {
-            //_pA.SetBool("NAttack");
         }
         //頭上に攻撃するスキルの処理
         if (Input.GetKeyDown(KeyCode.I) && _OnGround == true && _OverHeadAttackStartCT == false)
@@ -130,7 +125,7 @@ public class PlayerAction : MonoBehaviour
         }
     }
 
-    #region スキルのCT処理
+    #region CT処理
     IEnumerator OverHeadAttackSkillCT()
     {
         yield return new WaitForSeconds(_OverHeadAttackCT);
