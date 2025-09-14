@@ -82,7 +82,7 @@ public class PlayerAction : MonoBehaviour
         {
             _rb.velocity = new Vector2(_rb.velocity.x, _JumpPower);
             _OnGround = false;
-            _pA.SetBool("Jump", true);
+            _pA.SetTrigger("Jump");
         }
         if (!_OnGround)
         {
@@ -92,7 +92,7 @@ public class PlayerAction : MonoBehaviour
         else
         {
             _rb.velocity = Vector2.right * (x * _MoveSpeed);
-            _pA.SetBool("Jump", false);
+            //_pA.SetTrigger("Jump");
         }
         #endregion
 
@@ -100,11 +100,11 @@ public class PlayerAction : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.J))
         {
             Instantiate(_NAttack,_PlayerFront.position,Quaternion.identity);
-            _pA.SetBool("NAttack", true);
+            _pA.SetTrigger("NAttack");
         }
         else
         {
-            _pA.SetBool("NAttack", false);
+            //_pA.SetBool("NAttack");
         }
         //ì™è„Ç…çUåÇÇ∑ÇÈÉXÉLÉãÇÃèàóù
         if (Input.GetKeyDown(KeyCode.I) && _OnGround == true && _OverHeadAttackStartCT == false)
