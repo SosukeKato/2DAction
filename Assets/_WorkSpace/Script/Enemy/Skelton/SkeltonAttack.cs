@@ -24,7 +24,7 @@ public class SkeltonAttack : MonoBehaviour
         _skeltonAttackTimer += Time.deltaTime;
         if (_skeltonAttackTimer >= _skeltonAttackInterval - 0.1) 
         {
-            _sA.SetBool("SkeltonAttack", true);
+            _sA.SetTrigger("SkeltonAttack");
         }
         if (_skeltonAttackTimer >= _skeltonAttackInterval)
         {
