@@ -36,8 +36,10 @@ public class PlayerAction : MonoBehaviour
     [SerializeField]
     int _UpperImpulseCT;
     [SerializeField]
+    float _NAttackCT;
+
+    bool _NAttackStartCT;
     bool _OverHeadAttackStartCT;
-    [SerializeField]
     bool _UpperImpulseStartCT;
     #endregion
 
@@ -96,10 +98,12 @@ public class PlayerAction : MonoBehaviour
         #endregion
 
         //’ÊíUŒ‚‚Ìˆ—
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.J) && _NAttackStartCT == false)
         {
             Instantiate(_NAttack,_PlayerFront.position,Quaternion.identity);
+            _NAttackStartCT = true;
             _pA.SetTrigger("NAttack");
+            StartCoroutine("NAttackCT");
         }
         //“ªã‚ÉUŒ‚‚·‚éƒXƒLƒ‹‚Ìˆ—
         if (Input.GetKeyDown(KeyCode.I) && _OnGround == true && _OverHeadAttackStartCT == false)
@@ -136,6 +140,12 @@ public class PlayerAction : MonoBehaviour
     {
         yield return new WaitForSeconds(_UpperImpulseCT);
         _UpperImpulseStartCT = false;
+    }
+
+    IEnumerator NAttackCT()
+    {
+        yield return new WaitForSeconds(_NAttackCT);
+        _NAttackStartCT = false;
     }
     #endregion
 }
