@@ -45,6 +45,11 @@ public class AudioController : MonoBehaviour
     AudioClip _gameOverBGMClip;
     #endregion
 
+    #region 他のスクリプトを呼び出すための変数
+    GameObject _playerObj;
+    PlayerAction _pAc;
+    #endregion
+
     void Awake()
     {
         if (instance == null)
@@ -62,6 +67,11 @@ public class AudioController : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)//シーンがロードされたときのみ実行する関数(AI)
     {
         _bGMAudioSource.Stop();//直前のシーンで再生されてたBGMを停止する処理(AI)
+
+        #region 特定のGameObjectに付属しているコンポーネントを取得する処理
+        _playerObj = GameObject.FindGameObjectWithTag("Player");
+        _pAc = _playerObj.GetComponent<PlayerAction>();
+        #endregion
 
         #region TitleSceneでのBGMの処理
         if (scene.name == "TitleScene")
