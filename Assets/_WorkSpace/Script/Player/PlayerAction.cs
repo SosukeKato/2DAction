@@ -38,9 +38,9 @@ public class PlayerAction : MonoBehaviour
     [SerializeField]
     float _NAttackCT;
 
-    bool _NAttackStartCT;
-    bool _OverHeadAttackStartCT;
-    bool _UpperImpulseStartCT;
+    public bool _NAttackStartCT;
+    public bool _OverHeadAttackStartCT;
+    public bool _UpperImpulseStartCT;
     #endregion
 
     Animator _pA;
