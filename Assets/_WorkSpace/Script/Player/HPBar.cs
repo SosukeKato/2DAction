@@ -1,19 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HPBar : MonoBehaviour
 {
     GameObject _playerObj;
-    PlayerAction _pAc;
+    PlayerHealth _pH;
+
+    [SerializeField]
+    Image _hpBarImage;
     void Start()
     {
         _playerObj = GameObject.FindGameObjectWithTag("Player");
-        _pAc = _playerObj.GetComponent<PlayerAction>();
+        _pH = _playerObj.GetComponent<PlayerHealth>();
     }
 
     void Update()
     {
-        
+        _hpBarImage.fillAmount = _pH._playerHealth / 100;
     }
 }
