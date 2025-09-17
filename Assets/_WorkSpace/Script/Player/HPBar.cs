@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class HPBar : MonoBehaviour
 {
-    // Start is called before the first frame update
+    GameObject _playerObj;
+    PlayerAction _pAc;
     void Start()
     {
-        
+        _playerObj = GameObject.FindGameObjectWithTag("Player");
+        _pAc = _playerObj.GetComponent<PlayerAction>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
