@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    int _playerHealth = 100;
+    public int _playerHealth = 100;
     [SerializeField]
     int _heal = 3;
     [SerializeField]
