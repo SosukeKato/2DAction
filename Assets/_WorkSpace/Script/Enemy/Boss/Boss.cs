@@ -6,11 +6,13 @@ public class Boss : MonoBehaviour
     [SerializeField]
     int _bossAttackInterval = 10;
     [SerializeField]
-    List<GameObject> _bossAttackObj;
+    GameObject[] _bossAttackObj;
     [SerializeField]
-    List<Transform> _bossAttackPos;
+    Transform[] _bossAttackPos;
 
     float _bossAttackTimer;
+    int _randomBossAttack;
+    int _randomBossAttackPosition;
     void Start()
     {
         
@@ -21,6 +23,8 @@ public class Boss : MonoBehaviour
         _bossAttackTimer += Time.deltaTime;
         if (_bossAttackTimer >= _bossAttackInterval)
         {
+            _randomBossAttack = Random.Range(0, _bossAttackObj.Length);
+            _randomBossAttackPosition = Random.Range(0, _bossAttackPos.Length);
             Instantiate(_bossAttackObj[1], _bossAttackPos[1].position, Quaternion.identity);
         }
     }
