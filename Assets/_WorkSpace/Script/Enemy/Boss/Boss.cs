@@ -26,6 +26,7 @@ public class Boss : MonoBehaviour
             _randomBossAttack = Random.Range(0, _bossAttackObj.Length);
             _randomBossAttackPos = Random.Range(0, _bossAttackPos.Length);
             Instantiate(_bossAttackObj[_randomBossAttack], _bossAttackPos[_randomBossAttackPos].position, Quaternion.identity);
+            _bossAttackTimer = 0;
         }
     }
 }
