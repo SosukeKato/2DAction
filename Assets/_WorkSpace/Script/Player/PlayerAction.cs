@@ -128,6 +128,8 @@ public class PlayerAction : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.L))
         {
             Instantiate(_playerBullet, _PlayerFront.position, Quaternion.identity);
+            _playerBulletStartCT = true;
+            StartCoroutine("PlayerBulletSkillCT");
         }
     }
 
@@ -156,6 +158,12 @@ public class PlayerAction : MonoBehaviour
     {
         yield return new WaitForSeconds(_NAttackCT);
         _nAttackStartCT = false;
+    }
+
+    IEnumerator PlayerBulletSkillCT()
+    {
+        yield return new WaitForSeconds(_playerBulletCT);
+        _playerBulletStartCT = false;
     }
     #endregion
 }
