@@ -68,11 +68,6 @@ public class AudioController : MonoBehaviour
     {
         _bGMAudioSource.Stop();//直前のシーンで再生されてたBGMを停止する処理(AI)
 
-        #region 特定のGameObjectに付属しているコンポーネントを取得する処理
-        _playerObj = GameObject.FindGameObjectWithTag("Player");
-        _pAc = _playerObj.GetComponent<PlayerAction>();
-        #endregion
-
         #region TitleSceneでのBGMの処理
         if (scene.name == "TitleScene")
         {
@@ -89,6 +84,10 @@ public class AudioController : MonoBehaviour
         {
             _bGMAudioSource.clip = _playBGMClip;
             _bGMAudioSource.Play();
+            #region 特定のGameObjectに付属しているコンポーネントを取得する処理
+            _playerObj = GameObject.FindGameObjectWithTag("Player");
+            _pAc = _playerObj.GetComponent<PlayerAction>();
+            #endregion
         }
         #endregion
 
