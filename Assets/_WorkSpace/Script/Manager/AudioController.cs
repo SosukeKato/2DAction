@@ -134,11 +134,11 @@ public class AudioController : MonoBehaviour
         #region PlaySceneÇ≈ÇÃSEÇÃèàóù
         if (SceneManager.GetActiveScene().name == "EasyStage")
         {
-            if (Input.GetKeyDown(KeyCode.M) && _pAc._UpperImpulseStartCT == false)
+            if (Input.GetKeyDown(KeyCode.M) && _pAc._upperImpulseStartCT == false)
             {
                 _sEAudioSource.PlayOneShot(_upperImpulseSEClip);
             }
-            if (Input.GetKeyDown(KeyCode.I) && _pAc._OverHeadAttackStartCT == false)
+            if (Input.GetKeyDown(KeyCode.I) && _pAc._overHeadAttackStartCT == false)
             {
                 _sEAudioSource.PlayOneShot(_overHeadAttackSEClip);
             }

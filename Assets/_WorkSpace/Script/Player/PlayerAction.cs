@@ -19,6 +19,8 @@ public class PlayerAction : MonoBehaviour
     GameObject _OverHeadAttack;
     [SerializeField]
     GameObject _UpperImpulse;
+    [SerializeField]
+    GameObject _playerBullet;
     #endregion
 
     #region 攻撃の発生位置を管理する変数
@@ -37,10 +39,13 @@ public class PlayerAction : MonoBehaviour
     int _UpperImpulseCT;
     [SerializeField]
     float _NAttackCT;
+    [SerializeField]
+    int _playerBulletCT;
 
-    public bool _NAttackStartCT;
-    public bool _OverHeadAttackStartCT;
-    public bool _UpperImpulseStartCT;
+    public bool _nAttackStartCT;
+    public bool _overHeadAttackStartCT;
+    public bool _upperImpulseStartCT;
+    public bool _playerBulletStartCT;
     #endregion
 
     Animator _pA;
@@ -98,26 +103,31 @@ public class PlayerAction : MonoBehaviour
         #endregion
 
         //通常攻撃の処理
-        if (Input.GetKeyDown(KeyCode.J) && _NAttackStartCT == false)
+        if (Input.GetKeyDown(KeyCode.J) && _nAttackStartCT == false)
         {
             Instantiate(_NAttack,_PlayerFront.position,Quaternion.identity);
-            _NAttackStartCT = true;
+            _nAttackStartCT = true;
             _pA.SetTrigger("NAttack");
             StartCoroutine("NAttackCT");
         }
         //頭上に攻撃するスキルの処理
-        if (Input.GetKeyDown(KeyCode.I) && _OnGround == true && _OverHeadAttackStartCT == false)
+        if (Input.GetKeyDown(KeyCode.I) && _OnGround == true && _overHeadAttackStartCT == false)
         {
             Instantiate(_OverHeadAttack, _PlayerOverHead.position, Quaternion.identity);
-            _OverHeadAttackStartCT = true;
+            _overHeadAttackStartCT = true;
             StartCoroutine("OverHeadAttackSkillCT");
         }
         //頭上にEnemyを打ち上げるスキルの処理
-        if (Input.GetKeyDown(KeyCode.M) && _OnGround == true && _UpperImpulseStartCT == false)
+        if (Input.GetKeyDown(KeyCode.M) && _OnGround == true && _upperImpulseStartCT == false)
         {
             Instantiate(_UpperImpulse, _PlayerFoot.position, Quaternion.identity);
-            _UpperImpulseStartCT = true;
+            _upperImpulseStartCT = true;
             StartCoroutine("UpperImpulseSkillCT");
+        }
+        //Bulletを打ち出すスキルの処理
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            Instantiate(_playerBullet, _PlayerFront.position, Quaternion.identity);
         }
     }
 
@@ -133,19 +143,19 @@ public class PlayerAction : MonoBehaviour
     IEnumerator OverHeadAttackSkillCT()
     {
         yield return new WaitForSeconds(_OverHeadAttackCT);
-        _OverHeadAttackStartCT = false;
+        _overHeadAttackStartCT = false;
     }
 
     IEnumerator UpperImpulseSkillCT()
     {
         yield return new WaitForSeconds(_UpperImpulseCT);
-        _UpperImpulseStartCT = false;
+        _upperImpulseStartCT = false;
     }
 
     IEnumerator NAttackCT()
     {
         yield return new WaitForSeconds(_NAttackCT);
-        _NAttackStartCT = false;
+        _nAttackStartCT = false;
     }
     #endregion
 }
