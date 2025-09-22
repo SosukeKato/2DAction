@@ -10,6 +10,8 @@ public class PlayerAction : MonoBehaviour
     [SerializeField]
     float _JumpPower;
     [SerializeField]
+    int _attackSpeed;
+    [SerializeField]
     bool _OnGround;
 
     #region UŒ‚‚ÌPrefab‚ğ•Û‘¶‚·‚é•Ï”
@@ -25,7 +27,7 @@ public class PlayerAction : MonoBehaviour
 
     #region UŒ‚‚Ì”­¶ˆÊ’u‚ğŠÇ—‚·‚é•Ï”
     [SerializeField]
-    Transform _PlayerFront;
+    Transform _playerFront;
     [SerializeField]
     Transform _PlayerOverHead;
     [SerializeField]
@@ -47,6 +49,8 @@ public class PlayerAction : MonoBehaviour
     public bool _upperImpulseStartCT;
     public bool _playerBulletStartCT;
     #endregion
+
+    GameObject _bulletobj;
 
     Animator _pA;
 
@@ -105,7 +109,7 @@ public class PlayerAction : MonoBehaviour
         //’ÊíUŒ‚‚Ìˆ—
         if (Input.GetKeyDown(KeyCode.J) && _nAttackStartCT == false)
         {
-            Instantiate(_NAttack,_PlayerFront.position,Quaternion.identity);
+            Instantiate(_NAttack,_playerFront.position,Quaternion.identity);
             _nAttackStartCT = true;
             _pA.SetTrigger("NAttack");
             StartCoroutine("NAttackCT");
@@ -127,7 +131,8 @@ public class PlayerAction : MonoBehaviour
         //Bullet‚ğ‘Å‚¿o‚·ƒXƒLƒ‹‚Ìˆ—
         if (Input.GetKeyDown(KeyCode.L))
         {
-            Instantiate(_playerBullet, _PlayerFront.position, Quaternion.identity);
+            _bulletobj = Instantiate(_playerBullet, _playerFront.position, Quaternion.identity);
+            _bulletobj.GetComponent<Rigidbody>().AddForce(_playerFront.forward * _attackSpeed);  
             _playerBulletStartCT = true;
             StartCoroutine("PlayerBulletSkillCT");
         }
