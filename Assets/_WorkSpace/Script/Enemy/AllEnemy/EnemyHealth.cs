@@ -5,22 +5,24 @@ public class EnemyHealth : MonoBehaviour
 {
     EnemyAI _EAI;
     Rigidbody2D _rb;
-    bool _Death;
+    bool _death;
     bool _OnGround;
     [SerializeField]
-    int _Health = 100;
+    int _health = 100;
     [SerializeField]
     int _MaxHealth = 100;
     [SerializeField]
-    int _NAttackDamage = 15;
+    int _nAttackDamage = 15;
     [SerializeField]
-    int _OverHeadAttackDamage = 30;
+    int _overHeadAttackDamage = 30;
     [SerializeField]
-    int _AirEnemyDefenseDebuff = 2;
+    int _airEnemyDefenseDebuff = 2;
     [SerializeField]
     float _JumpPower = 30;
     [SerializeField]
-    List<GameObject> _EnemyDropItem = null;
+    List<GameObject> _enemyDropItem = null;
+
+    int _randomItemDrop;
 
     void Start()
     {
@@ -31,31 +33,31 @@ public class EnemyHealth : MonoBehaviour
 
     void Update()
     {
-        if (_Health <= 0)
+        if (_health <= 0)
         {
-            _Death = true;
+            _death = true;
         }
         else
         {
-            _Death = false;
+            _death = false;
         }
-        if (_Health >= _MaxHealth)
+        if (_health >= _MaxHealth)
         {
-            _Health = _MaxHealth;
+            _health = _MaxHealth;
         }
-        if (_Death == true)
+        if (_death == true)
         {
             Destroy(gameObject);
-            int RandomItemDrop = Random.Range(0, _EnemyDropItem.Count);
-            Instantiate(_EnemyDropItem[RandomItemDrop], transform.position, Quaternion.identity);
+            _randomItemDrop = Random.Range(0, _enemyDropItem.Count);
+            Instantiate(_enemyDropItem[_randomItemDrop], transform.position, Quaternion.identity);
         }
         if (_OnGround == true)
         {
-            _AirEnemyDefenseDebuff = 1;
+            _airEnemyDefenseDebuff = 1;
         }
         else
         {
-            _AirEnemyDefenseDebuff = 2;
+            _airEnemyDefenseDebuff = 2;
         }
     }
 
@@ -67,7 +69,7 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    void OnCollisionExit2D(Collision2D col)//collisionà¯êîÇæÇ©ÇÁñºëOïœÇ¶ÇƒÇ‡ìÆÇ≠Ç®
+    void OnCollisionExit2D(Collision2D col)//collisionÇÕà¯êîÇæÇ©ÇÁñºëOïœÇ¶ÇƒÇ‡ìÆÇ≠Ç®
     {
         if (col.gameObject.CompareTag("Ground"))
         {
@@ -79,13 +81,13 @@ public class EnemyHealth : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("NAttack"))
         {
-            _Health -= _NAttackDamage * _AirEnemyDefenseDebuff;
-            Debug.Log($"Ç±ÇÃìGÇÃHPÇÕ{_Health}Ç∂Ç·ÇÊ");
+            _health -= _nAttackDamage * _airEnemyDefenseDebuff;
+            Debug.Log($"Ç±ÇÃìGÇÃHPÇÕ{_health}Ç∂Ç·ÇÊ");
         }
         if (collision.gameObject.CompareTag("OverHeadAttack"))
         {
-            _Health -= _OverHeadAttackDamage * _AirEnemyDefenseDebuff;
-            Debug.Log($"Ç±ÇÃìGÇÃHPÇÕ{_Health}Ç∂Ç·ÇÊ");
+            _health -= _overHeadAttackDamage * _airEnemyDefenseDebuff;
+            Debug.Log($"Ç±ÇÃìGÇÃHPÇÕ{_health}Ç∂Ç·ÇÊ");
         }
         if (collision.gameObject.CompareTag("UpperImpulse"))
         {
