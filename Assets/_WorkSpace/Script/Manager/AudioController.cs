@@ -110,16 +110,6 @@ public class AudioController : MonoBehaviour
 
     void Update()
     {
-        #region TitleScene‚Å‚ÌSE‚Ìˆ—
-        if (SceneManager.GetActiveScene().name == "TitleScene")
-        {
-            if (Input.anyKeyDown)
-            {
-                _sEAudioSource.PlayOneShot(_startSEClip);
-            }
-        }
-        #endregion
-
         #region TutorialScene‚Å‚ÌSE‚Ìˆ—
         if (SceneManager.GetActiveScene().name == "TutorialScene")
         {
@@ -164,4 +154,11 @@ public class AudioController : MonoBehaviour
         }
         #endregion 
     }
+
+    #region TitleScene‚Å‚ÌSE‚Ìˆ—
+    public void TitleButtonClick()
+    {
+        _sEAudioSource.PlayOneShot(_startSEClip);
+    }
+    #endregion
 }

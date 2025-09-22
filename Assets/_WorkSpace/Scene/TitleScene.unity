@@ -1525,6 +1525,18 @@ MonoBehaviour:
           m_StringArgument: EasyStage
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3349006198945842112}
+        m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
+        m_MethodName: TitleButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1609658557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2285,6 +2297,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79a84e1e3d78c1b45a33f60c6791d735, type: 3}
+--- !u!114 &3349006198945842112 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5079800477095260559, guid: 79a84e1e3d78c1b45a33f60c6791d735, type: 3}
+  m_PrefabInstance: {fileID: 3349006198945842111}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3503d926d8432864eb2b6c1ad1759fe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
