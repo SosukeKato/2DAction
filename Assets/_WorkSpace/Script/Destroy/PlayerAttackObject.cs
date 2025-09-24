@@ -5,6 +5,8 @@ public class PlayerAttackObject : MonoBehaviour
 {
     [SerializeField]
     float _attackDuration;
+    [SerializeField]
+    int _bulletHeal = 15;
 
     GameObject _playerObj;
     PlayerHealth _pH;
@@ -26,7 +28,7 @@ public class PlayerAttackObject : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-
+            _pH._playerHealth += _bulletHeal;
         }
     }
 }
