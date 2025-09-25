@@ -13,6 +13,7 @@ TagManager:
   - Fade
   - Enemy
   - SkeltonAttack
+  - PlayerBullet
   layers:
   - Default
   - TransparentFX
