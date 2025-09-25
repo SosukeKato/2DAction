@@ -11,14 +11,18 @@ public class EnemyHealth : MonoBehaviour
     int _health = 100;
     [SerializeField]
     int _MaxHealth = 100;
+    #region É_ÉÅÅ[ÉWÇä«óùÇ∑ÇÈïœêî
     [SerializeField]
     int _nAttackDamage = 15;
     [SerializeField]
     int _overHeadAttackDamage = 30;
     [SerializeField]
+    int _playerBulletDamage;
+    [SerializeField]
     int _airEnemyDefenseDebuff = 2;
     [SerializeField]
     float _JumpPower = 30;
+    #endregion
     [SerializeField]
     List<GameObject> _enemyDropItem = null;
 
@@ -82,12 +86,14 @@ public class EnemyHealth : MonoBehaviour
         if(collision.gameObject.CompareTag("NAttack"))
         {
             _health -= _nAttackDamage * _airEnemyDefenseDebuff;
-            Debug.Log($"Ç±ÇÃìGÇÃHPÇÕ{_health}Ç∂Ç·ÇÊ");
         }
         if (collision.gameObject.CompareTag("OverHeadAttack"))
         {
             _health -= _overHeadAttackDamage * _airEnemyDefenseDebuff;
-            Debug.Log($"Ç±ÇÃìGÇÃHPÇÕ{_health}Ç∂Ç·ÇÊ");
+        }
+        if (collision.gameObject.CompareTag("PlayerBullet"))
+        {
+            _health -= _playerBulletDamage;
         }
         if (collision.gameObject.CompareTag("UpperImpulse"))
         {
