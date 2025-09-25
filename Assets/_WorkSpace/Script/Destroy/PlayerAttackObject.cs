@@ -1,12 +1,11 @@
 using System.Collections;
 using UnityEngine;
 
+[RequireComponent(typeof(Collider2D))]
 public class PlayerAttackObject : MonoBehaviour
 {
     [SerializeField]
     float _attackDuration;
-    [SerializeField]
-    int _bulletHeal = 15;
 
     IEnumerator Start()
     {
