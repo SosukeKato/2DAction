@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
+    GameObject _playerObj;
+    PlayerHealth _pH;
     EnemyAI _EAI;
     Rigidbody2D _rb;
     bool _death;
@@ -30,9 +32,11 @@ public class EnemyHealth : MonoBehaviour
 
     void Start()
     {
+        _playerObj = GameObject.FindGameObjectWithTag("Player");
         Application.targetFrameRate = 30;
         _rb = GetComponent<Rigidbody2D>();
         _EAI = GetComponent<EnemyAI>();
+        _pH = _playerObj.GetComponent<PlayerHealth>();
     }
 
     void Update()
@@ -94,6 +98,7 @@ public class EnemyHealth : MonoBehaviour
         if (collision.gameObject.CompareTag("PlayerBullet"))
         {
             _health -= _playerBulletDamage;
+            _pH._playerHealth += _playerBulletDamage;
         }
         if (collision.gameObject.CompareTag("UpperImpulse"))
         {
