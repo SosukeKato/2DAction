@@ -10,7 +10,7 @@ public class PlayerAction : MonoBehaviour
     [SerializeField]
     float _JumpPower;
     [SerializeField]
-    int _attackSpeed;
+    int _bulletSpeed;
     [SerializeField]
     bool _OnGround;
 
@@ -132,7 +132,7 @@ public class PlayerAction : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.L))
         {
             _bulletobj = Instantiate(_playerBullet, _playerFront.position, Quaternion.identity);
-            _bulletobj.GetComponent<Rigidbody>().AddForce(_playerFront.forward * _attackSpeed);  
+            _bulletobj.GetComponent<Rigidbody>().AddForce(_playerFront.forward * _bulletSpeed);  
             _playerBulletStartCT = true;
             StartCoroutine("PlayerBulletSkillCT");
         }
