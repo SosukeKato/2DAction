@@ -144,14 +144,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 429ac4b19fdbc86469cecf0636d7c094, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Health: 30
+  _health: 100
   _MaxHealth: 30
-  _NAttackDamage: 15
-  _OverHeadAttackDamage: 30
-  _AirEnemyDefenseDebuff: 2
+  _nAttackDamage: 15
+  _overHeadAttackDamage: 30
+  _playerBulletDamage: 0
+  _airEnemyDefenseDebuff: 2
   _JumpPower: 30
-  _EnemyDropItem:
-  - {fileID: 3729811217784919095, guid: d81b87c471d14f44987f78d29c6ccb7f, type: 3}
+  _enemyDropItem: []
 --- !u!114 &6595173278371343465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502e1f2cd1e597d42aaf0d152f991723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _flyerAttack: {fileID: 4404108738399803691, guid: 0cee30c1594d9db4ca02aefc38b137da, type: 3}
+  _flyerAttack: {fileID: 1869364255412402876, guid: fa784ec69df4653449c85b312bc6209c, type: 3}
   _flyer: {fileID: 7965213388584525566}
   _flyerAttackInterval: 5
   _bulletSpeed: 3
