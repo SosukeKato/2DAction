@@ -26,7 +26,7 @@ public class EnemyHealth : MonoBehaviour
     float _JumpPower = 30;
     #endregion
     [SerializeField]
-    List<GameObject> _enemyDropItem = null;
+    GameObject _enemyDropItem = null;
 
     int _randomItemDrop;
 
@@ -56,8 +56,7 @@ public class EnemyHealth : MonoBehaviour
         if (_death == true)
         {
             Destroy(gameObject);
-            _randomItemDrop = Random.Range(0, _enemyDropItem.Count);
-            Instantiate(_enemyDropItem[_randomItemDrop], transform.position, Quaternion.identity);
+            Instantiate(_enemyDropItem, transform.position, Quaternion.identity);
         }
         if (_OnGround == true)
         {
