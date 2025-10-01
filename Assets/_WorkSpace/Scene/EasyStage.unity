@@ -1761,7 +1761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93642752bf4e94d4b8ed2546ea276552, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minY: 2
+  _minY: 0
   _maxY: 5
   _minX: -11
   _maxX: 11
@@ -1784,7 +1784,7 @@ MonoBehaviour:
   _playerBulletDamage: 0
   _airEnemyDefenseDebuff: 2
   _JumpPower: 30
-  _enemyDropItem: []
+  _enemyDropItem: {fileID: 0}
 --- !u!1 &1661745639
 GameObject:
   m_ObjectHideFlags: 0
