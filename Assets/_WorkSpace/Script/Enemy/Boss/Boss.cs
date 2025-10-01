@@ -9,12 +9,16 @@ public class Boss : MonoBehaviour
     [SerializeField]
     Transform[] _bossAttackPos;
 
+    Transform _player;
+    GameObject _playerObj;
+
     float _bossAttackTimer;
     int _randomBossAttack;
     int _randomBossAttackPos;
     void Start()
     {
-        
+        _playerObj = GameObject.FindGameObjectWithTag("Player");
+        _player = _playerObj.transform;
     }
 
     void Update()
