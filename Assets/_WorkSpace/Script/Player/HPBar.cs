@@ -16,6 +16,7 @@ public class HPBar : MonoBehaviour
 
     void Update()
     {
-        _hpBarImage.fillAmount = _pH._playerHealth / 100;
+        _hpBarImage.fillAmount = (float)_pH._playerHealth / 100f;
+        Debug.Log($"{_pH._playerHealth / 100}");
     }
 }
