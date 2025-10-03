@@ -182,30 +182,4 @@ public class PlayerAction : MonoBehaviour
             _OnGround = true;
         }
     }
-
-    #region CTèàóù
-    IEnumerator OverHeadAttackSkillCT()
-    {
-        yield return new WaitForSeconds(_overHeadAttackCT);
-        _overHeadAttackStartCT = false;
-    }
-
-    IEnumerator UpperImpulseSkillCT()
-    {
-        yield return new WaitForSeconds(_upperImpulseCT);
-        _upperImpulseStartCT = false;
-    }
-
-    IEnumerator NAttackCT()
-    {
-        yield return new WaitForSeconds(_nAttackCT);
-        _nAttackStartCT = false;
-    }
-
-    IEnumerator PlayerBulletSkillCT()
-    {
-        yield return new WaitForSeconds(_playerBulletCT);
-        _playerBulletStartCT = false;
-    }
-    #endregion
 }
