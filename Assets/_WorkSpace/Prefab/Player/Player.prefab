@@ -235,10 +235,10 @@ MonoBehaviour:
   _playerFront: {fileID: 6909038325741840483}
   _PlayerOverHead: {fileID: 2666945886307698648}
   _PlayerFoot: {fileID: 6870959609950061348}
-  _OverHeadAttackCT: 4
-  _UpperImpulseCT: 5
-  _NAttackCT: 0
-  _playerBulletCT: 0
+  _overHeadAttackCT: 4
+  _upperImpulseCT: 5
+  _nAttackCT: 0
+  _playerBulletCT: 12
   _nAttackStartCT: 0
   _overHeadAttackStartCT: 0
   _upperImpulseStartCT: 0
