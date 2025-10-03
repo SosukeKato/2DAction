@@ -36,13 +36,13 @@ public class PlayerAction : MonoBehaviour
 
     #region 攻撃のCTを管理する変数
     [SerializeField]
-    float _overHeadAttackCT;
+    float _overHeadAttackCT = 4;
     [SerializeField]
-    float _upperImpulseCT;
+    float _upperImpulseCT = 5;
     [SerializeField]
     float _nAttackCT;
     [SerializeField]
-    float _playerBulletCT;
+    float _playerBulletCT = 12;
 
     float _oHAElapsedTime;
     float _uIElapsedTime;
@@ -117,21 +117,45 @@ public class PlayerAction : MonoBehaviour
             Instantiate(_NAttack,_playerFront.position,Quaternion.identity);
             _nAttackStartCT = true;
             _pA.SetTrigger("NAttack");
-            StartCoroutine("NAttackCT");
+        }
+        if (_nAttackStartCT == true)
+        {
+            _nAElapsedTime += Time.deltaTime;
+            if(_nAElapsedTime > _nAttackCT)
+            {
+                _nAttackStartCT = false;
+                _nAElapsedTime = 0;
+            }
         }
         //頭上に攻撃するスキルの処理
         if (Input.GetKeyDown(KeyCode.I) && _OnGround == true && _overHeadAttackStartCT == false)
         {
             Instantiate(_OverHeadAttack, _PlayerOverHead.position, Quaternion.identity);
             _overHeadAttackStartCT = true;
-            StartCoroutine("OverHeadAttackSkillCT");
+        }
+        if (_overHeadAttackStartCT == true)
+        {
+            _oHAElapsedTime += Time.deltaTime;
+            if(_oHAElapsedTime > _overHeadAttackCT)
+            {
+                _overHeadAttackStartCT = false;
+                _oHAElapsedTime = 0;
+            }
         }
         //頭上にEnemyを打ち上げるスキルの処理
         if (Input.GetKeyDown(KeyCode.M) && _OnGround == true && _upperImpulseStartCT == false)
         {
             Instantiate(_UpperImpulse, _PlayerFoot.position, Quaternion.identity);
             _upperImpulseStartCT = true;
-            StartCoroutine("UpperImpulseSkillCT");
+        }
+        if (_upperImpulseStartCT == true)
+        {
+            _uIElapsedTime += Time.deltaTime;
+            if(_uIElapsedTime > _upperImpulseCT)
+            {
+                _upperImpulseStartCT = false;
+                _uIElapsedTime = 0;
+            }
         }
         //Bulletを打ち出すスキルの処理
         if (Input.GetKeyDown(KeyCode.L))
@@ -139,7 +163,15 @@ public class PlayerAction : MonoBehaviour
             _bulletobj = Instantiate(_playerBullet, _playerFront.position, Quaternion.identity);
             _bulletobj.GetComponent<Rigidbody2D>().AddForce(_playerFront.forward * _bulletSpeed);  
             _playerBulletStartCT = true;
-            StartCoroutine("PlayerBulletSkillCT");
+        }
+        if (_playerBulletStartCT == true)
+        {
+            _pBElapsedTime += Time.deltaTime;
+            if(_pBElapsedTime > _playerBulletCT)
+            {
+                _playerBulletStartCT = false;
+                _pBElapsedTime = 0;
+            }
         }
     }
 
