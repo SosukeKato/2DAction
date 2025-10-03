@@ -36,13 +36,18 @@ public class PlayerAction : MonoBehaviour
 
     #region çUåÇÇÃCTÇä«óùÇ∑ÇÈïœêî
     [SerializeField]
-    int _OverHeadAttackCT;
+    float _overHeadAttackCT;
     [SerializeField]
-    int _UpperImpulseCT;
+    float _upperImpulseCT;
     [SerializeField]
-    float _NAttackCT;
+    float _nAttackCT;
     [SerializeField]
-    int _playerBulletCT;
+    float _playerBulletCT;
+
+    float _oHAElapsedTime;
+    float _uIElapsedTime;
+    float _nAElapsedTime;
+    float _pBElapsedTime;
 
     public bool _nAttackStartCT;
     public bool _overHeadAttackStartCT;
@@ -149,19 +154,19 @@ public class PlayerAction : MonoBehaviour
     #region CTèàóù
     IEnumerator OverHeadAttackSkillCT()
     {
-        yield return new WaitForSeconds(_OverHeadAttackCT);
+        yield return new WaitForSeconds(_overHeadAttackCT);
         _overHeadAttackStartCT = false;
     }
 
     IEnumerator UpperImpulseSkillCT()
     {
-        yield return new WaitForSeconds(_UpperImpulseCT);
+        yield return new WaitForSeconds(_upperImpulseCT);
         _upperImpulseStartCT = false;
     }
 
     IEnumerator NAttackCT()
     {
-        yield return new WaitForSeconds(_NAttackCT);
+        yield return new WaitForSeconds(_nAttackCT);
         _nAttackStartCT = false;
     }
 
