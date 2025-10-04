@@ -9,6 +9,12 @@ public class HPBar : MonoBehaviour
 
     [SerializeField]
     Image _hpBarImage;
+    [SerializeField]
+    Image _uICTG;
+    [SerializeField]
+    Image _oHACTG;
+    [SerializeField]
+    Image _pBCTG;
     void Start()
     {
         _playerObj = GameObject.FindGameObjectWithTag("Player");
@@ -19,6 +25,5 @@ public class HPBar : MonoBehaviour
     void Update()
     {
         _hpBarImage.fillAmount = _pH._playerHealth / 100f;
-        Debug.Log($"{_pH._playerHealth / 100}");
     }
 }
