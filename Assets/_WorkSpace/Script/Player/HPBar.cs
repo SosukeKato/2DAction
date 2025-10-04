@@ -25,5 +25,9 @@ public class HPBar : MonoBehaviour
     void Update()
     {
         _hpBarImage.fillAmount = _pH._playerHealth / 100f;
+
+        _oHACTG.fillAmount = _pA._oHAElapsedTime / _pA._overHeadAttackCT;
+        _uICTG.fillAmount = _pA._uIElapsedTime / _pA._upperImpulseCT;
+        _pBCTG.fillAmount = _pA._pBElapsedTime / _pA._playerBulletCT;
     }
 }

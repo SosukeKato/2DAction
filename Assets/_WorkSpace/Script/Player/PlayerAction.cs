@@ -36,13 +36,13 @@ public class PlayerAction : MonoBehaviour
 
     #region UŒ‚‚ÌCT‚ğŠÇ—‚·‚é•Ï”
     [SerializeField]
-    float _overHeadAttackCT = 4;
+    public float _overHeadAttackCT = 4;
     [SerializeField]
-    float _upperImpulseCT = 5;
+    public float _upperImpulseCT = 5;
     [SerializeField]
     float _nAttackCT;
     [SerializeField]
-    float _playerBulletCT = 12;
+    public float _playerBulletCT = 12;
 
     public float _oHAElapsedTime;
     public float _uIElapsedTime;
