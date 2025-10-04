@@ -44,10 +44,10 @@ public class PlayerAction : MonoBehaviour
     [SerializeField]
     float _playerBulletCT = 12;
 
-    float _oHAElapsedTime;
-    float _uIElapsedTime;
-    float _nAElapsedTime;
-    float _pBElapsedTime;
+    public float _oHAElapsedTime;
+    public float _uIElapsedTime;
+    public float _nAElapsedTime;
+    public float _pBElapsedTime;
 
     public bool _nAttackStartCT;
     public bool _overHeadAttackStartCT;

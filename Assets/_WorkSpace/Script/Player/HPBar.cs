@@ -5,6 +5,7 @@ public class HPBar : MonoBehaviour
 {
     GameObject _playerObj;
     PlayerHealth _pH;
+    PlayerAction _pA;
 
     [SerializeField]
     Image _hpBarImage;
@@ -12,6 +13,7 @@ public class HPBar : MonoBehaviour
     {
         _playerObj = GameObject.FindGameObjectWithTag("Player");
         _pH = _playerObj.GetComponent<PlayerHealth>();
+        _pA = _playerObj.GetComponent<PlayerAction>();
     }
 
     void Update()
