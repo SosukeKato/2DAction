@@ -161,7 +161,7 @@ public class PlayerAction : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.L))
         {
             _bulletobj = Instantiate(_playerBullet, _playerFront.position, Quaternion.identity);
-            _bulletobj.GetComponent<Rigidbody2D>().AddForce(_playerFront.forward * _bulletSpeed);  
+            _bulletobj.GetComponent<Rigidbody2D>().AddForce(_playerFront.right * _bulletSpeed);  
             _playerBulletStartCT = true;
         }
         if (_playerBulletStartCT == true)
