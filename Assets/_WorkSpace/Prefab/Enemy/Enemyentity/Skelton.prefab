@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 7069317197427637860}
   - component: {fileID: 75089849290906413}
   - component: {fileID: 7124081135421013704}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Skelton
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.04854405, y: 0.016181111}
@@ -185,14 +185,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 429ac4b19fdbc86469cecf0636d7c094, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Health: 30
+  _health: 100
   _MaxHealth: 30
-  _NAttackDamage: 15
-  _OverHeadAttackDamage: 30
-  _AirEnemyDefenseDebuff: 2
+  _nAttackDamage: 15
+  _overHeadAttackDamage: 30
+  _playerBulletDamage: 0
+  _airEnemyDefenseDebuff: 2
   _JumpPower: 50
-  _EnemyDropItem:
-  - {fileID: 3729811217784919095, guid: d81b87c471d14f44987f78d29c6ccb7f, type: 3}
+  _enemyDropItem: {fileID: 3729811217784919095, guid: d81b87c471d14f44987f78d29c6ccb7f, type: 3}
 --- !u!50 &-8902353173545676690
 Rigidbody2D:
   serializedVersion: 4

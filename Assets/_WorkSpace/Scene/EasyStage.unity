@@ -2607,6 +2607,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hpBarImage: {fileID: 2054245165}
+  _uICTG: {fileID: 548154936}
+  _oHACTG: {fileID: 649518551}
+  _pBCTG: {fileID: 1334496718}
 --- !u!1001 &542154826914994099
 PrefabInstance:
   m_ObjectHideFlags: 0

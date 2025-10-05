@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 5939652381829166180}
   - component: {fileID: 4546121441806957197}
   - component: {fileID: 1185287273066521793}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -239,6 +239,10 @@ MonoBehaviour:
   _upperImpulseCT: 5
   _nAttackCT: 0
   _playerBulletCT: 12
+  _oHAElapsedTime: 0
+  _uIElapsedTime: 0
+  _nAElapsedTime: 0
+  _pBElapsedTime: 0
   _nAttackStartCT: 0
   _overHeadAttackStartCT: 0
   _upperImpulseStartCT: 0
