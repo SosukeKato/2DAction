@@ -20,7 +20,6 @@ public class Boss : MonoBehaviour
     float _bossAttackTimer;
     int _randomBossAttack;
     int _randomBossAttackPos;
-    int _randomBossAction;
     void Start()
     {
         _tr = transform;
@@ -37,15 +36,13 @@ public class Boss : MonoBehaviour
         _bossAttackTimer += Time.deltaTime;
         if (_bossAttackTimer >= _bossAttackInterval)
         {
-            _randomBossAction = Random.Range(0, 1);
-
             _bossAttackTimer = 0;
-            switch(_randomBossAction)
+            switch(Random.Range(0,1))
             {
                 case 0:
-                //    _randomBossAttack = Random.Range(0, _bossAttackObj.Length);
-                //    _randomBossAttackPos = Random.Range(0, _bossAttackPos.Length);
-                //    Instantiate(_bossAttackObj[_randomBossAttack], _bossAttackPos[_randomBossAttackPos].position, Quaternion.identity);
+                    _randomBossAttack = Random.Range(0, _bossAttackObj.Length);
+                    _randomBossAttackPos = Random.Range(0, _bossAttackPos.Length);
+                    Instantiate(_bossAttackObj[_randomBossAttack], _bossAttackPos[_randomBossAttackPos].position, Quaternion.identity);
                     break;
                 case 1:
                     _bossX *= -1;

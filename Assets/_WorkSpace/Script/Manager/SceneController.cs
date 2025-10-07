@@ -11,6 +11,7 @@ public class SceneController : MonoBehaviour
     Transform _sceneManager;
 
     GameObject playerObj;
+    PlayerHealth _pH;
     void Awake()
     {
         if (instance == null)
@@ -29,6 +30,7 @@ public class SceneController : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         playerObj = GameObject.FindGameObjectWithTag("Player");
+        _pH = playerObj.GetComponent<PlayerHealth>();
     }
 
     void Update()
@@ -46,7 +48,10 @@ public class SceneController : MonoBehaviour
         #region PlaySceneÇ…Ç¢ÇÈÇ∆Ç´ÇÃèàóù
         if (SceneManager.GetActiveScene().name == "EasyStage")
         {
-            
+            if (_pH._death)
+            {
+                SceneManager.LoadScene("GameOverScene");
+            }
         }
         #endregion
 
