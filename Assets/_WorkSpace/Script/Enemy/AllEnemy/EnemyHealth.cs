@@ -59,9 +59,9 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D col)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if(col.gameObject.CompareTag("Ground"))
+        if(collision.gameObject.CompareTag("Ground"))
         {
             _OnGround = true;
         }
