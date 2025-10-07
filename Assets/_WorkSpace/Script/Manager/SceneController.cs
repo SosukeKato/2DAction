@@ -11,7 +11,7 @@ public class SceneController : MonoBehaviour
     Transform _sceneManager;
 
     GameObject playerObj;
-    void Start()
+    void Awake()
     {
         if (instance == null)
         {
@@ -23,6 +23,11 @@ public class SceneController : MonoBehaviour
             Destroy(gameObject);
         }
 
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
         playerObj = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -41,10 +46,7 @@ public class SceneController : MonoBehaviour
         #region PlaySceneÇ…Ç¢ÇÈÇ∆Ç´ÇÃèàóù
         if (SceneManager.GetActiveScene().name == "EasyStage")
         {
-            if (GetComponent<Timer>()._min == 3)
-            {
-                SceneManager.LoadScene("GameClearScene");
-            }
+            
         }
         #endregion
 
