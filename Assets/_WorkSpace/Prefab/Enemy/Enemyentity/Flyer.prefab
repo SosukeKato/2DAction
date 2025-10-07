@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6595173278371343465}
   - component: {fileID: 5587580331005498259}
   - component: {fileID: 1539324007225563466}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Flyer
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.028278887, y: 0.050400317}
