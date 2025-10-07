@@ -37,7 +37,7 @@ public class Boss : MonoBehaviour
         if (_bossAttackTimer >= _bossAttackInterval)
         {
             _bossAttackTimer = 0;
-            switch(Random.Range(0,1))
+            switch(Random.Range(0,2))
             {
                 case 0:
                     _randomBossAttack = Random.Range(0, _bossAttackObj.Length);

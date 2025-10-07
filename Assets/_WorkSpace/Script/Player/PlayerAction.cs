@@ -131,12 +131,13 @@ public class PlayerAction : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I) && _OnGround == true && _overHeadAttackStartCT == false)
         {
             Instantiate(_OverHeadAttack, _PlayerOverHead.position, Quaternion.identity);
+            _oHAElapsedTime = _overHeadAttackCT;
             _overHeadAttackStartCT = true;
         }
         if (_overHeadAttackStartCT == true)
         {
-            _oHAElapsedTime += Time.deltaTime;
-            if(_oHAElapsedTime > _overHeadAttackCT)
+            _oHAElapsedTime -= Time.deltaTime;
+            if(_oHAElapsedTime <= 0)
             {
                 _overHeadAttackStartCT = false;
                 _oHAElapsedTime = 0;
@@ -146,12 +147,13 @@ public class PlayerAction : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.M) && _OnGround == true && _upperImpulseStartCT == false)
         {
             Instantiate(_UpperImpulse, _PlayerFoot.position, Quaternion.identity);
+            _uIElapsedTime = _upperImpulseCT;
             _upperImpulseStartCT = true;
         }
         if (_upperImpulseStartCT == true)
         {
-            _uIElapsedTime += Time.deltaTime;
-            if(_uIElapsedTime > _upperImpulseCT)
+            _uIElapsedTime -= Time.deltaTime;
+            if(_uIElapsedTime <= 0)
             {
                 _upperImpulseStartCT = false;
                 _uIElapsedTime = 0;
@@ -162,12 +164,13 @@ public class PlayerAction : MonoBehaviour
         {
             _bulletobj = Instantiate(_playerBullet, _playerFront.position, Quaternion.identity);
             _bulletobj.GetComponent<Rigidbody2D>().AddForce(_playerFront.right * _bulletSpeed);  
+            _pBElapsedTime = _playerBulletCT;
             _playerBulletStartCT = true;
         }
         if (_playerBulletStartCT == true)
         {
-            _pBElapsedTime += Time.deltaTime;
-            if(_pBElapsedTime > _playerBulletCT)
+            _pBElapsedTime -= Time.deltaTime;
+            if(_pBElapsedTime <= 0)
             {
                 _playerBulletStartCT = false;
                 _pBElapsedTime = 0;
