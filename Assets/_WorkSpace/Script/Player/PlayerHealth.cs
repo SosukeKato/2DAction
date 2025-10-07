@@ -1,8 +1,8 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public bool _death;
     public float _playerHealth = 100;
     [SerializeField]
     int _heal = 3;
@@ -15,7 +15,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if(_playerHealth <= 0)
         {
-            SceneManager.LoadScene("GameOverScene");
+            _death = true;
         }
         if (_playerHealth >= 100)
         {
