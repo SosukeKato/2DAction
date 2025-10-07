@@ -20,6 +20,7 @@ public class Boss : MonoBehaviour
     float _bossAttackTimer;
     int _randomBossAttack;
     int _randomBossAttackPos;
+    int _randomBossAction;
     void Start()
     {
         _tr = transform;
@@ -30,21 +31,30 @@ public class Boss : MonoBehaviour
 
     void Update()
     {
+        _playerX = _player.position.x;
+        _bossX = _tr.position.x;
         #region BossÇÃçUåÇèàóù
         _bossAttackTimer += Time.deltaTime;
         if (_bossAttackTimer >= _bossAttackInterval)
         {
-            _randomBossAttack = Random.Range(0, _bossAttackObj.Length);
-            _randomBossAttackPos = Random.Range(0, _bossAttackPos.Length);
-            Instantiate(_bossAttackObj[_randomBossAttack], _bossAttackPos[_randomBossAttackPos].position, Quaternion.identity);
+            _randomBossAction = Random.Range(0, 1);
+
             _bossAttackTimer = 0;
+            switch(_randomBossAction)
+            {
+                case 0:
+                //    _randomBossAttack = Random.Range(0, _bossAttackObj.Length);
+                //    _randomBossAttackPos = Random.Range(0, _bossAttackPos.Length);
+                //    Instantiate(_bossAttackObj[_randomBossAttack], _bossAttackPos[_randomBossAttackPos].position, Quaternion.identity);
+                    break;
+                case 1:
+                    _bossX *= -1;
+                    break;
+            }
         }
         #endregion
 
         #region BossÇÃç∂âEÇÃå©ÇΩñ⁄ÇÃí≤êÆ
-        _playerX = _player.position.x;
-        _bossX = _tr.position.x;
-
         if (_playerX - _bossX < 0)
         {
             _tr.eulerAngles = new Vector3(0, 0, 0);

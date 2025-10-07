@@ -16,22 +16,22 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     int _BossSpawnCount;
 
+    int Random;
+    int RandomEnemy;
+
     float _SpawnTimer = 0;
-    // Start is called before the first frame update
     void Start()
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
         _SpawnTimer += Time.deltaTime;
 
         if (_SpawnTimer >= _SpawnInterval)
         {
-            int Random = UnityEngine.Random.Range(0, _EnemySpawn.Count);
-            int RandomEnemy = UnityEngine.Random.Range(0, _EnemyPrefab.Count);
+            Random = UnityEngine.Random.Range(0, _EnemySpawn.Count);
+            RandomEnemy = UnityEngine.Random.Range(0, _EnemyPrefab.Count);
             Instantiate(_EnemyPrefab[RandomEnemy], _EnemySpawn[Random].position, Quaternion.identity);
             _SpawnTimer = 0f;
         }

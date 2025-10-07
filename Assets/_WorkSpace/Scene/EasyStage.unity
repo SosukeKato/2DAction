@@ -1974,7 +1974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c2d798f092711142a1a080c3ff603a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bossAttackInterval: 10
+  _bossAttackInterval: 2
   _bossAttackObj: []
   _bossAttackPos: []
 --- !u!114 &1653244701
@@ -2661,6 +2661,10 @@ PrefabInstance:
     - target: {fileID: 6743203295839000625, guid: c30d13b8b89d1274d839c4be5ee3a186, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6743203295839000625, guid: c30d13b8b89d1274d839c4be5ee3a186, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -115,8 +115,8 @@ public class PlayerAction : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.J) && _nAttackStartCT == false)
         {
             Instantiate(_NAttack,_playerFront.position,Quaternion.identity);
-            _nAttackStartCT = true;
             _pA.SetTrigger("NAttack");
+            _nAttackStartCT = true;
         }
         if (_nAttackStartCT == true)
         {
