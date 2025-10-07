@@ -14,26 +14,32 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     float _SpawnInterval;
     [SerializeField]
-    int _BossSpawnCount;
+    int _bossSpawnTime;
 
     int Random;
     int RandomEnemy;
 
-    float _SpawnTimer = 0;
+    float _spawnTimer = 0;
+    float _bossSpaenTimer = 0;
     void Start()
     {
         
     }
     void Update()
     {
-        _SpawnTimer += Time.deltaTime;
+        _spawnTimer += Time.deltaTime;
+        _bossSpaenTimer += Time.deltaTime;
 
-        if (_SpawnTimer >= _SpawnInterval)
+        if (_spawnTimer >= _SpawnInterval)
         {
             Random = UnityEngine.Random.Range(0, _EnemySpawn.Count);
             RandomEnemy = UnityEngine.Random.Range(0, _EnemyPrefab.Count);
             Instantiate(_EnemyPrefab[RandomEnemy], _EnemySpawn[Random].position, Quaternion.identity);
-            _SpawnTimer = 0f;
+            _spawnTimer = 0f;
+        }
+        if (_bossSpaenTimer >= _bossSpawnTime)
+        {
+            Instantiate(_Boss, _BossSpawn.position, Quaternion.identity);
         }
     }
 }
