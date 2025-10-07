@@ -12,6 +12,7 @@ public class SceneController : MonoBehaviour
 
     GameObject playerObj;
     PlayerHealth _pH;
+    GameObject BossObj;
     void Awake()
     {
         if (instance == null)

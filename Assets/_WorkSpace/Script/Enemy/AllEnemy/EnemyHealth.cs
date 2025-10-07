@@ -7,7 +7,6 @@ public class EnemyHealth : MonoBehaviour
     PlayerHealth _pH;
     EnemyAI _EAI;
     Rigidbody2D _rb;
-    bool _death;
     bool _OnGround;
     [SerializeField]
     int _health = 100;
@@ -43,20 +42,12 @@ public class EnemyHealth : MonoBehaviour
     {
         if (_health <= 0)
         {
-            _death = true;
-        }
-        else
-        {
-            _death = false;
+            Destroy(gameObject);
+            Instantiate(_enemyDropItem, transform.position, Quaternion.identity);
         }
         if (_health >= _MaxHealth)
         {
             _health = _MaxHealth;
-        }
-        if (_death == true)
-        {
-            Destroy(gameObject);
-            Instantiate(_enemyDropItem, transform.position, Quaternion.identity);
         }
         if (_OnGround == true)
         {
@@ -76,9 +67,9 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    void OnCollisionExit2D(Collision2D col)//collision‚Íˆø”‚¾‚©‚ç–¼‘O•Ï‚¦‚Ä‚à“®‚­‚¨
+    void OnCollisionExit2D(Collision2D collision)//collision‚Íˆø”‚¾‚©‚ç–¼‘O•Ï‚¦‚Ä‚à“®‚­‚¨
     {
-        if (col.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground"))
         {
             _OnGround = false;
         }
