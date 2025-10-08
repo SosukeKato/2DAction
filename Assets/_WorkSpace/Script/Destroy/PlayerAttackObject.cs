@@ -9,7 +9,6 @@ public class PlayerAttackObject : MonoBehaviour
 
     IEnumerator Start()
     {
-        Application.targetFrameRate = 30;
         yield return new WaitForSeconds(_attackDuration);
         Destroy(gameObject);
     }
