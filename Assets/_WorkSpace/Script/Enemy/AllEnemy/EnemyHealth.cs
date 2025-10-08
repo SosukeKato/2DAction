@@ -59,25 +59,13 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.CompareTag("Ground"))
-        {
-            _OnGround = true;
-        }
-    }
-
-    void OnCollisionExit2D(Collision2D collision)//collisionÇÕà¯êîÇæÇ©ÇÁñºëOïœÇ¶ÇƒÇ‡ìÆÇ≠Ç®
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            _OnGround = false;
+            _OnGround = true;
         }
-    }
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.CompareTag("NAttack"))
+        if (collision.gameObject.CompareTag("NAttack"))
         {
             _health -= _nAttackDamage * _airEnemyDefenseDebuff;
         }
@@ -106,6 +94,14 @@ public class EnemyHealth : MonoBehaviour
             {
                 _rb.velocity = Vector2.right * (_EAI._MoveSpeed);
             }
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            _OnGround = false;
         }
     }
 }
